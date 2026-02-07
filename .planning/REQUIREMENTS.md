@@ -111,12 +111,66 @@
 
 ## Traceability
 
-Requirements will be mapped to phases during roadmap creation.
-
 | Requirement | Phase | Plan | Status |
 |-------------|-------|------|--------|
-| (To be filled by roadmap) | | | |
+| EQ-01 | Phase 1 | - | Pending |
+| EQ-02 | Phase 1 | - | Pending |
+| EQ-03 | Phase 1 | - | Pending |
+| EQ-04 | Phase 1 | - | Pending |
+| EQ-05 | Phase 1 | - | Pending |
+| EQ-06 | Phase 1 | - | Pending |
+| EQ-07 | Phase 1 | - | Pending |
+| SYNC-01 | Phase 1 | - | Pending |
+| SYNC-02 | Phase 1 | - | Pending |
+| BEAN-01 | Phase 2 | - | Pending |
+| BEAN-02 | Phase 2 | - | Pending |
+| BEAN-03 | Phase 2 | - | Pending |
+| BEAN-04 | Phase 2 | - | Pending |
+| BEAN-05 | Phase 2 | - | Pending |
+| BEAN-06 | Phase 2 | - | Pending |
+| BEAN-07 | Phase 2 | - | Pending |
+| BEAN-08 | Phase 2 | - | Pending |
+| BREW-01 | Phase 3 | - | Pending |
+| BREW-02 | Phase 3 | - | Pending |
+| BREW-03 | Phase 3 | - | Pending |
+| BREW-04 | Phase 3 | - | Pending |
+| BREW-05 | Phase 3 | - | Pending |
+| BREW-06 | Phase 3 | - | Pending |
+| BREW-07 | Phase 3 | - | Pending |
+| BREW-08 | Phase 3 | - | Pending |
+| BREW-09 | Phase 3 | - | Pending |
+| BREW-10 | Phase 3 | - | Pending |
+| BREW-11 | Phase 3 | - | Pending |
+| BREW-12 | Phase 3 | - | Pending |
+| BREW-13 | Phase 3 | - | Pending |
+| BREW-14 | Phase 3 | - | Pending |
+| BREW-15 | Phase 3 | - | Pending |
+| TASTE-01 | Phase 4 | - | Pending |
+| TASTE-02 | Phase 4 | - | Pending |
+| TASTE-03 | Phase 4 | - | Pending |
+| TASTE-04 | Phase 4 | - | Pending |
+| TASTE-05 | Phase 4 | - | Pending |
+| TASTE-06 | Phase 4 | - | Pending |
+| TASTE-07 | Phase 4 | - | Pending |
+| HIST-01 | Phase 5 | - | Pending |
+| HIST-02 | Phase 5 | - | Pending |
+| HIST-03 | Phase 5 | - | Pending |
+| HIST-04 | Phase 5 | - | Pending |
+| HIST-05 | Phase 5 | - | Pending |
+| HIST-06 | Phase 5 | - | Pending |
+| SYNC-03 | Phase 6 | - | Pending |
+| SYNC-04 | Phase 6 | - | Pending |
+| SYNC-05 | Phase 6 | - | Pending |
+| AI-01 | Phase 7 | - | Pending |
+| AI-02 | Phase 7 | - | Pending |
+| AI-03 | Phase 7 | - | Pending |
+| AI-04 | Phase 7 | - | Pending |
+| AI-05 | Phase 7 | - | Pending |
+| HIST-07 | Phase 8 | - | Pending |
+| HIST-08 | Phase 8 | - | Pending |
+| HIST-09 | Phase 8 | - | Pending |
 
 ---
 
 *Generated: 2026-02-07 during project initialization*
+*Traceability updated: 2026-02-07 during roadmap creation*
