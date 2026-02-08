@@ -27,6 +27,11 @@ let package = Package(
                 "Models/TastingNote.swift",
                 "Models/Schema/SchemaV1.swift",
                 "Models/Schema/MigrationPlan.swift",
+                "Views/Components/MonochromeStyle.swift",
+                "Views/Components/EmptyStateView.swift",
+                "Views/Components/EquipmentRow.swift",
+                "Utilities/ImageCompressor.swift",
+                "Utilities/AppStorageKeys.swift",
             ]
         ),
     ]

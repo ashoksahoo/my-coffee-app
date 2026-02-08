@@ -19,6 +19,11 @@
 		45807FF116514C72 /* TastingNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFE5D8B70148F2 /* TastingNote.swift */; };
 		9B054550D54A4ECC /* SchemaV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774C71094AD5404D /* SchemaV1.swift */; };
 		421B6DC050FD42E7 /* MigrationPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09E04E786C944E3 /* MigrationPlan.swift */; };
+		AA100001AA100001 /* MonochromeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB100001BB100001 /* MonochromeStyle.swift */; };
+		AA100002AA100002 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB100002BB100002 /* EmptyStateView.swift */; };
+		AA100003AA100003 /* EquipmentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB100003BB100003 /* EquipmentRow.swift */; };
+		AA100004AA100004 /* ImageCompressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB100004BB100004 /* ImageCompressor.swift */; };
+		AA100005AA100005 /* AppStorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB100005BB100005 /* AppStorageKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +40,11 @@
 		1BDFE5D8B70148F2 /* TastingNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingNote.swift; sourceTree = "<group>"; };
 		774C71094AD5404D /* SchemaV1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemaV1.swift; sourceTree = "<group>"; };
 		D09E04E786C944E3 /* MigrationPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationPlan.swift; sourceTree = "<group>"; };
+		BB100001BB100001 /* MonochromeStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonochromeStyle.swift; sourceTree = "<group>"; };
+		BB100002BB100002 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		BB100003BB100003 /* EquipmentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentRow.swift; sourceTree = "<group>"; };
+		BB100004BB100004 /* ImageCompressor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCompressor.swift; sourceTree = "<group>"; };
+		BB100005BB100005 /* AppStorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +122,9 @@
 		EA648F9510D9437C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				BB100001BB100001 /* MonochromeStyle.swift */,
+				BB100002BB100002 /* EmptyStateView.swift */,
+				BB100003BB100003 /* EquipmentRow.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -119,6 +132,8 @@
 		32312D707D2F41478 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				BB100004BB100004 /* ImageCompressor.swift */,
+				BB100005BB100005 /* AppStorageKeys.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -192,6 +207,11 @@
 				45807FF116514C72 /* TastingNote.swift in Sources */,
 				9B054550D54A4ECC /* SchemaV1.swift in Sources */,
 				421B6DC050FD42E7 /* MigrationPlan.swift in Sources */,
+				AA100001AA100001 /* MonochromeStyle.swift in Sources */,
+				AA100002AA100002 /* EmptyStateView.swift in Sources */,
+				AA100003AA100003 /* EquipmentRow.swift in Sources */,
+				AA100004AA100004 /* ImageCompressor.swift in Sources */,
+				AA100005AA100005 /* AppStorageKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
