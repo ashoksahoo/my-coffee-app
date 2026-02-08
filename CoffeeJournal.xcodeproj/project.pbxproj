@@ -25,6 +25,15 @@
 		AA100004AA100004 /* ImageCompressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB100004BB100004 /* ImageCompressor.swift */; };
 		AA100005AA100005 /* AppStorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB100005BB100005 /* AppStorageKeys.swift */; };
 		CC200001CC200001 /* SetupWizardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD200001DD200001 /* SetupWizardViewModel.swift */; };
+		CC300001CC300001 /* MethodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD300001DD300001 /* MethodListView.swift */; };
+		CC300002CC300002 /* AddMethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD300002DD300002 /* AddMethodView.swift */; };
+		CC300003CC300003 /* GrinderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD300003DD300003 /* GrinderListView.swift */; };
+		CC300004CC300004 /* AddGrinderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD300004DD300004 /* AddGrinderView.swift */; };
+		CC400001CC400001 /* SetupWizardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400001DD400001 /* SetupWizardView.swift */; };
+		CC400002CC400002 /* WelcomeStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400002DD400002 /* WelcomeStepView.swift */; };
+		CC400003CC400003 /* MethodSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400003DD400003 /* MethodSelectionView.swift */; };
+		CC400004CC400004 /* GrinderEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400004DD400004 /* GrinderEntryView.swift */; };
+		CC400005CC400005 /* SetupCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400005DD400005 /* SetupCompleteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +56,15 @@
 		BB100004BB100004 /* ImageCompressor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCompressor.swift; sourceTree = "<group>"; };
 		BB100005BB100005 /* AppStorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageKeys.swift; sourceTree = "<group>"; };
 		DD200001DD200001 /* SetupWizardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupWizardViewModel.swift; sourceTree = "<group>"; };
+		DD300001DD300001 /* MethodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodListView.swift; sourceTree = "<group>"; };
+		DD300002DD300002 /* AddMethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMethodView.swift; sourceTree = "<group>"; };
+		DD300003DD300003 /* GrinderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrinderListView.swift; sourceTree = "<group>"; };
+		DD300004DD300004 /* AddGrinderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGrinderView.swift; sourceTree = "<group>"; };
+		DD400001DD400001 /* SetupWizardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupWizardView.swift; sourceTree = "<group>"; };
+		DD400002DD400002 /* WelcomeStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeStepView.swift; sourceTree = "<group>"; };
+		DD400003DD400003 /* MethodSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodSelectionView.swift; sourceTree = "<group>"; };
+		DD400004DD400004 /* GrinderEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrinderEntryView.swift; sourceTree = "<group>"; };
+		DD400005DD400005 /* SetupCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupCompleteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +136,33 @@
 			isa = PBXGroup;
 			children = (
 				EA648F9510D9437C /* Components */,
+				FF300001FF300001 /* Equipment */,
+				FF400001FF400001 /* Setup */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FF400001FF400001 /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				DD400001DD400001 /* SetupWizardView.swift */,
+				DD400002DD400002 /* WelcomeStepView.swift */,
+				DD400003DD400003 /* MethodSelectionView.swift */,
+				DD400004DD400004 /* GrinderEntryView.swift */,
+				DD400005DD400005 /* SetupCompleteView.swift */,
+			);
+			path = Setup;
+			sourceTree = "<group>";
+		};
+		FF300001FF300001 /* Equipment */ = {
+			isa = PBXGroup;
+			children = (
+				DD300001DD300001 /* MethodListView.swift */,
+				DD300002DD300002 /* AddMethodView.swift */,
+				DD300003DD300003 /* GrinderListView.swift */,
+				DD300004DD300004 /* AddGrinderView.swift */,
+			);
+			path = Equipment;
 			sourceTree = "<group>";
 		};
 		EA648F9510D9437C /* Components */ = {
@@ -224,6 +267,15 @@
 				AA100004AA100004 /* ImageCompressor.swift in Sources */,
 				AA100005AA100005 /* AppStorageKeys.swift in Sources */,
 				CC200001CC200001 /* SetupWizardViewModel.swift in Sources */,
+				CC300001CC300001 /* MethodListView.swift in Sources */,
+				CC300002CC300002 /* AddMethodView.swift in Sources */,
+				CC300003CC300003 /* GrinderListView.swift in Sources */,
+				CC300004CC300004 /* AddGrinderView.swift in Sources */,
+				CC400001CC400001 /* SetupWizardView.swift in Sources */,
+				CC400002CC400002 /* WelcomeStepView.swift in Sources */,
+				CC400003CC400003 /* MethodSelectionView.swift in Sources */,
+				CC400004CC400004 /* GrinderEntryView.swift in Sources */,
+				CC400005CC400005 /* SetupCompleteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
