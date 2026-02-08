@@ -33,12 +33,14 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. User can customize which brew parameters appear for each method (espresso shows yield/pressure, pour-over shows pour stages)
   4. User can see usage statistics for any piece of equipment (brew count, last used, favorite beans)
   5. Equipment data persists across app launches and syncs to another iOS device via iCloud
-**Plans**: TBD
+**Plans**: 5 plans
 
 Plans:
-- [ ] 01-01: SwiftUI project setup with SwiftData models and CloudKit container
-- [ ] 01-02: Equipment domain models and CRUD operations
-- [ ] 01-03: Equipment UI with method-specific parameters and usage stats
+- [ ] 01-01-PLAN.md -- Xcode project, SwiftData models (all entities for CloudKit permanence), VersionedSchema, design system
+- [ ] 01-02-PLAN.md -- First-launch setup wizard (method selection, grinder entry, skip flow)
+- [ ] 01-03-PLAN.md -- Equipment list screens (Methods + Grinders) with add, delete, empty states
+- [ ] 01-04-PLAN.md -- Equipment detail/edit views with photos and pre-configured parameters
+- [ ] 01-05-PLAN.md -- App navigation wiring (routing, tabs, settings, end-to-end verification)
 
 ### Phase 2: Coffee Bean Tracking
 **Goal**: Users can catalog their coffee beans with full origin details and track freshness
@@ -155,7 +157,7 @@ Note: Phase 6 (Sync & Offline) depends only on Phase 1 and can be executed in pa
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation + Equipment | 0/3 | Not started | - |
+| 1. Foundation + Equipment | 0/5 | Planning complete | - |
 | 2. Coffee Bean Tracking | 0/2 | Not started | - |
 | 3. Brew Logging | 0/3 | Not started | - |
 | 4. Tasting & Flavor Notes | 0/2 | Not started | - |
