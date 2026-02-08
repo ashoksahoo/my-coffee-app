@@ -43,7 +43,7 @@ Decisions are logged in PROJECT.md Key Decisions table.
 Recent decisions affecting current work:
 
 - [Roadmap]: CloudKit schema permanence drives Phase 1 priority -- data model must be designed carefully before any deployment
-- [Roadmap]: Equipment CRUD chosen as Phase 1 vertical slice (simplest domain entity, proves full KMP-Swift-CloudKit stack)
+- [Roadmap]: Equipment CRUD chosen as Phase 1 vertical slice (simplest domain entity, proves full SwiftUI-SwiftData-CloudKit stack)
 - [Roadmap]: Sync infrastructure (SYNC-01, SYNC-02) in Phase 1; sync UX (SYNC-03..05) deferred to Phase 6
 
 ### Pending Todos
@@ -52,7 +52,7 @@ None yet.
 
 ### Blockers/Concerns
 
-- [Research]: SKIE 0.10.9 lists compatibility up to Kotlin 2.3.0; Kotlin 2.3.10 may require SKIE 0.11.x -- verify during Phase 1 setup
+- [Tech Stack]: Switched from KMP to pure Swift for v1 simplicity -- research findings (SwiftData, CloudKit, Apple Intelligence) still apply
 - [Research]: Foundation Models requires iOS 26+ with A17 Pro/M1+ -- Phase 7 features must degrade gracefully
 
 ## Session Continuity

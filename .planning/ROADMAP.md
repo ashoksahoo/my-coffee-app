@@ -2,7 +2,7 @@
 
 ## Overview
 
-This roadmap delivers a local-first iOS coffee journal from foundation to intelligence. The journey starts with the data model and KMP-Swift bridge (critical because CloudKit schema is permanent once deployed), proves the architecture with Equipment CRUD, then builds outward through beans, brew logging, tasting, history, sync UX, AI insights, and data export. Each phase delivers a complete, verifiable capability that builds on the previous.
+This roadmap delivers a local-first iOS coffee journal from foundation to intelligence. The journey starts with the data model and SwiftData/CloudKit setup (critical because CloudKit schema is permanent once deployed), proves the architecture with Equipment CRUD, then builds outward through beans, brew logging, tasting, history, sync UX, AI insights, and data export. Each phase delivers a complete, verifiable capability that builds on the previous.
 
 ## Phases
 
@@ -12,7 +12,7 @@ This roadmap delivers a local-first iOS coffee journal from foundation to intell
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation + Equipment** - KMP project setup, data model, persistence, CloudKit container, and Equipment CRUD as architecture proof
+- [ ] **Phase 1: Foundation + Equipment** - Swift project setup, SwiftData model, CloudKit container, and Equipment CRUD as architecture proof
 - [ ] **Phase 2: Coffee Bean Tracking** - Bean management with origin details, roast freshness, photos, and search
 - [ ] **Phase 3: Brew Logging** - Core journaling loop: create brew entries with parameters, timer, and photos
 - [ ] **Phase 4: Tasting & Flavor Notes** - Structured tasting attributes, SCA flavor wheel, visualizations, and brew comparison
@@ -36,9 +36,9 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: TBD
 
 Plans:
-- [ ] 01-01: KMP project skeleton with SKIE, Koin, domain models, and repository interfaces
-- [ ] 01-02: SwiftData persistence layer with CloudKit container and Core Data model
-- [ ] 01-03: Equipment management UI and end-to-end vertical slice
+- [ ] 01-01: SwiftUI project setup with SwiftData models and CloudKit container
+- [ ] 01-02: Equipment domain models and CRUD operations
+- [ ] 01-03: Equipment UI with method-specific parameters and usage stats
 
 ### Phase 2: Coffee Bean Tracking
 **Goal**: Users can catalog their coffee beans with full origin details and track freshness

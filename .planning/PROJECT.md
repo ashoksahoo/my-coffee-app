@@ -95,7 +95,7 @@ Every coffee enthusiast faces the same challenge: you dial in a perfect cup, but
 - **Bluetooth scale integration** — deferred to v3 (requires hardware, adds complexity)
 - **Sharing/social features** — explicitly excluded (personal journal, not social network)
 - **Subscription/monetization** — not relevant for v1 personal use
-- **Android support** — iOS-only for v1, cross-platform later via KMP
+- **Android support** — iOS-only for v1-v3, cross-platform later if needed
 - **Web app** — mobile-first, no web interface planned
 - **Export/backup beyond iCloud** — iCloud is sufficient for v1
 
@@ -103,7 +103,7 @@ Every coffee enthusiast faces the same challenge: you dial in a perfect cup, but
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| **Kotlin Multiplatform + SwiftUI** | KMP shares business logic across platforms while keeping native UI. SwiftUI gives native iOS feel. Better than Flutter for CloudKit integration and Apple Intelligence. | ✓ Adopted — Kotlin for shared logic, SwiftUI for UI |
+| **Pure Swift + SwiftUI** | Native iOS development simplifies v1. SwiftUI for UI, SwiftData for persistence, CloudKit for sync. Can add cross-platform later if needed. Better learning curve than KMP for Swift beginners. | ✓ Adopted — Swift-only for v1 |
 | **CloudKit for sync** | Native Apple solution, no backend to maintain, respects user privacy. Users own their data in their iCloud. | ✓ Adopted — iCloud-only, no custom backend |
 | **Monochrome design** | Black and white only, e-ink friendly. Timeless aesthetic, reduces visual noise, focuses on content. | ✓ Adopted — no color anywhere in the app |
 | **Apple Intelligence for insights** | On-device ML, no cloud processing, privacy-first. Leverage Apple's models rather than building custom ML. | ✓ Adopted — system-level AI, no custom models |
@@ -129,7 +129,7 @@ Every coffee enthusiast faces the same challenge: you dial in a perfect cup, but
 - E-ink display friendly (high contrast, no gradients)
 
 **Personal:**
-- No Swift/Obj-C experience (learning as we go)
+- Learning Swift from scratch (native iOS development)
 - Weekly new coffee arrivals (frequent new coffee entries)
 - iPhone + iPad sync required
 

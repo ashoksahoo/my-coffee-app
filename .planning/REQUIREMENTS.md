@@ -65,8 +65,8 @@
 
 ### Sync & Data
 
-- [ ] **SYNC-01**: All data stored locally with SwiftData
-- [ ] **SYNC-02**: iCloud sync via CloudKit with zero-code integration
+- [ ] **SYNC-01**: All data stored locally with SwiftData (iOS 17+)
+- [ ] **SYNC-02**: iCloud sync via CloudKit with zero-code SwiftData integration
 - [ ] **SYNC-03**: App works offline, syncs when connected
 - [ ] **SYNC-04**: Conflict resolution handles simultaneous edits across devices gracefully
 - [ ] **SYNC-05**: Photos stored as CloudKit assets with compression
