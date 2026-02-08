@@ -24,6 +24,7 @@
 		AA100003AA100003 /* EquipmentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB100003BB100003 /* EquipmentRow.swift */; };
 		AA100004AA100004 /* ImageCompressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB100004BB100004 /* ImageCompressor.swift */; };
 		AA100005AA100005 /* AppStorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB100005BB100005 /* AppStorageKeys.swift */; };
+		CC200001CC200001 /* SetupWizardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD200001DD200001 /* SetupWizardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		BB100003BB100003 /* EquipmentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentRow.swift; sourceTree = "<group>"; };
 		BB100004BB100004 /* ImageCompressor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCompressor.swift; sourceTree = "<group>"; };
 		BB100005BB100005 /* AppStorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageKeys.swift; sourceTree = "<group>"; };
+		DD200001DD200001 /* SetupWizardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupWizardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				28835F6529C54E9F /* ContentView.swift */,
 				2A110F0444F64FDD /* Models */,
 				9ED56D77D9FD4B5D /* Views */,
+				EE200001EE200001 /* ViewModels */,
 				32312D707D2F41478 /* Utilities */,
 			);
 			path = CoffeeJournal;
@@ -127,6 +130,14 @@
 				BB100003BB100003 /* EquipmentRow.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		EE200001EE200001 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DD200001DD200001 /* SetupWizardViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		32312D707D2F41478 /* Utilities */ = {
@@ -212,6 +223,7 @@
 				AA100003AA100003 /* EquipmentRow.swift in Sources */,
 				AA100004AA100004 /* ImageCompressor.swift in Sources */,
 				AA100005AA100005 /* AppStorageKeys.swift in Sources */,
+				CC200001CC200001 /* SetupWizardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
