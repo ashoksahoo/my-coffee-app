@@ -5,24 +5,24 @@
 See: .planning/PROJECT.md (updated 2026-02-07)
 
 **Core value:** Remember and improve your coffee brewing by tracking what works
-**Current focus:** Phase 5 - History & Search (In Progress)
+**Current focus:** Phase 5 - History & Search (Complete)
 
 ## Current Position
 
 Phase: 5 of 8 (History & Search)
-Plan: 1 of 2 complete in current phase
-Status: In progress
-Last activity: 2026-02-09 -- Completed 05-01-PLAN.md (brew history search and multi-criteria filtering)
+Plan: 2 of 2 complete in current phase
+Status: Phase complete
+Last activity: 2026-02-09 -- Completed 05-02-PLAN.md (statistics dashboard with Swift Charts)
 
-Progress: [████████░░░░░░░░] 1/2 plans complete in phase
-Overall: [██████████████████████████████████████████████░░] 14/15 plans
+Progress: [████████████████] 2/2 plans complete in phase
+Overall: [████████████████████████████████████████████████] 15/15 plans
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 14
-- Average duration: ~5min
-- Total execution time: ~64min
+- Total plans completed: 15
+- Average duration: ~4min
+- Total execution time: ~66min
 
 **By Phase:**
 
@@ -32,11 +32,11 @@ Overall: [███████████████████████�
 | 02-coffee-bean-tracking | 2/2 | ~5min | ~2.5min |
 | 03-brew-logging | 3/3 | ~7min | ~2.3min |
 | 04-tasting-flavor-notes | 3/3 | ~9min | ~3min |
-| 05-history-search | 1/2 | ~3min | ~3min |
+| 05-history-search | 2/2 | ~5min | ~2.5min |
 
 **Recent Trend:**
-- Last 5 plans: 04-01 (~4min), 04-02 (~2min), 04-03 (~3min), 05-01 (~3min)
-- Trend: Stable (consistent 2-4min per plan)
+- Last 5 plans: 04-02 (~2min), 04-03 (~3min), 05-01 (~3min), 05-02 (~2min)
+- Trend: Stable (consistent 2-3min per plan)
 
 *Updated after each plan completion*
 
@@ -103,6 +103,10 @@ Recent decisions affecting current work:
 - [05-01]: Filter state owned by parent BrewLogListView, passed to child BrewHistoryListContent as init params for @Query reinitialization
 - [05-01]: Date range filter uses toggle pattern with 30-day default window when enabled
 - [05-01]: Empty state shows "No Matches" with filter adjustment suggestion when filters/search active
+- [05-02]: Charts use AppColors.primary.opacity(0.8) for bars, 1.0 for lines -- consistent monochrome grayscale
+- [05-02]: Top beans chart uses horizontal BarMark for long bean names
+- [05-02]: Rating trend groups by month via Calendar.dateInterval for proper monthly aggregation
+- [05-02]: ToolbarItemGroup groups Compare and Statistics buttons in leading position
 
 ### Pending Todos
 
@@ -137,5 +141,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-09
-Stopped at: Phase 05 plan 01 complete. Ready for 05-02 execution.
-Resume file: .planning/phases/05-history-search/05-01-SUMMARY.md
+Stopped at: Phase 05 complete. All 15 plans across 5 phases executed.
+Resume file: .planning/phases/05-history-search/05-02-SUMMARY.md
