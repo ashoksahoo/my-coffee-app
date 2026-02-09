@@ -5,24 +5,24 @@
 See: .planning/PROJECT.md (updated 2026-02-07)
 
 **Core value:** Remember and improve your coffee brewing by tracking what works
-**Current focus:** Phase 3 - Brew Logging (Verified Complete)
+**Current focus:** Phase 4 - Tasting & Flavor Notes (In Progress)
 
 ## Current Position
 
-Phase: 3 of 8 (Brew Logging)
-Plan: 3 of 3 complete in current phase
-Status: Phase verified and complete
-Last activity: 2026-02-09 -- Verification complete: 5/5 success criteria verified, 11/11 artifacts substantive and wired, 15/15 requirements satisfied, PASSED
+Phase: 4 of 8 (Tasting & Flavor Notes)
+Plan: 1 of 3 complete in current phase
+Status: In progress
+Last activity: 2026-02-09 -- Completed 04-01-PLAN.md (tasting note entry form, FlavorWheel data, BrewLog inverse)
 
-Progress: [================] 3/3 plans complete in phase
-Overall: [████████████████████████████████████░░] 10/10 plans defined
+Progress: [█████░░░░░░░░░░░] 1/3 plans complete in phase
+Overall: [████████████████████████████████████████░░░░░░] 11/13 plans defined
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 10
+- Total plans completed: 11
 - Average duration: ~5min
-- Total execution time: ~52min
+- Total execution time: ~56min
 
 **By Phase:**
 
@@ -31,10 +31,11 @@ Overall: [███████████████████████�
 | 01-foundation-equipment | 5/5 | ~40min | ~8min |
 | 02-coffee-bean-tracking | 2/2 | ~5min | ~2.5min |
 | 03-brew-logging | 3/3 | ~7min | ~2.3min |
+| 04-tasting-flavor-notes | 1/3 | ~4min | ~4min |
 
 **Recent Trend:**
-- Last 5 plans: 02-02 (~2min), 03-01 (~3min), 03-02 (~2min), 03-03 (~2min)
-- Trend: Stable (consistent 2-3min per plan)
+- Last 5 plans: 03-01 (~3min), 03-02 (~2min), 03-03 (~2min), 04-01 (~4min)
+- Trend: Stable (consistent 2-4min per plan)
 
 *Updated after each plan completion*
 
@@ -84,6 +85,12 @@ Recent decisions affecting current work:
 - [03-03]: Brews tab uses "mug" SF Symbol, distinct from "cup.and.saucer" used for Methods tab
 - [03-03]: BrewLogDetailView uses ScrollView+VStack (not Form) for read-only detail layout
 - [03-03]: Photo section placed after Rating & Notes in AddBrewLogView form order
+- [04-01]: BrewLog inverse relationship added directly to SchemaV1 (app not shipped, no migration needed)
+- [04-01]: Flavor tags stored as JSON-encoded string array in TastingNote.flavorTags for CloudKit compatibility
+- [04-01]: Custom tags use "custom:" prefix convention to distinguish from SCA flavor IDs
+- [04-01]: Hierarchical DisclosureGroup used for flavor browsing (radial wheel deferred to Plan 02)
+- [04-01]: Tasting entry presented as sheet from BrewLogDetailView (post-brew flow)
+- [04-01]: AttributeSliderView value 0 means unrated (em-dash display); 1-5 is rated range
 
 ### Pending Todos
 
@@ -118,5 +125,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-09
-Stopped at: Phase 03 verified complete. Ready for Phase 04 (Tasting Notes).
-Resume file: .planning/phases/04-tasting-notes/04-RESEARCH.md
+Stopped at: Phase 04 Plan 01 complete. Continue with 04-02 (radial flavor wheel).
+Resume file: .planning/phases/04-tasting-flavor-notes/04-02-PLAN.md
