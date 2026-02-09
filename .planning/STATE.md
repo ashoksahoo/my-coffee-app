@@ -5,34 +5,34 @@
 See: .planning/PROJECT.md (updated 2026-02-07)
 
 **Core value:** Remember and improve your coffee brewing by tracking what works
-**Current focus:** Phase 2 - Coffee Bean Tracking (In Progress)
+**Current focus:** Phase 2 - Coffee Bean Tracking (Complete)
 
 ## Current Position
 
 Phase: 2 of 8 (Coffee Bean Tracking)
-Plan: 1 of 2 complete in current phase
-Status: In progress
-Last activity: 2026-02-09 -- Completed 02-01-PLAN.md (Bean management CRUD with search, archive, freshness tracking)
+Plan: 2 of 2 complete in current phase
+Status: Phase complete
+Last activity: 2026-02-09 -- Completed 02-02-PLAN.md (Bag label OCR scanning with VisionKit)
 
-Progress: [========........] 1/2 plans complete in phase
-Overall: [████████████████████████░░░░░░░░] 6/7 plans defined
+Progress: [================] 2/2 plans complete in phase
+Overall: [████████████████████████████░░░░] 7/7 plans defined
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 6
+- Total plans completed: 7
 - Average duration: ~6min
-- Total execution time: ~43min
+- Total execution time: ~45min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-foundation-equipment | 5/5 | ~40min | ~8min |
-| 02-coffee-bean-tracking | 1/2 | ~3min | ~3min |
+| 02-coffee-bean-tracking | 2/2 | ~5min | ~2.5min |
 
 **Recent Trend:**
-- Last 5 plans: 01-03 (~5min), 01-04 (~3min), 01-05 (~2min), 02-01 (~3min)
+- Last 5 plans: 01-04 (~3min), 01-05 (~2min), 02-01 (~3min), 02-02 (~2min)
 - Trend: Accelerating (established patterns, high reuse from Phase 1)
 
 *Updated after each plan completion*
@@ -70,6 +70,10 @@ Recent decisions affecting current work:
 - [02-01]: FreshnessLevel uses monochrome opacity encoding (1.0/0.6/0.3) and SF Symbol icons instead of color
 - [02-01]: Beans tab placed first in MainTabView (most frequently accessed entity)
 - [02-01]: CoffeeBean name field optional -- displayName computed property falls back to "Roaster - Origin"
+- [02-02]: Roast level/processing method keyword arrays use ordered tuples (not Dictionary) so multi-word matches are checked before single-word
+- [02-02]: BagScannerSheet manages scan-to-review flow as self-contained NavigationStack in sheet
+- [02-02]: ScanResultReviewView validation uses OR (roaster or origin) rather than AND for OCR permissiveness
+- [02-02]: Info.plist created as standalone XML file for NSCameraUsageDescription
 
 ### Pending Todos
 
@@ -84,5 +88,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-09
-Stopped at: Phase 02, Plan 01 complete. Plan 02 (bag label OCR scanning) next.
-Resume file: .planning/phases/02-coffee-bean-tracking/02-02-PLAN.md
+Stopped at: Phase 02 complete. Ready for Phase 03 (Brew Logging).
+Resume file: .planning/phases/03-brew-logging/
