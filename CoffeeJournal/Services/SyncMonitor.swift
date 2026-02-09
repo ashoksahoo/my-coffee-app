@@ -43,6 +43,11 @@ final class SyncMonitor {
         ) { [weak self] _ in
             Task { await self?.checkAccountStatus() }
         }
+
+        // Check account status on initialization
+        Task {
+            await checkAccountStatus()
+        }
     }
 
     private func handleEvent(_ notification: Notification) {
@@ -74,22 +79,36 @@ final class SyncMonitor {
         }
     }
 
+    @MainActor
     func checkAccountStatus() async {
         do {
             let status = try await CKContainer.default().accountStatus()
-            switch status {
-            case .available:
-                break
-            case .noAccount, .restricted:
-                importState = .noAccount
-                exportState = .noAccount
-            case .couldNotDetermine, .temporarilyUnavailable:
-                break
-            @unknown default:
-                break
+            await MainActor.run {
+                switch status {
+                case .available:
+                    // Account is available, clear any no-account state
+                    if importState == .noAccount {
+                        importState = .idle
+                    }
+                    if exportState == .noAccount {
+                        exportState = .idle
+                    }
+                case .noAccount, .restricted:
+                    importState = .noAccount
+                    exportState = .noAccount
+                case .couldNotDetermine, .temporarilyUnavailable:
+                    // Don't change state, might be temporary
+                    break
+                @unknown default:
+                    break
+                }
             }
         } catch {
-            importState = .failed(error.localizedDescription)
+            await MainActor.run {
+                // If we can't check account status, assume no account rather than crashing
+                importState = .noAccount
+                exportState = .noAccount
+            }
         }
     }
 }
