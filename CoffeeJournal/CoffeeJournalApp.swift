@@ -10,10 +10,14 @@ struct CoffeeJournalApp: App {
     init() {
         let schema = Schema(versionedSchema: SchemaV1.self)
 
-        // Try to initialize with CloudKit first
-        var config = ModelConfiguration(
+        // Use local-only storage by default
+        // To enable CloudKit sync:
+        // 1. Configure CloudKit container in Apple Developer Portal
+        // 2. Change cloudKitDatabase to .automatic
+        // 3. Ensure proper signing and entitlements
+        let config = ModelConfiguration(
             schema: schema,
-            cloudKitDatabase: .automatic
+            cloudKitDatabase: .none  // Disable CloudKit until properly configured
         )
 
         do {
@@ -23,21 +27,7 @@ struct CoffeeJournalApp: App {
                 configurations: [config]
             )
         } catch {
-            // If CloudKit setup fails, fall back to local-only storage
-            print("CloudKit initialization failed: \(error). Falling back to local storage.")
-            config = ModelConfiguration(
-                schema: schema,
-                cloudKitDatabase: .none
-            )
-            do {
-                container = try ModelContainer(
-                    for: schema,
-                    migrationPlan: CoffeeJournalMigrationPlan.self,
-                    configurations: [config]
-                )
-            } catch {
-                fatalError("Failed to create ModelContainer even with local storage: \(error)")
-            }
+            fatalError("Failed to create ModelContainer: \(error)")
         }
     }
 
