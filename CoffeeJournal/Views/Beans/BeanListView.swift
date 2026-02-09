@@ -1,5 +1,6 @@
 import SwiftUI
 import SwiftData
+import VisionKit
 
 // MARK: - Parent View
 
@@ -7,6 +8,7 @@ struct BeanListView: View {
     @State private var searchText = ""
     @State private var showArchived = false
     @State private var showingAddSheet = false
+    @State private var showingScanner = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -24,8 +26,20 @@ struct BeanListView: View {
         .navigationTitle("Beans")
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button {
-                    showingAddSheet = true
+                Menu {
+                    Button {
+                        showingAddSheet = true
+                    } label: {
+                        Label("Add Manually", systemImage: "plus")
+                    }
+
+                    if DataScannerViewController.isSupported {
+                        Button {
+                            showingScanner = true
+                        } label: {
+                            Label("Scan Bag Label", systemImage: "camera.viewfinder")
+                        }
+                    }
                 } label: {
                     Image(systemName: "plus")
                         .foregroundStyle(AppColors.primary)
@@ -36,6 +50,9 @@ struct BeanListView: View {
             NavigationStack {
                 AddBeanView()
             }
+        }
+        .sheet(isPresented: $showingScanner) {
+            BagScannerSheet()
         }
     }
 }
