@@ -39,33 +39,11 @@ struct GrinderDetailView: View {
     @ViewBuilder
     private var photoSection: some View {
         Section {
-            photoArea
-                .frame(maxWidth: .infinity)
-                .frame(height: 200)
-                .listRowInsets(EdgeInsets())
+            EquipmentPhotoPickerView(photoData: $grinder.photoData)
+                .listRowInsets(EdgeInsets(top: AppSpacing.sm, leading: AppSpacing.md, bottom: AppSpacing.sm, trailing: AppSpacing.md))
 
             TextField("Grinder Name", text: $grinder.name)
                 .font(AppTypography.title)
-        }
-    }
-
-    @ViewBuilder
-    private var photoArea: some View {
-        if let photoData = grinder.photoData, let uiImage = UIImage(data: photoData) {
-            Image(uiImage: uiImage)
-                .resizable()
-                .scaledToFill()
-                .frame(maxWidth: .infinity)
-                .frame(height: 200)
-                .clipped()
-        } else {
-            ZStack {
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(AppColors.secondaryBackground)
-                Image(systemName: grinder.grinderType.iconName)
-                    .font(.system(size: 60))
-                    .foregroundStyle(AppColors.subtle)
-            }
         }
     }
 

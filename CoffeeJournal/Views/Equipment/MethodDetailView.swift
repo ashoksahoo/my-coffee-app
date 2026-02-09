@@ -26,33 +26,11 @@ struct MethodDetailView: View {
     @ViewBuilder
     private var photoSection: some View {
         Section {
-            photoArea
-                .frame(maxWidth: .infinity)
-                .frame(height: 200)
-                .listRowInsets(EdgeInsets())
+            EquipmentPhotoPickerView(photoData: $method.photoData)
+                .listRowInsets(EdgeInsets(top: AppSpacing.sm, leading: AppSpacing.md, bottom: AppSpacing.sm, trailing: AppSpacing.md))
 
             TextField("Method Name", text: $method.name)
                 .font(AppTypography.title)
-        }
-    }
-
-    @ViewBuilder
-    private var photoArea: some View {
-        if let photoData = method.photoData, let uiImage = UIImage(data: photoData) {
-            Image(uiImage: uiImage)
-                .resizable()
-                .scaledToFill()
-                .frame(maxWidth: .infinity)
-                .frame(height: 200)
-                .clipped()
-        } else {
-            ZStack {
-                RoundedRectangle(cornerRadius: 16)
-                    .fill(AppColors.secondaryBackground)
-                Image(systemName: method.category.iconName)
-                    .font(.system(size: 60))
-                    .foregroundStyle(AppColors.subtle)
-            }
         }
     }
 
