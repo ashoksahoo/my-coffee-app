@@ -4,68 +4,76 @@ import SwiftData
 // MARK: - Parent View
 
 struct BrewLogListView: View {
+    @State private var searchText: String = ""
+    @State private var selectedMethodID: PersistentIdentifier? = nil
+    @State private var selectedBeanID: PersistentIdentifier? = nil
+    @State private var startDate: Date? = nil
+    @State private var endDate: Date? = nil
+    @State private var minimumRating: Int = 0
+    @State private var showingFilterSheet = false
     @State private var showingAddSheet = false
 
-    var body: some View {
-        BrewLogListContent()
-            .navigationTitle("Brews")
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    NavigationLink {
-                        BrewComparisonView()
-                    } label: {
-                        Image(systemName: "arrow.left.arrow.right")
-                            .foregroundStyle(AppColors.primary)
-                    }
-                }
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showingAddSheet = true
-                    } label: {
-                        Image(systemName: "plus")
-                            .foregroundStyle(AppColors.primary)
-                    }
-                }
-            }
-            .sheet(isPresented: $showingAddSheet) {
-                NavigationStack {
-                    AddBrewLogView()
-                }
-            }
+    private var hasActiveFilters: Bool {
+        selectedMethodID != nil ||
+        selectedBeanID != nil ||
+        startDate != nil ||
+        endDate != nil ||
+        minimumRating > 0 ||
+        !searchText.isEmpty
     }
-}
-
-// MARK: - Child View (Dynamic @Query)
-
-struct BrewLogListContent: View {
-    @Query(sort: \BrewLog.createdAt, order: .reverse) private var brews: [BrewLog]
-    @Environment(\.modelContext) private var modelContext
 
     var body: some View {
-        if brews.isEmpty {
-            EmptyStateView(
-                systemImage: "cup.and.saucer",
-                title: "No Brews Yet",
-                message: "Log your first brew to start tracking"
-            )
-        } else {
-            List {
-                ForEach(brews) { brew in
-                    NavigationLink {
-                        BrewLogDetailView(brew: brew)
-                    } label: {
-                        BrewLogRow(brew: brew)
-                    }
-                    .swipeActions(edge: .trailing, allowsFullSwipe: false) {
-                        Button(role: .destructive) {
-                            modelContext.delete(brew)
-                        } label: {
-                            Label("Delete", systemImage: "trash")
-                        }
-                    }
+        BrewHistoryListContent(
+            searchText: searchText,
+            methodID: selectedMethodID,
+            beanID: selectedBeanID,
+            startDate: startDate,
+            endDate: endDate,
+            minimumRating: minimumRating
+        )
+        .searchable(text: $searchText, prompt: "Search brew notes")
+        .navigationTitle("Brews")
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                NavigationLink {
+                    BrewComparisonView()
+                } label: {
+                    Image(systemName: "arrow.left.arrow.right")
+                        .foregroundStyle(AppColors.primary)
                 }
             }
-            .listStyle(.plain)
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    showingFilterSheet = true
+                } label: {
+                    Image(systemName: hasActiveFilters ? "line.3.horizontal.decrease.circle.fill" : "line.3.horizontal.decrease.circle")
+                        .foregroundStyle(AppColors.primary)
+                }
+            }
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    showingAddSheet = true
+                } label: {
+                    Image(systemName: "plus")
+                        .foregroundStyle(AppColors.primary)
+                }
+            }
+        }
+        .sheet(isPresented: $showingAddSheet) {
+            NavigationStack {
+                AddBrewLogView()
+            }
+        }
+        .sheet(isPresented: $showingFilterSheet) {
+            NavigationStack {
+                BrewFilterSheet(
+                    selectedMethodID: $selectedMethodID,
+                    selectedBeanID: $selectedBeanID,
+                    startDate: $startDate,
+                    endDate: $endDate,
+                    minimumRating: $minimumRating
+                )
+            }
         }
     }
 }
