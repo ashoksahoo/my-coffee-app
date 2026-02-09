@@ -5,24 +5,24 @@
 See: .planning/PROJECT.md (updated 2026-02-07)
 
 **Core value:** Remember and improve your coffee brewing by tracking what works
-**Current focus:** Phase 3 - Brew Logging (In Progress)
+**Current focus:** Phase 3 - Brew Logging (Complete)
 
 ## Current Position
 
 Phase: 3 of 8 (Brew Logging)
-Plan: 2 of 3 complete in current phase
-Status: In progress
-Last activity: 2026-02-09 -- Completed 03-02-PLAN.md (Brew timer with step-by-step guidance)
+Plan: 3 of 3 complete in current phase
+Status: Phase complete
+Last activity: 2026-02-09 -- Completed 03-03-PLAN.md (Brew log list, detail views, photos, Brews tab)
 
-Progress: [==========......] 2/3 plans complete in phase
-Overall: [████████████████████████████████░░░░░░] 9/10 plans defined
+Progress: [================] 3/3 plans complete in phase
+Overall: [████████████████████████████████████░░] 10/10 plans defined
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 9
-- Average duration: ~6min
-- Total execution time: ~50min
+- Total plans completed: 10
+- Average duration: ~5min
+- Total execution time: ~52min
 
 **By Phase:**
 
@@ -30,10 +30,10 @@ Overall: [███████████████████████�
 |-------|-------|-------|----------|
 | 01-foundation-equipment | 5/5 | ~40min | ~8min |
 | 02-coffee-bean-tracking | 2/2 | ~5min | ~2.5min |
-| 03-brew-logging | 2/3 | ~5min | ~2.5min |
+| 03-brew-logging | 3/3 | ~7min | ~2.3min |
 
 **Recent Trend:**
-- Last 5 plans: 02-01 (~3min), 02-02 (~2min), 03-01 (~3min), 03-02 (~2min)
+- Last 5 plans: 02-02 (~2min), 03-01 (~3min), 03-02 (~2min), 03-03 (~2min)
 - Trend: Stable (consistent 2-3min per plan)
 
 *Updated after each plan completion*
@@ -81,6 +81,9 @@ Recent decisions affecting current work:
 - [03-02]: Step Guide toggle only visible when timer is idle or stopped -- prevents changing guidance mode mid-brew
 - [03-02]: Manual Stepper fallback preserved within timer section for users who prefer not to use the timer
 - [03-02]: BrewStepGuideView Next Step button always shown (not just for untimed steps) to allow manual override
+- [03-03]: Brews tab uses "mug" SF Symbol, distinct from "cup.and.saucer" used for Methods tab
+- [03-03]: BrewLogDetailView uses ScrollView+VStack (not Form) for read-only detail layout
+- [03-03]: Photo section placed after Rating & Notes in AddBrewLogView form order
 
 ### Pending Todos
 
@@ -95,5 +98,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-09
-Stopped at: Phase 03 plan 02 complete. Ready for 03-03 (brew log list, detail, photos).
-Resume file: .planning/phases/03-brew-logging/03-03-PLAN.md
+Stopped at: Phase 03 complete (all 3 plans). Ready for Phase 04 (Tasting Notes).
+Resume file: .planning/phases/04-tasting-notes/04-RESEARCH.md
