@@ -41,12 +41,14 @@ final class SyncMonitor {
             object: nil,
             queue: .main
         ) { [weak self] _ in
-            Task { await self?.checkAccountStatus() }
+            Task { @MainActor in
+                await self?.checkAccountStatus()
+            }
         }
 
-        // Check account status on initialization
-        Task {
-            await checkAccountStatus()
+        // Check account status on initialization - wrapped in Task with error handling
+        Task { @MainActor [weak self] in
+            await self?.checkAccountStatus()
         }
     }
 
@@ -81,8 +83,16 @@ final class SyncMonitor {
 
     @MainActor
     func checkAccountStatus() async {
+        // Silently handle any errors - CloudKit might not be available
+        guard let container = try? CKContainer(identifier: CKContainer.default().containerIdentifier ?? "iCloud.com.coffeejournal") else {
+            // CloudKit not available, set no account state
+            importState = .noAccount
+            exportState = .noAccount
+            return
+        }
+
         do {
-            let status = try await CKContainer.default().accountStatus()
+            let status = try await container.accountStatus()
             switch status {
             case .available:
                 // Account is available, clear any no-account state
