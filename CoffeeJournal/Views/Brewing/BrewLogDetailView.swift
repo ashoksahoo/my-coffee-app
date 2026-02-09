@@ -1,7 +1,9 @@
 import SwiftUI
+import SwiftData
 
 struct BrewLogDetailView: View {
     let brew: BrewLog
+    @State private var showTastingEntry = false
 
     var body: some View {
         ScrollView {
@@ -10,6 +12,7 @@ struct BrewLogDetailView: View {
                 equipmentSection
                 parametersSection
                 ratingSection
+                tastingNotesSection
                 notesSection
                 metadataSection
             }
@@ -17,6 +20,11 @@ struct BrewLogDetailView: View {
         }
         .navigationTitle("Brew Detail")
         .navigationBarTitleDisplayMode(.inline)
+        .sheet(isPresented: $showTastingEntry) {
+            NavigationStack {
+                TastingNoteEntryView(brewLog: brew)
+            }
+        }
     }
 
     // MARK: - Photo
@@ -107,6 +115,77 @@ struct BrewLogDetailView: View {
                             .foregroundStyle(index <= brew.rating ? AppColors.primary : AppColors.muted)
                     }
                 }
+            }
+        }
+    }
+
+    // MARK: - Tasting Notes
+
+    private var tastingNotesSection: some View {
+        VStack(alignment: .leading, spacing: AppSpacing.sm) {
+            Text("Tasting Notes")
+                .font(AppTypography.title)
+
+            if let note = brew.tastingNote {
+                if note.acidity > 0 {
+                    parameterRow(label: "Acidity", value: "\(note.acidity)/5")
+                }
+                if note.body > 0 {
+                    parameterRow(label: "Body", value: "\(note.body)/5")
+                }
+                if note.sweetness > 0 {
+                    parameterRow(label: "Sweetness", value: "\(note.sweetness)/5")
+                }
+
+                // Display flavor tags
+                if !note.flavorTags.isEmpty,
+                   let data = note.flavorTags.data(using: .utf8),
+                   let tags = try? JSONDecoder().decode([String].self, from: data) {
+                    let displayTags: [(id: String, name: String, isCustom: Bool)] = tags.compactMap { tag in
+                        if tag.hasPrefix("custom:") {
+                            let name = String(tag.dropFirst("custom:".count))
+                            return (id: tag, name: name, isCustom: true)
+                        } else if let node = FlavorWheel.findNode(byId: tag) {
+                            return (id: tag, name: node.name, isCustom: false)
+                        }
+                        return nil
+                    }
+
+                    if !displayTags.isEmpty {
+                        FlowLayout(spacing: 8) {
+                            ForEach(displayTags, id: \.id) { tag in
+                                FlavorTagChipView(
+                                    name: tag.name,
+                                    isSelected: true,
+                                    onTap: {}
+                                )
+                            }
+                        }
+                    }
+                }
+
+                if !note.freeformNotes.isEmpty {
+                    Text(note.freeformNotes)
+                        .font(AppTypography.body)
+                        .foregroundStyle(AppColors.secondary)
+                }
+
+                Button {
+                    showTastingEntry = true
+                } label: {
+                    Label("Edit Tasting Notes", systemImage: "pencil")
+                        .font(AppTypography.body)
+                }
+                .foregroundStyle(AppColors.primary)
+                .padding(.top, AppSpacing.xs)
+            } else {
+                Button {
+                    showTastingEntry = true
+                } label: {
+                    Label("Add Tasting Notes", systemImage: "plus.circle")
+                        .font(AppTypography.body)
+                }
+                .foregroundStyle(AppColors.primary)
             }
         }
     }

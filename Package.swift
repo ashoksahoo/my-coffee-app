@@ -49,6 +49,10 @@ let package = Package(
                 "Models/FlavorWheel.swift",
                 "Utilities/FlowLayout.swift",
                 "ViewModels/TastingNoteViewModel.swift",
+                "Views/Tasting/AttributeSliderView.swift",
+                "Views/Tasting/FlavorTagChipView.swift",
+                "Views/Tasting/FlavorTagFlowView.swift",
+                "Views/Tasting/TastingNoteEntryView.swift",
             ]
         ),
     ]

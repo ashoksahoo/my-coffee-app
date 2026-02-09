@@ -213,6 +213,10 @@ struct AddBrewLogView: View {
             TextField("Tasting notes (optional)", text: $viewModel.notes, axis: .vertical)
                 .font(AppTypography.body)
                 .lineLimit(3...6)
+
+            Text("You can add detailed tasting notes after saving this brew.")
+                .font(AppTypography.caption)
+                .foregroundStyle(AppColors.subtle)
         }
     }
 
