@@ -146,6 +146,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00B78D46303D1E4D38BEB631 /* CoffeeJournal.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = CoffeeJournal/CoffeeJournal.entitlements; sourceTree = "<group>"; };
 		014FFB2DA26C4B6B8A779504 /* BeanRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeanRow.swift; path = CoffeeJournal/Views/Beans/BeanRow.swift; sourceTree = "<group>"; };
 		08E8293CAE4B037A0915CE21 /* TastingNoteEntryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TastingNoteEntryView.swift; path = CoffeeJournal/Views/Tasting/TastingNoteEntryView.swift; sourceTree = "<group>"; };
 		099E721499955159C235059F /* NetworkMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkMonitor.swift; path = CoffeeJournal/Services/NetworkMonitor.swift; sourceTree = "<group>"; };
@@ -337,6 +338,7 @@
 				9ED56D77D9FD4B5D /* Views */,
 				EE200001EE200001 /* ViewModels */,
 				32312D707D2F41478 /* Utilities */,
+				00B78D46303D1E4D38BEB631 /* CoffeeJournal.entitlements */,
 			);
 			path = CoffeeJournal;
 			sourceTree = "<group>";
@@ -901,6 +903,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CoffeeJournal/CoffeeJournal.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -929,6 +932,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CoffeeJournal/CoffeeJournal.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
