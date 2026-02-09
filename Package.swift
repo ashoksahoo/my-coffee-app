@@ -46,6 +46,9 @@ let package = Package(
                 "Views/Brewing/BrewLogRow.swift",
                 "Views/Brewing/BrewLogListView.swift",
                 "Views/Brewing/BrewLogDetailView.swift",
+                "Models/FlavorWheel.swift",
+                "Utilities/FlowLayout.swift",
+                "ViewModels/TastingNoteViewModel.swift",
             ]
         ),
     ]

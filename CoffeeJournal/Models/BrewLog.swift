@@ -20,6 +20,7 @@ final class BrewLog {
     var brewMethod: BrewMethod?
     var grinder: Grinder?
     var coffeeBean: CoffeeBean?
+    @Relationship(inverse: \TastingNote.brewLog) var tastingNote: TastingNote?
 
     init() {}
 }
