@@ -5,24 +5,24 @@
 See: .planning/PROJECT.md (updated 2026-02-07)
 
 **Core value:** Remember and improve your coffee brewing by tracking what works
-**Current focus:** Phase 2 - Coffee Bean Tracking (Complete)
+**Current focus:** Phase 3 - Brew Logging (In Progress)
 
 ## Current Position
 
-Phase: 2 of 8 (Coffee Bean Tracking)
-Plan: 2 of 2 complete in current phase
-Status: Phase complete
-Last activity: 2026-02-09 -- Completed 02-02-PLAN.md (Bag label OCR scanning with VisionKit)
+Phase: 3 of 8 (Brew Logging)
+Plan: 1 of 3 complete in current phase
+Status: In progress
+Last activity: 2026-02-09 -- Completed 03-01-PLAN.md (Brew log entry form with equipment/bean selection, parameters, ratio, rating)
 
-Progress: [================] 2/2 plans complete in phase
-Overall: [████████████████████████████░░░░] 7/7 plans defined
+Progress: [=====...........] 1/3 plans complete in phase
+Overall: [████████████████████████████████░░░░░░] 8/10 plans defined
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 7
+- Total plans completed: 8
 - Average duration: ~6min
-- Total execution time: ~45min
+- Total execution time: ~48min
 
 **By Phase:**
 
@@ -30,10 +30,11 @@ Overall: [███████████████████████�
 |-------|-------|-------|----------|
 | 01-foundation-equipment | 5/5 | ~40min | ~8min |
 | 02-coffee-bean-tracking | 2/2 | ~5min | ~2.5min |
+| 03-brew-logging | 1/3 | ~3min | ~3min |
 
 **Recent Trend:**
-- Last 5 plans: 01-04 (~3min), 01-05 (~2min), 02-01 (~3min), 02-02 (~2min)
-- Trend: Accelerating (established patterns, high reuse from Phase 1)
+- Last 5 plans: 01-05 (~2min), 02-01 (~3min), 02-02 (~2min), 03-01 (~3min)
+- Trend: Stable (consistent 2-3min per plan)
 
 *Updated after each plan completion*
 
@@ -74,6 +75,9 @@ Recent decisions affecting current work:
 - [02-02]: BagScannerSheet manages scan-to-review flow as self-contained NavigationStack in sheet
 - [02-02]: ScanResultReviewView validation uses OR (roaster or origin) rather than AND for OCR permissiveness
 - [02-02]: Info.plist created as standalone XML file for NSCameraUsageDescription
+- [03-01]: CoffeeBean.lastBrewedDate skipped in saveBrew -- field does not exist on model, adding would be unplanned schema change
+- [03-01]: Temperature shown for all method categories (simpler than excluding pour-over, all methods benefit from temperature tracking)
+- [03-01]: Package.swift expanded to include FreshnessCalculator, RoastLevel, ProcessingMethod for better CLI build coverage
 
 ### Pending Todos
 
@@ -88,5 +92,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-09
-Stopped at: Phase 02 complete. Ready for Phase 03 (Brew Logging).
-Resume file: .planning/phases/03-brew-logging/
+Stopped at: Phase 03 plan 01 complete. Ready for 03-02 (brew timer integration).
+Resume file: .planning/phases/03-brew-logging/03-02-PLAN.md
