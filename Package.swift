@@ -39,6 +39,7 @@ let package = Package(
                 "ViewModels/SetupWizardViewModel.swift",
                 "ViewModels/BrewLogViewModel.swift",
                 "Views/Components/StarRatingView.swift",
+                "Utilities/BrewStepTemplates.swift",
                 "Views/Brewing/AddBrewLogView.swift",
             ]
         ),

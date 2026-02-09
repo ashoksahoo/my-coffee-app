@@ -51,6 +51,12 @@ class BrewLogViewModel {
     var elapsedSeconds: TimeInterval = 0
     var brewTime: Double = 0
 
+    // MARK: - Step Guidance
+
+    var guidanceEnabled: Bool = false
+    var currentStepIndex: Int = 0
+    var stepElapsedSeconds: TimeInterval = 0
+
     // MARK: - Computed Properties
 
     var brewRatio: String {
@@ -94,6 +100,87 @@ class BrewLogViewModel {
 
     var manualBrewTimeTotal: Double {
         Double(brewTimeMinutes * 60 + brewTimeSeconds)
+    }
+
+    var currentSteps: [BrewStep] {
+        BrewStepTemplate.steps(for: selectedMethod?.category ?? .other)
+    }
+
+    var currentStep: BrewStep? {
+        guard currentStepIndex >= 0 && currentStepIndex < currentSteps.count else { return nil }
+        return currentSteps[currentStepIndex]
+    }
+
+    // MARK: - Timer Controls
+
+    func startTimer() {
+        timerStartDate = Date()
+        timerState = .running
+        stepElapsedSeconds = 0
+    }
+
+    func pauseTimer() {
+        pausedElapsed = elapsedSeconds
+        timerState = .paused
+    }
+
+    func resumeTimer() {
+        timerStartDate = Date()
+        timerState = .running
+    }
+
+    func stopTimer() {
+        timerState = .stopped
+        brewTime = elapsedSeconds
+    }
+
+    func resetTimer() {
+        timerState = .idle
+        timerStartDate = nil
+        pausedElapsed = 0
+        elapsedSeconds = 0
+        currentStepIndex = 0
+        stepElapsedSeconds = 0
+    }
+
+    func updateTimer() {
+        guard timerState == .running, let start = timerStartDate else { return }
+        elapsedSeconds = pausedElapsed + Date().timeIntervalSince(start)
+
+        if guidanceEnabled {
+            // Calculate cumulative duration up to (but not including) current step
+            let steps = currentSteps
+            var cumulativeDuration: TimeInterval = 0
+            for i in 0..<currentStepIndex {
+                cumulativeDuration += Double(steps[i].durationSeconds)
+            }
+            stepElapsedSeconds = elapsedSeconds - cumulativeDuration
+
+            // Auto-advance if current step has a timed duration and it has been exceeded
+            if let step = currentStep, step.durationSeconds > 0 {
+                if stepElapsedSeconds >= Double(step.durationSeconds) {
+                    if currentStepIndex < steps.count - 1 {
+                        currentStepIndex += 1
+                        // Recalculate step elapsed for new step
+                        cumulativeDuration += Double(step.durationSeconds)
+                        stepElapsedSeconds = elapsedSeconds - cumulativeDuration
+                    }
+                }
+            }
+        }
+    }
+
+    func advanceStep() {
+        if currentStepIndex < currentSteps.count - 1 {
+            currentStepIndex += 1
+            // Reset step elapsed based on cumulative timing
+            var cumulativeDuration: TimeInterval = 0
+            let steps = currentSteps
+            for i in 0..<currentStepIndex {
+                cumulativeDuration += Double(steps[i].durationSeconds)
+            }
+            stepElapsedSeconds = elapsedSeconds - cumulativeDuration
+        }
     }
 
     // MARK: - Grinder Change Handler
