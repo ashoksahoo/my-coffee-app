@@ -17,6 +17,10 @@ final class SyncMonitor {
     private(set) var exportState: SyncState = .idle
     private(set) var lastSuccessfulSync: Date?
 
+    // CloudKit is disabled by default (set to .none in CoffeeJournalApp.swift)
+    // Set this to true when CloudKit is enabled in ModelConfiguration
+    private let cloudKitEnabled = false
+
     var overallState: SyncState {
         if case .failed(let msg) = importState { return .failed(msg) }
         if case .failed(let msg) = exportState { return .failed(msg) }
@@ -28,6 +32,14 @@ final class SyncMonitor {
     }
 
     init() {
+        // Skip CloudKit monitoring if disabled
+        guard cloudKitEnabled else {
+            // Set to noAccount state to indicate CloudKit is not available
+            importState = .noAccount
+            exportState = .noAccount
+            return
+        }
+
         NotificationCenter.default.addObserver(
             forName: NSPersistentCloudKitContainer.eventChangedNotification,
             object: nil,
@@ -83,6 +95,13 @@ final class SyncMonitor {
 
     @MainActor
     func checkAccountStatus() async {
+        // Skip CloudKit checks if disabled
+        guard cloudKitEnabled else {
+            importState = .noAccount
+            exportState = .noAccount
+            return
+        }
+
         // Silently handle any errors - CloudKit might not be available
         guard let container = try? CKContainer(identifier: CKContainer.default().containerIdentifier ?? "iCloud.io.ashok.mycoffeeapp") else {
             // CloudKit not available, set no account state
