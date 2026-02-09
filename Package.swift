@@ -56,6 +56,7 @@ let package = Package(
                 "Views/Tasting/FlavorWheelView.swift",
                 "Views/Tasting/SpiderChartView.swift",
                 "Views/Tasting/FlavorProfileView.swift",
+                "Views/Tasting/BrewComparisonView.swift",
             ]
         ),
     ]

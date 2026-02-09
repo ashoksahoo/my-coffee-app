@@ -10,6 +10,14 @@ struct BrewLogListView: View {
         BrewLogListContent()
             .navigationTitle("Brews")
             .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    NavigationLink {
+                        BrewComparisonView()
+                    } label: {
+                        Image(systemName: "arrow.left.arrow.right")
+                            .foregroundStyle(AppColors.primary)
+                    }
+                }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         showingAddSheet = true
