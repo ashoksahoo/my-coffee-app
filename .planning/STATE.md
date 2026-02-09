@@ -10,19 +10,19 @@ See: .planning/PROJECT.md (updated 2026-02-07)
 ## Current Position
 
 Phase: 3 of 8 (Brew Logging)
-Plan: 1 of 3 complete in current phase
+Plan: 2 of 3 complete in current phase
 Status: In progress
-Last activity: 2026-02-09 -- Completed 03-01-PLAN.md (Brew log entry form with equipment/bean selection, parameters, ratio, rating)
+Last activity: 2026-02-09 -- Completed 03-02-PLAN.md (Brew timer with step-by-step guidance)
 
-Progress: [=====...........] 1/3 plans complete in phase
-Overall: [████████████████████████████████░░░░░░] 8/10 plans defined
+Progress: [==========......] 2/3 plans complete in phase
+Overall: [████████████████████████████████░░░░░░] 9/10 plans defined
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 8
+- Total plans completed: 9
 - Average duration: ~6min
-- Total execution time: ~48min
+- Total execution time: ~50min
 
 **By Phase:**
 
@@ -30,10 +30,10 @@ Overall: [███████████████████████�
 |-------|-------|-------|----------|
 | 01-foundation-equipment | 5/5 | ~40min | ~8min |
 | 02-coffee-bean-tracking | 2/2 | ~5min | ~2.5min |
-| 03-brew-logging | 1/3 | ~3min | ~3min |
+| 03-brew-logging | 2/3 | ~5min | ~2.5min |
 
 **Recent Trend:**
-- Last 5 plans: 01-05 (~2min), 02-01 (~3min), 02-02 (~2min), 03-01 (~3min)
+- Last 5 plans: 02-01 (~3min), 02-02 (~2min), 03-01 (~3min), 03-02 (~2min)
 - Trend: Stable (consistent 2-3min per plan)
 
 *Updated after each plan completion*
@@ -78,6 +78,9 @@ Recent decisions affecting current work:
 - [03-01]: CoffeeBean.lastBrewedDate skipped in saveBrew -- field does not exist on model, adding would be unplanned schema change
 - [03-01]: Temperature shown for all method categories (simpler than excluding pour-over, all methods benefit from temperature tracking)
 - [03-01]: Package.swift expanded to include FreshnessCalculator, RoastLevel, ProcessingMethod for better CLI build coverage
+- [03-02]: Step Guide toggle only visible when timer is idle or stopped -- prevents changing guidance mode mid-brew
+- [03-02]: Manual Stepper fallback preserved within timer section for users who prefer not to use the timer
+- [03-02]: BrewStepGuideView Next Step button always shown (not just for untimed steps) to allow manual override
 
 ### Pending Todos
 
@@ -92,5 +95,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-09
-Stopped at: Phase 03 plan 01 complete. Ready for 03-02 (brew timer integration).
-Resume file: .planning/phases/03-brew-logging/03-02-PLAN.md
+Stopped at: Phase 03 plan 02 complete. Ready for 03-03 (brew log list, detail, photos).
+Resume file: .planning/phases/03-brew-logging/03-03-PLAN.md
