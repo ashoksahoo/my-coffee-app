@@ -85,11 +85,12 @@ Plans:
   3. User can view a flavor profile visualization (spider chart or word cloud) for any brew
   4. User can compare tasting notes side-by-side for two different brews
   5. Tasting data syncs across devices via iCloud
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 04-01: Structured tasting attributes and SCA flavor wheel UI
-- [ ] 04-02: Flavor visualizations and brew comparison
+- [ ] 04-01-PLAN.md -- Data layer, tasting entry form with attribute sliders, flavor tag selection, BrewLog inverse relationship
+- [ ] 04-02-PLAN.md -- Interactive radial SCA flavor wheel with drill-down and integration into entry form
+- [ ] 04-03-PLAN.md -- Spider chart, flavor profile visualization, and side-by-side brew comparison view
 
 ### Phase 5: History & Search
 **Goal**: Users can browse, search, and analyze their brewing history
@@ -160,7 +161,7 @@ Note: Phase 6 (Sync & Offline) depends only on Phase 1 and can be executed in pa
 | 1. Foundation + Equipment | 0/5 | Planning complete | - |
 | 2. Coffee Bean Tracking | 0/2 | Planning complete | - |
 | 3. Brew Logging | 0/3 | Planning complete | - |
-| 4. Tasting & Flavor Notes | 0/2 | Not started | - |
+| 4. Tasting & Flavor Notes | 0/3 | Planning complete | - |
 | 5. History & Search | 0/2 | Not started | - |
 | 6. Sync & Offline | 0/1 | Not started | - |
 | 7. Apple Intelligence | 0/2 | Not started | - |
