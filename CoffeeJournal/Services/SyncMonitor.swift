@@ -84,7 +84,7 @@ final class SyncMonitor {
     @MainActor
     func checkAccountStatus() async {
         // Silently handle any errors - CloudKit might not be available
-        guard let container = try? CKContainer(identifier: CKContainer.default().containerIdentifier ?? "iCloud.com.coffeejournal") else {
+        guard let container = try? CKContainer(identifier: CKContainer.default().containerIdentifier ?? "iCloud.io.ashok.mycoffeeapp") else {
             // CloudKit not available, set no account state
             importState = .noAccount
             exportState = .noAccount
