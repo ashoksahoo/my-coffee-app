@@ -34,11 +34,17 @@ struct BrewLogListView: View {
         .searchable(text: $searchText, prompt: "Search brew notes")
         .navigationTitle("Brews")
         .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
+            ToolbarItemGroup(placement: .topBarLeading) {
                 NavigationLink {
                     BrewComparisonView()
                 } label: {
                     Image(systemName: "arrow.left.arrow.right")
+                        .foregroundStyle(AppColors.primary)
+                }
+                NavigationLink {
+                    StatisticsDashboardView()
+                } label: {
+                    Image(systemName: "chart.bar.xaxis")
                         .foregroundStyle(AppColors.primary)
                 }
             }
