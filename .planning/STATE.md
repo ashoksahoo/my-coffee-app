@@ -5,24 +5,24 @@
 See: .planning/PROJECT.md (updated 2026-02-07)
 
 **Core value:** Remember and improve your coffee brewing by tracking what works
-**Current focus:** Phase 5 - History & Search (Complete)
+**Current focus:** Phase 6 - Sync & Offline (Complete)
 
 ## Current Position
 
-Phase: 5 of 8 (History & Search)
-Plan: 2 of 2 complete in current phase
+Phase: 6 of 8 (Sync & Offline)
+Plan: 1 of 1 complete in current phase
 Status: Phase complete
-Last activity: 2026-02-09 -- Completed 05-02-PLAN.md (statistics dashboard with Swift Charts)
+Last activity: 2026-02-09 -- Completed 06-01-PLAN.md (sync monitoring and offline awareness)
 
-Progress: [████████████████] 2/2 plans complete in phase
-Overall: [████████████████████████████████████████████████] 15/15 plans
+Progress: [████████████████] 1/1 plans complete in phase
+Overall: [████████████████████████████████████████████████████] 16/16 plans
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 15
+- Total plans completed: 16
 - Average duration: ~4min
-- Total execution time: ~66min
+- Total execution time: ~69min
 
 **By Phase:**
 
@@ -33,9 +33,10 @@ Overall: [███████████████████████�
 | 03-brew-logging | 3/3 | ~7min | ~2.3min |
 | 04-tasting-flavor-notes | 3/3 | ~9min | ~3min |
 | 05-history-search | 2/2 | ~5min | ~2.5min |
+| 06-sync-offline | 1/1 | ~3min | ~3min |
 
 **Recent Trend:**
-- Last 5 plans: 04-02 (~2min), 04-03 (~3min), 05-01 (~3min), 05-02 (~2min)
+- Last 5 plans: 04-03 (~3min), 05-01 (~3min), 05-02 (~2min), 06-01 (~3min)
 - Trend: Stable (consistent 2-3min per plan)
 
 *Updated after each plan completion*
@@ -107,6 +108,11 @@ Recent decisions affecting current work:
 - [05-02]: Top beans chart uses horizontal BarMark for long bean names
 - [05-02]: Rating trend groups by month via Calendar.dateInterval for proper monthly aggregation
 - [05-02]: ToolbarItemGroup groups Compare and Statistics buttons in leading position
+- [06-01]: SyncMonitor imports CoreData solely for eventChangedNotification constant -- stable API wrapped in single class
+- [06-01]: Both monitors use @Observable (not ObservableObject/@Published) for iOS 17+ fine-grained observation
+- [06-01]: OfflineBanner available as component but NOT wired into MainTabView -- Settings is primary sync status surface per Apple's pattern
+- [06-01]: CloudKit last-writer-wins conflict resolution accepted -- personal coffee journal with 1-2 devices has low conflict probability
+- [06-01]: Existing ImageCompressor satisfies SYNC-05 photo compression -- no changes needed
 
 ### Pending Todos
 
@@ -141,5 +147,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-09
-Stopped at: Phase 05 complete. All 15 plans across 5 phases executed.
-Resume file: .planning/phases/05-history-search/05-02-SUMMARY.md
+Stopped at: Phase 06 complete. All 16 plans across 6 phases executed.
+Resume file: .planning/phases/06-sync-offline/06-01-SUMMARY.md
