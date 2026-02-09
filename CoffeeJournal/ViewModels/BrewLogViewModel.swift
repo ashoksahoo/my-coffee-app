@@ -42,6 +42,7 @@ class BrewLogViewModel {
 
     var rating: Int = 0
     var notes: String = ""
+    var photoData: Data?
 
     // MARK: - Timer State
 
@@ -95,7 +96,8 @@ class BrewLogViewModel {
     var hasUnsavedChanges: Bool {
         dose > 0 || selectedMethod != nil || !notes.isEmpty || rating > 0 ||
         waterAmount > 0 || waterTemperature > 0 || yieldAmount > 0 ||
-        !pressureProfile.isEmpty || brewTimeMinutes > 0 || brewTimeSeconds > 0
+        !pressureProfile.isEmpty || brewTimeMinutes > 0 || brewTimeSeconds > 0 ||
+        photoData != nil
     }
 
     var manualBrewTimeTotal: Double {
@@ -205,6 +207,7 @@ class BrewLogViewModel {
         log.grinderSetting = grinderSetting
         log.rating = rating
         log.notes = notes
+        log.photoData = photoData
 
         // Set brew time: timer takes priority over manual entry
         if timerState == .stopped {

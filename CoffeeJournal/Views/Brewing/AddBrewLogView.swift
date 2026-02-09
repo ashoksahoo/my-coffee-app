@@ -20,6 +20,7 @@ struct AddBrewLogView: View {
             brewRatioSection
             brewTimeSection
             ratingAndNotesSection
+            photoSection
         }
         .scrollDismissesKeyboard(.interactively)
         .navigationTitle("Log Brew")
@@ -212,6 +213,15 @@ struct AddBrewLogView: View {
             TextField("Tasting notes (optional)", text: $viewModel.notes, axis: .vertical)
                 .font(AppTypography.body)
                 .lineLimit(3...6)
+        }
+    }
+
+    // MARK: - Photo
+
+    @ViewBuilder
+    private var photoSection: some View {
+        Section("Photo") {
+            EquipmentPhotoPickerView(photoData: $viewModel.photoData)
         }
     }
 }

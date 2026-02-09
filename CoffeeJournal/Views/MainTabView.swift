@@ -4,6 +4,13 @@ struct MainTabView: View {
     var body: some View {
         TabView {
             NavigationStack {
+                BrewLogListView()
+            }
+            .tabItem {
+                Label("Brews", systemImage: "mug")
+            }
+
+            NavigationStack {
                 BeanListView()
             }
             .tabItem {
