@@ -52,11 +52,11 @@ Plans:
   3. User can scan a coffee bag label with their camera and have roaster, origin, variety, and roast date auto-populated
   4. User can search their coffee collection by roaster or origin and archive beans no longer in use
   5. Coffee data syncs across devices via iCloud
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 02-01: Bean domain model, repository, and CRUD UI
-- [ ] 02-02: Freshness tracking, bag photo OCR, and search
+- [ ] 02-01-PLAN.md -- Bean enums, freshness calculator, CRUD views (list with search/archive, add, detail/edit), Beans tab wiring
+- [ ] 02-02-PLAN.md -- Camera bag label OCR scanning with heuristic parsing and review flow
 
 ### Phase 3: Brew Logging
 **Goal**: Users can log a complete brew from equipment selection through final parameters
@@ -158,7 +158,7 @@ Note: Phase 6 (Sync & Offline) depends only on Phase 1 and can be executed in pa
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation + Equipment | 0/5 | Planning complete | - |
-| 2. Coffee Bean Tracking | 0/2 | Not started | - |
+| 2. Coffee Bean Tracking | 0/2 | Planning complete | - |
 | 3. Brew Logging | 0/3 | Not started | - |
 | 4. Tasting & Flavor Notes | 0/2 | Not started | - |
 | 5. History & Search | 0/2 | Not started | - |
