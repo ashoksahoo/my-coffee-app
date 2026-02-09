@@ -24,8 +24,7 @@ struct MethodListView: View {
                 List {
                     ForEach(methods) { method in
                         NavigationLink {
-                            Text(method.name)
-                                .font(AppTypography.title)
+                            MethodDetailView(method: method)
                         } label: {
                             EquipmentRow(
                                 name: method.name,

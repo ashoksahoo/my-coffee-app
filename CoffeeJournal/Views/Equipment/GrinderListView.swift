@@ -24,8 +24,7 @@ struct GrinderListView: View {
                 List {
                     ForEach(grinders) { grinder in
                         NavigationLink {
-                            Text(grinder.name)
-                                .font(AppTypography.title)
+                            GrinderDetailView(grinder: grinder)
                         } label: {
                             EquipmentRow(
                                 name: grinder.name,

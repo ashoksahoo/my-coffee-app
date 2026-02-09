@@ -34,6 +34,9 @@
 		CC400003CC400003 /* MethodSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400003DD400003 /* MethodSelectionView.swift */; };
 		CC400004CC400004 /* GrinderEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400004DD400004 /* GrinderEntryView.swift */; };
 		CC400005CC400005 /* SetupCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400005DD400005 /* SetupCompleteView.swift */; };
+		CC500001CC500001 /* MethodDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD500001DD500001 /* MethodDetailView.swift */; };
+		CC500002CC500002 /* GrinderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD500002DD500002 /* GrinderDetailView.swift */; };
+		CC500003CC500003 /* EquipmentPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD500003DD500003 /* EquipmentPhotoPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +68,9 @@
 		DD400003DD400003 /* MethodSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodSelectionView.swift; sourceTree = "<group>"; };
 		DD400004DD400004 /* GrinderEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrinderEntryView.swift; sourceTree = "<group>"; };
 		DD400005DD400005 /* SetupCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupCompleteView.swift; sourceTree = "<group>"; };
+		DD500001DD500001 /* MethodDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodDetailView.swift; sourceTree = "<group>"; };
+		DD500002DD500002 /* GrinderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrinderDetailView.swift; sourceTree = "<group>"; };
+		DD500003DD500003 /* EquipmentPhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentPhotoPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,9 +164,12 @@
 			isa = PBXGroup;
 			children = (
 				DD300001DD300001 /* MethodListView.swift */,
+				DD500001DD500001 /* MethodDetailView.swift */,
 				DD300002DD300002 /* AddMethodView.swift */,
 				DD300003DD300003 /* GrinderListView.swift */,
+				DD500002DD500002 /* GrinderDetailView.swift */,
 				DD300004DD300004 /* AddGrinderView.swift */,
+				DD500003DD500003 /* EquipmentPhotoPickerView.swift */,
 			);
 			path = Equipment;
 			sourceTree = "<group>";
@@ -276,6 +285,9 @@
 				CC400003CC400003 /* MethodSelectionView.swift in Sources */,
 				CC400004CC400004 /* GrinderEntryView.swift in Sources */,
 				CC400005CC400005 /* SetupCompleteView.swift in Sources */,
+				CC500001CC500001 /* MethodDetailView.swift in Sources */,
+				CC500002CC500002 /* GrinderDetailView.swift in Sources */,
+				CC500003CC500003 /* EquipmentPhotoPickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
