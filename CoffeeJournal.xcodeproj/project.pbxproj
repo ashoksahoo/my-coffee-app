@@ -76,6 +76,76 @@
 		EC4853E0DDE9531F6BD77EB7 /* BagLabelParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9B8A943C7499703D46828B /* BagLabelParser.swift */; };
 		EFE88A50DB1F9FEAEE0F3EAC /* RoastLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2436F912F5FE42AC4FF6B1A /* RoastLevel.swift */; };
 		F48528280182198D3C42F577 /* AddBrewLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40163B2BA83D83F734CD147 /* AddBrewLogView.swift */; };
+		F93FD78F2F3A615E0009322A /* SchemaV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7352F3A615E0009322A /* SchemaV1.swift */; };
+		F93FD7902F3A615E0009322A /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7612F3A615E0009322A /* StarRatingView.swift */; };
+		F93FD7912F3A615E0009322A /* BrewLogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7582F3A615E0009322A /* BrewLogDetailView.swift */; };
+		F93FD7922F3A615E0009322A /* AddGrinderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7642F3A615E0009322A /* AddGrinderView.swift */; };
+		F93FD7932F3A615E0009322A /* BrewLogRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD75A2F3A615E0009322A /* BrewLogRow.swift */; };
+		F93FD7942F3A615E0009322A /* GrinderEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7752F3A615E0009322A /* GrinderEntryView.swift */; };
+		F93FD7952F3A615E0009322A /* AddMethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7652F3A615E0009322A /* AddMethodView.swift */; };
+		F93FD7962F3A615E0009322A /* BrewHistoryListContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD76D2F3A615E0009322A /* BrewHistoryListContent.swift */; };
+		F93FD7972F3A615E0009322A /* FlavorWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD73A2F3A615E0009322A /* FlavorWheel.swift */; };
+		F93FD7982F3A615E0009322A /* BrewFilterSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD76C2F3A615E0009322A /* BrewFilterSheet.swift */; };
+		F93FD7992F3A615E0009322A /* SyncMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7442F3A615E0009322A /* SyncMonitor.swift */; };
+		F93FD79A2F3A615E0009322A /* TastingNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7412F3A615E0009322A /* TastingNote.swift */; };
+		F93FD79B2F3A615E0009322A /* FlavorProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD77D2F3A615E0009322A /* FlavorProfileView.swift */; };
+		F93FD79C2F3A615E0009322A /* GrinderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD73C2F3A615E0009322A /* GrinderType.swift */; };
+		F93FD79D2F3A615E0009322A /* SetupWizardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7782F3A615E0009322A /* SetupWizardView.swift */; };
+		F93FD79E2F3A615E0009322A /* GrinderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7682F3A615E0009322A /* GrinderListView.swift */; };
+		F93FD79F2F3A615E0009322A /* SetupCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7772F3A615E0009322A /* SetupCompleteView.swift */; };
+		F93FD7A02F3A615E0009322A /* BrewMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7382F3A615E0009322A /* BrewMethod.swift */; };
+		F93FD7A12F3A615E0009322A /* MethodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD73D2F3A615E0009322A /* MethodCategory.swift */; };
+		F93FD7A22F3A615E0009322A /* BrewStepGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD75B2F3A615E0009322A /* BrewStepGuideView.swift */; };
+		F93FD7A32F3A615E0009322A /* BrewLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD74D2F3A615E0009322A /* BrewLogViewModel.swift */; };
+		F93FD7A42F3A615E0009322A /* Grinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD73B2F3A615E0009322A /* Grinder.swift */; };
+		F93FD7A52F3A615E0009322A /* MigrationPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7342F3A615E0009322A /* MigrationPlan.swift */; };
+		F93FD7A62F3A615E0009322A /* FlavorWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7802F3A615E0009322A /* FlavorWheelView.swift */; };
+		F93FD7A72F3A615E0009322A /* SpiderChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7812F3A615E0009322A /* SpiderChartView.swift */; };
+		F93FD7A82F3A615E0009322A /* MethodTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD73E2F3A615E0009322A /* MethodTemplate.swift */; };
+		F93FD7A92F3A615E0009322A /* FlavorTagFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD77F2F3A615E0009322A /* FlavorTagFlowView.swift */; };
+		F93FD7AA2F3A615E0009322A /* CoffeeBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7392F3A615E0009322A /* CoffeeBean.swift */; };
+		F93FD7AB2F3A615E0009322A /* BrewStepTemplates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7482F3A615E0009322A /* BrewStepTemplates.swift */; };
+		F93FD7AC2F3A615E0009322A /* BrewLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7372F3A615E0009322A /* BrewLog.swift */; };
+		F93FD7AD2F3A615E0009322A /* GrinderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7672F3A615E0009322A /* GrinderDetailView.swift */; };
+		F93FD7AE2F3A615E0009322A /* CoffeeJournalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7862F3A615E0009322A /* CoffeeJournalApp.swift */; };
+		F93FD7AF2F3A615E0009322A /* MethodSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7762F3A615E0009322A /* MethodSelectionView.swift */; };
+		F93FD7B02F3A615E0009322A /* ScanResultReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7712F3A615E0009322A /* ScanResultReviewView.swift */; };
+		F93FD7B12F3A615E0009322A /* MonochromeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7602F3A615E0009322A /* MonochromeStyle.swift */; };
+		F93FD7B22F3A615E0009322A /* FreshnessCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD74A2F3A615E0009322A /* FreshnessCalculator.swift */; };
+		F93FD7B32F3A615E0009322A /* ImageCompressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD74B2F3A615E0009322A /* ImageCompressor.swift */; };
+		F93FD7B42F3A615E0009322A /* AttributeSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD77B2F3A615E0009322A /* AttributeSliderView.swift */; };
+		F93FD7B52F3A615E0009322A /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD78B2F3A615E0009322A /* Package.swift */; };
+		F93FD7B62F3A615E0009322A /* BeanDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7522F3A615E0009322A /* BeanDetailView.swift */; };
+		F93FD7B72F3A615E0009322A /* ProcessingMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD73F2F3A615E0009322A /* ProcessingMethod.swift */; };
+		F93FD7B82F3A615E0009322A /* FlavorTagChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD77E2F3A615E0009322A /* FlavorTagChipView.swift */; };
+		F93FD7B92F3A615E0009322A /* MethodDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7692F3A615E0009322A /* MethodDetailView.swift */; };
+		F93FD7BA2F3A615E0009322A /* StatisticsDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD76E2F3A615E0009322A /* StatisticsDashboardView.swift */; };
+		F93FD7BB2F3A615E0009322A /* MethodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD76A2F3A615E0009322A /* MethodListView.swift */; };
+		F93FD7BC2F3A615E0009322A /* SyncStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7622F3A615E0009322A /* SyncStatusView.swift */; };
+		F93FD7BD2F3A615E0009322A /* BrewTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD75C2F3A615E0009322A /* BrewTimerView.swift */; };
+		F93FD7BE2F3A615E0009322A /* TastingNoteEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7822F3A615E0009322A /* TastingNoteEntryView.swift */; };
+		F93FD7BF2F3A615E0009322A /* BagLabelParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7472F3A615E0009322A /* BagLabelParser.swift */; };
+		F93FD7C02F3A615E0009322A /* RoastLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7402F3A615E0009322A /* RoastLevel.swift */; };
+		F93FD7C12F3A615E0009322A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7732F3A615E0009322A /* SettingsView.swift */; };
+		F93FD7C22F3A615E0009322A /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7432F3A615E0009322A /* NetworkMonitor.swift */; };
+		F93FD7C32F3A615E0009322A /* AddBrewLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7572F3A615E0009322A /* AddBrewLogView.swift */; };
+		F93FD7C42F3A615E0009322A /* TastingNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD74F2F3A615E0009322A /* TastingNoteViewModel.swift */; };
+		F93FD7C52F3A615E0009322A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7872F3A615E0009322A /* ContentView.swift */; };
+		F93FD7C62F3A615E0009322A /* AddBeanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7512F3A615E0009322A /* AddBeanView.swift */; };
+		F93FD7C72F3A615E0009322A /* EquipmentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD75F2F3A615E0009322A /* EquipmentRow.swift */; };
+		F93FD7C82F3A615E0009322A /* BeanRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7542F3A615E0009322A /* BeanRow.swift */; };
+		F93FD7C92F3A615E0009322A /* AppStorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7462F3A615E0009322A /* AppStorageKeys.swift */; };
+		F93FD7CA2F3A615E0009322A /* BrewLogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7592F3A615E0009322A /* BrewLogListView.swift */; };
+		F93FD7CB2F3A615E0009322A /* FreshnessIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7552F3A615E0009322A /* FreshnessIndicatorView.swift */; };
+		F93FD7CC2F3A615E0009322A /* WelcomeStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7792F3A615E0009322A /* WelcomeStepView.swift */; };
+		F93FD7CD2F3A615E0009322A /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD75E2F3A615E0009322A /* EmptyStateView.swift */; };
+		F93FD7CE2F3A615E0009322A /* SetupWizardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD74E2F3A615E0009322A /* SetupWizardViewModel.swift */; };
+		F93FD7CF2F3A615E0009322A /* EquipmentPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7662F3A615E0009322A /* EquipmentPhotoPickerView.swift */; };
+		F93FD7D02F3A615E0009322A /* BagScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7702F3A615E0009322A /* BagScannerView.swift */; };
+		F93FD7D12F3A615E0009322A /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7492F3A615E0009322A /* FlowLayout.swift */; };
+		F93FD7D22F3A615E0009322A /* BeanListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7532F3A615E0009322A /* BeanListView.swift */; };
+		F93FD7D32F3A615E0009322A /* BrewComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD77C2F3A615E0009322A /* BrewComparisonView.swift */; };
+		F93FD7D42F3A615E0009322A /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7842F3A615E0009322A /* MainTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,6 +218,80 @@
 		F5CAFB78E95C45AD /* CoffeeJournalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeJournalApp.swift; sourceTree = "<group>"; };
 		F6C67BC12CA1418C /* GrinderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrinderType.swift; sourceTree = "<group>"; };
 		F6F77C01FAE13CE97AF82F53 /* BrewHistoryListContent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewHistoryListContent.swift; path = CoffeeJournal/Views/History/BrewHistoryListContent.swift; sourceTree = "<group>"; };
+		F93FD7332F3A615E0009322A /* add_correct_files.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = add_correct_files.rb; sourceTree = "<group>"; };
+		F93FD7342F3A615E0009322A /* MigrationPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationPlan.swift; sourceTree = "<group>"; };
+		F93FD7352F3A615E0009322A /* SchemaV1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemaV1.swift; sourceTree = "<group>"; };
+		F93FD7372F3A615E0009322A /* BrewLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewLog.swift; sourceTree = "<group>"; };
+		F93FD7382F3A615E0009322A /* BrewMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewMethod.swift; sourceTree = "<group>"; };
+		F93FD7392F3A615E0009322A /* CoffeeBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeBean.swift; sourceTree = "<group>"; };
+		F93FD73A2F3A615E0009322A /* FlavorWheel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorWheel.swift; sourceTree = "<group>"; };
+		F93FD73B2F3A615E0009322A /* Grinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grinder.swift; sourceTree = "<group>"; };
+		F93FD73C2F3A615E0009322A /* GrinderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrinderType.swift; sourceTree = "<group>"; };
+		F93FD73D2F3A615E0009322A /* MethodCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodCategory.swift; sourceTree = "<group>"; };
+		F93FD73E2F3A615E0009322A /* MethodTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodTemplate.swift; sourceTree = "<group>"; };
+		F93FD73F2F3A615E0009322A /* ProcessingMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingMethod.swift; sourceTree = "<group>"; };
+		F93FD7402F3A615E0009322A /* RoastLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoastLevel.swift; sourceTree = "<group>"; };
+		F93FD7412F3A615E0009322A /* TastingNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingNote.swift; sourceTree = "<group>"; };
+		F93FD7432F3A615E0009322A /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		F93FD7442F3A615E0009322A /* SyncMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncMonitor.swift; sourceTree = "<group>"; };
+		F93FD7462F3A615E0009322A /* AppStorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageKeys.swift; sourceTree = "<group>"; };
+		F93FD7472F3A615E0009322A /* BagLabelParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagLabelParser.swift; sourceTree = "<group>"; };
+		F93FD7482F3A615E0009322A /* BrewStepTemplates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewStepTemplates.swift; sourceTree = "<group>"; };
+		F93FD7492F3A615E0009322A /* FlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
+		F93FD74A2F3A615E0009322A /* FreshnessCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshnessCalculator.swift; sourceTree = "<group>"; };
+		F93FD74B2F3A615E0009322A /* ImageCompressor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCompressor.swift; sourceTree = "<group>"; };
+		F93FD74D2F3A615E0009322A /* BrewLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewLogViewModel.swift; sourceTree = "<group>"; };
+		F93FD74E2F3A615E0009322A /* SetupWizardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupWizardViewModel.swift; sourceTree = "<group>"; };
+		F93FD74F2F3A615E0009322A /* TastingNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingNoteViewModel.swift; sourceTree = "<group>"; };
+		F93FD7512F3A615E0009322A /* AddBeanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBeanView.swift; sourceTree = "<group>"; };
+		F93FD7522F3A615E0009322A /* BeanDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanDetailView.swift; sourceTree = "<group>"; };
+		F93FD7532F3A615E0009322A /* BeanListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanListView.swift; sourceTree = "<group>"; };
+		F93FD7542F3A615E0009322A /* BeanRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanRow.swift; sourceTree = "<group>"; };
+		F93FD7552F3A615E0009322A /* FreshnessIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshnessIndicatorView.swift; sourceTree = "<group>"; };
+		F93FD7572F3A615E0009322A /* AddBrewLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBrewLogView.swift; sourceTree = "<group>"; };
+		F93FD7582F3A615E0009322A /* BrewLogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewLogDetailView.swift; sourceTree = "<group>"; };
+		F93FD7592F3A615E0009322A /* BrewLogListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewLogListView.swift; sourceTree = "<group>"; };
+		F93FD75A2F3A615E0009322A /* BrewLogRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewLogRow.swift; sourceTree = "<group>"; };
+		F93FD75B2F3A615E0009322A /* BrewStepGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewStepGuideView.swift; sourceTree = "<group>"; };
+		F93FD75C2F3A615E0009322A /* BrewTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewTimerView.swift; sourceTree = "<group>"; };
+		F93FD75E2F3A615E0009322A /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		F93FD75F2F3A615E0009322A /* EquipmentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentRow.swift; sourceTree = "<group>"; };
+		F93FD7602F3A615E0009322A /* MonochromeStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonochromeStyle.swift; sourceTree = "<group>"; };
+		F93FD7612F3A615E0009322A /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
+		F93FD7622F3A615E0009322A /* SyncStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncStatusView.swift; sourceTree = "<group>"; };
+		F93FD7642F3A615E0009322A /* AddGrinderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGrinderView.swift; sourceTree = "<group>"; };
+		F93FD7652F3A615E0009322A /* AddMethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMethodView.swift; sourceTree = "<group>"; };
+		F93FD7662F3A615E0009322A /* EquipmentPhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentPhotoPickerView.swift; sourceTree = "<group>"; };
+		F93FD7672F3A615E0009322A /* GrinderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrinderDetailView.swift; sourceTree = "<group>"; };
+		F93FD7682F3A615E0009322A /* GrinderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrinderListView.swift; sourceTree = "<group>"; };
+		F93FD7692F3A615E0009322A /* MethodDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodDetailView.swift; sourceTree = "<group>"; };
+		F93FD76A2F3A615E0009322A /* MethodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodListView.swift; sourceTree = "<group>"; };
+		F93FD76C2F3A615E0009322A /* BrewFilterSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewFilterSheet.swift; sourceTree = "<group>"; };
+		F93FD76D2F3A615E0009322A /* BrewHistoryListContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewHistoryListContent.swift; sourceTree = "<group>"; };
+		F93FD76E2F3A615E0009322A /* StatisticsDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsDashboardView.swift; sourceTree = "<group>"; };
+		F93FD7702F3A615E0009322A /* BagScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagScannerView.swift; sourceTree = "<group>"; };
+		F93FD7712F3A615E0009322A /* ScanResultReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResultReviewView.swift; sourceTree = "<group>"; };
+		F93FD7732F3A615E0009322A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F93FD7752F3A615E0009322A /* GrinderEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrinderEntryView.swift; sourceTree = "<group>"; };
+		F93FD7762F3A615E0009322A /* MethodSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodSelectionView.swift; sourceTree = "<group>"; };
+		F93FD7772F3A615E0009322A /* SetupCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupCompleteView.swift; sourceTree = "<group>"; };
+		F93FD7782F3A615E0009322A /* SetupWizardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupWizardView.swift; sourceTree = "<group>"; };
+		F93FD7792F3A615E0009322A /* WelcomeStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeStepView.swift; sourceTree = "<group>"; };
+		F93FD77B2F3A615E0009322A /* AttributeSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeSliderView.swift; sourceTree = "<group>"; };
+		F93FD77C2F3A615E0009322A /* BrewComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewComparisonView.swift; sourceTree = "<group>"; };
+		F93FD77D2F3A615E0009322A /* FlavorProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorProfileView.swift; sourceTree = "<group>"; };
+		F93FD77E2F3A615E0009322A /* FlavorTagChipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorTagChipView.swift; sourceTree = "<group>"; };
+		F93FD77F2F3A615E0009322A /* FlavorTagFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorTagFlowView.swift; sourceTree = "<group>"; };
+		F93FD7802F3A615E0009322A /* FlavorWheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlavorWheelView.swift; sourceTree = "<group>"; };
+		F93FD7812F3A615E0009322A /* SpiderChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiderChartView.swift; sourceTree = "<group>"; };
+		F93FD7822F3A615E0009322A /* TastingNoteEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingNoteEntryView.swift; sourceTree = "<group>"; };
+		F93FD7842F3A615E0009322A /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		F93FD7862F3A615E0009322A /* CoffeeJournalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeJournalApp.swift; sourceTree = "<group>"; };
+		F93FD7872F3A615E0009322A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F93FD7882F3A615E0009322A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F93FD78A2F3A615E0009322A /* CoffeeJournal.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CoffeeJournal.xcodeproj; sourceTree = "<group>"; };
+		F93FD78B2F3A615E0009322A /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		F93FD78C2F3A615E0009322A /* remove_stub_files.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = remove_stub_files.rb; sourceTree = "<group>"; };
 		FE673B250EB6C64EB09B7050 /* FlavorTagChipView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlavorTagChipView.swift; path = CoffeeJournal/Views/Tasting/FlavorTagChipView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -252,6 +396,11 @@
 				08E8293CAE4B037A0915CE21 /* TastingNoteEntryView.swift */,
 				834E68B8BC14C4387DEB0F7E /* MainTabView.swift */,
 				7B68E1C3C4A7A546FCB54B2C /* SetupWizardView.swift */,
+				F93FD7332F3A615E0009322A /* add_correct_files.rb */,
+				F93FD7892F3A615E0009322A /* CoffeeJournal */,
+				F93FD78A2F3A615E0009322A /* CoffeeJournal.xcodeproj */,
+				F93FD78B2F3A615E0009322A /* Package.swift */,
+				F93FD78C2F3A615E0009322A /* remove_stub_files.rb */,
 			);
 			sourceTree = "<group>";
 		};
@@ -291,6 +440,208 @@
 				DD200001DD200001 /* SetupWizardViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F93FD7362F3A615E0009322A /* Schema */ = {
+			isa = PBXGroup;
+			children = (
+				F93FD7342F3A615E0009322A /* MigrationPlan.swift */,
+				F93FD7352F3A615E0009322A /* SchemaV1.swift */,
+			);
+			path = Schema;
+			sourceTree = "<group>";
+		};
+		F93FD7422F3A615E0009322A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F93FD7362F3A615E0009322A /* Schema */,
+				F93FD7372F3A615E0009322A /* BrewLog.swift */,
+				F93FD7382F3A615E0009322A /* BrewMethod.swift */,
+				F93FD7392F3A615E0009322A /* CoffeeBean.swift */,
+				F93FD73A2F3A615E0009322A /* FlavorWheel.swift */,
+				F93FD73B2F3A615E0009322A /* Grinder.swift */,
+				F93FD73C2F3A615E0009322A /* GrinderType.swift */,
+				F93FD73D2F3A615E0009322A /* MethodCategory.swift */,
+				F93FD73E2F3A615E0009322A /* MethodTemplate.swift */,
+				F93FD73F2F3A615E0009322A /* ProcessingMethod.swift */,
+				F93FD7402F3A615E0009322A /* RoastLevel.swift */,
+				F93FD7412F3A615E0009322A /* TastingNote.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F93FD7452F3A615E0009322A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F93FD7432F3A615E0009322A /* NetworkMonitor.swift */,
+				F93FD7442F3A615E0009322A /* SyncMonitor.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F93FD74C2F3A615E0009322A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F93FD7462F3A615E0009322A /* AppStorageKeys.swift */,
+				F93FD7472F3A615E0009322A /* BagLabelParser.swift */,
+				F93FD7482F3A615E0009322A /* BrewStepTemplates.swift */,
+				F93FD7492F3A615E0009322A /* FlowLayout.swift */,
+				F93FD74A2F3A615E0009322A /* FreshnessCalculator.swift */,
+				F93FD74B2F3A615E0009322A /* ImageCompressor.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F93FD7502F3A615E0009322A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F93FD74D2F3A615E0009322A /* BrewLogViewModel.swift */,
+				F93FD74E2F3A615E0009322A /* SetupWizardViewModel.swift */,
+				F93FD74F2F3A615E0009322A /* TastingNoteViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F93FD7562F3A615E0009322A /* Beans */ = {
+			isa = PBXGroup;
+			children = (
+				F93FD7512F3A615E0009322A /* AddBeanView.swift */,
+				F93FD7522F3A615E0009322A /* BeanDetailView.swift */,
+				F93FD7532F3A615E0009322A /* BeanListView.swift */,
+				F93FD7542F3A615E0009322A /* BeanRow.swift */,
+				F93FD7552F3A615E0009322A /* FreshnessIndicatorView.swift */,
+			);
+			path = Beans;
+			sourceTree = "<group>";
+		};
+		F93FD75D2F3A615E0009322A /* Brewing */ = {
+			isa = PBXGroup;
+			children = (
+				F93FD7572F3A615E0009322A /* AddBrewLogView.swift */,
+				F93FD7582F3A615E0009322A /* BrewLogDetailView.swift */,
+				F93FD7592F3A615E0009322A /* BrewLogListView.swift */,
+				F93FD75A2F3A615E0009322A /* BrewLogRow.swift */,
+				F93FD75B2F3A615E0009322A /* BrewStepGuideView.swift */,
+				F93FD75C2F3A615E0009322A /* BrewTimerView.swift */,
+			);
+			path = Brewing;
+			sourceTree = "<group>";
+		};
+		F93FD7632F3A615E0009322A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F93FD75E2F3A615E0009322A /* EmptyStateView.swift */,
+				F93FD75F2F3A615E0009322A /* EquipmentRow.swift */,
+				F93FD7602F3A615E0009322A /* MonochromeStyle.swift */,
+				F93FD7612F3A615E0009322A /* StarRatingView.swift */,
+				F93FD7622F3A615E0009322A /* SyncStatusView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F93FD76B2F3A615E0009322A /* Equipment */ = {
+			isa = PBXGroup;
+			children = (
+				F93FD7642F3A615E0009322A /* AddGrinderView.swift */,
+				F93FD7652F3A615E0009322A /* AddMethodView.swift */,
+				F93FD7662F3A615E0009322A /* EquipmentPhotoPickerView.swift */,
+				F93FD7672F3A615E0009322A /* GrinderDetailView.swift */,
+				F93FD7682F3A615E0009322A /* GrinderListView.swift */,
+				F93FD7692F3A615E0009322A /* MethodDetailView.swift */,
+				F93FD76A2F3A615E0009322A /* MethodListView.swift */,
+			);
+			path = Equipment;
+			sourceTree = "<group>";
+		};
+		F93FD76F2F3A615E0009322A /* History */ = {
+			isa = PBXGroup;
+			children = (
+				F93FD76C2F3A615E0009322A /* BrewFilterSheet.swift */,
+				F93FD76D2F3A615E0009322A /* BrewHistoryListContent.swift */,
+				F93FD76E2F3A615E0009322A /* StatisticsDashboardView.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		F93FD7722F3A615E0009322A /* Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				F93FD7702F3A615E0009322A /* BagScannerView.swift */,
+				F93FD7712F3A615E0009322A /* ScanResultReviewView.swift */,
+			);
+			path = Scanner;
+			sourceTree = "<group>";
+		};
+		F93FD7742F3A615E0009322A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F93FD7732F3A615E0009322A /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F93FD77A2F3A615E0009322A /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				F93FD7752F3A615E0009322A /* GrinderEntryView.swift */,
+				F93FD7762F3A615E0009322A /* MethodSelectionView.swift */,
+				F93FD7772F3A615E0009322A /* SetupCompleteView.swift */,
+				F93FD7782F3A615E0009322A /* SetupWizardView.swift */,
+				F93FD7792F3A615E0009322A /* WelcomeStepView.swift */,
+			);
+			path = Setup;
+			sourceTree = "<group>";
+		};
+		F93FD7832F3A615E0009322A /* Tasting */ = {
+			isa = PBXGroup;
+			children = (
+				F93FD77B2F3A615E0009322A /* AttributeSliderView.swift */,
+				F93FD77C2F3A615E0009322A /* BrewComparisonView.swift */,
+				F93FD77D2F3A615E0009322A /* FlavorProfileView.swift */,
+				F93FD77E2F3A615E0009322A /* FlavorTagChipView.swift */,
+				F93FD77F2F3A615E0009322A /* FlavorTagFlowView.swift */,
+				F93FD7802F3A615E0009322A /* FlavorWheelView.swift */,
+				F93FD7812F3A615E0009322A /* SpiderChartView.swift */,
+				F93FD7822F3A615E0009322A /* TastingNoteEntryView.swift */,
+			);
+			path = Tasting;
+			sourceTree = "<group>";
+		};
+		F93FD7852F3A615E0009322A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F93FD7562F3A615E0009322A /* Beans */,
+				F93FD75D2F3A615E0009322A /* Brewing */,
+				F93FD7632F3A615E0009322A /* Components */,
+				F93FD76B2F3A615E0009322A /* Equipment */,
+				F93FD76F2F3A615E0009322A /* History */,
+				F93FD7722F3A615E0009322A /* Scanner */,
+				F93FD7742F3A615E0009322A /* Settings */,
+				F93FD77A2F3A615E0009322A /* Setup */,
+				F93FD7832F3A615E0009322A /* Tasting */,
+				F93FD7842F3A615E0009322A /* MainTabView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F93FD7892F3A615E0009322A /* CoffeeJournal */ = {
+			isa = PBXGroup;
+			children = (
+				F93FD7422F3A615E0009322A /* Models */,
+				F93FD7452F3A615E0009322A /* Services */,
+				F93FD74C2F3A615E0009322A /* Utilities */,
+				F93FD7502F3A615E0009322A /* ViewModels */,
+				F93FD7852F3A615E0009322A /* Views */,
+				F93FD7862F3A615E0009322A /* CoffeeJournalApp.swift */,
+				F93FD7872F3A615E0009322A /* ContentView.swift */,
+				F93FD7882F3A615E0009322A /* Info.plist */,
+			);
+			path = CoffeeJournal;
+			sourceTree = "<group>";
+		};
+		F93FD78D2F3A615E0009322A /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		FF300001FF300001 /* Equipment */ = {
@@ -371,6 +722,12 @@
 			mainGroup = 77BCD03B956B4346;
 			productRefGroup = 5A3197CDFCC742B8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F93FD78D2F3A615E0009322A /* Products */;
+					ProjectRef = F93FD78A2F3A615E0009322A /* CoffeeJournal.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3346B019B6444328 /* CoffeeJournal */,
@@ -437,6 +794,76 @@
 				B374480BE12A7EF82DFCF5B1 /* BrewStepGuideView.swift in Sources */,
 				5CD859DA6E208C5A08255949 /* BrewTimerView.swift in Sources */,
 				2991EF4CAD335F1A11909FE8 /* StarRatingView.swift in Sources */,
+				F93FD78F2F3A615E0009322A /* SchemaV1.swift in Sources */,
+				F93FD7902F3A615E0009322A /* StarRatingView.swift in Sources */,
+				F93FD7912F3A615E0009322A /* BrewLogDetailView.swift in Sources */,
+				F93FD7922F3A615E0009322A /* AddGrinderView.swift in Sources */,
+				F93FD7932F3A615E0009322A /* BrewLogRow.swift in Sources */,
+				F93FD7942F3A615E0009322A /* GrinderEntryView.swift in Sources */,
+				F93FD7952F3A615E0009322A /* AddMethodView.swift in Sources */,
+				F93FD7962F3A615E0009322A /* BrewHistoryListContent.swift in Sources */,
+				F93FD7972F3A615E0009322A /* FlavorWheel.swift in Sources */,
+				F93FD7982F3A615E0009322A /* BrewFilterSheet.swift in Sources */,
+				F93FD7992F3A615E0009322A /* SyncMonitor.swift in Sources */,
+				F93FD79A2F3A615E0009322A /* TastingNote.swift in Sources */,
+				F93FD79B2F3A615E0009322A /* FlavorProfileView.swift in Sources */,
+				F93FD79C2F3A615E0009322A /* GrinderType.swift in Sources */,
+				F93FD79D2F3A615E0009322A /* SetupWizardView.swift in Sources */,
+				F93FD79E2F3A615E0009322A /* GrinderListView.swift in Sources */,
+				F93FD79F2F3A615E0009322A /* SetupCompleteView.swift in Sources */,
+				F93FD7A02F3A615E0009322A /* BrewMethod.swift in Sources */,
+				F93FD7A12F3A615E0009322A /* MethodCategory.swift in Sources */,
+				F93FD7A22F3A615E0009322A /* BrewStepGuideView.swift in Sources */,
+				F93FD7A32F3A615E0009322A /* BrewLogViewModel.swift in Sources */,
+				F93FD7A42F3A615E0009322A /* Grinder.swift in Sources */,
+				F93FD7A52F3A615E0009322A /* MigrationPlan.swift in Sources */,
+				F93FD7A62F3A615E0009322A /* FlavorWheelView.swift in Sources */,
+				F93FD7A72F3A615E0009322A /* SpiderChartView.swift in Sources */,
+				F93FD7A82F3A615E0009322A /* MethodTemplate.swift in Sources */,
+				F93FD7A92F3A615E0009322A /* FlavorTagFlowView.swift in Sources */,
+				F93FD7AA2F3A615E0009322A /* CoffeeBean.swift in Sources */,
+				F93FD7AB2F3A615E0009322A /* BrewStepTemplates.swift in Sources */,
+				F93FD7AC2F3A615E0009322A /* BrewLog.swift in Sources */,
+				F93FD7AD2F3A615E0009322A /* GrinderDetailView.swift in Sources */,
+				F93FD7AE2F3A615E0009322A /* CoffeeJournalApp.swift in Sources */,
+				F93FD7AF2F3A615E0009322A /* MethodSelectionView.swift in Sources */,
+				F93FD7B02F3A615E0009322A /* ScanResultReviewView.swift in Sources */,
+				F93FD7B12F3A615E0009322A /* MonochromeStyle.swift in Sources */,
+				F93FD7B22F3A615E0009322A /* FreshnessCalculator.swift in Sources */,
+				F93FD7B32F3A615E0009322A /* ImageCompressor.swift in Sources */,
+				F93FD7B42F3A615E0009322A /* AttributeSliderView.swift in Sources */,
+				F93FD7B52F3A615E0009322A /* Package.swift in Sources */,
+				F93FD7B62F3A615E0009322A /* BeanDetailView.swift in Sources */,
+				F93FD7B72F3A615E0009322A /* ProcessingMethod.swift in Sources */,
+				F93FD7B82F3A615E0009322A /* FlavorTagChipView.swift in Sources */,
+				F93FD7B92F3A615E0009322A /* MethodDetailView.swift in Sources */,
+				F93FD7BA2F3A615E0009322A /* StatisticsDashboardView.swift in Sources */,
+				F93FD7BB2F3A615E0009322A /* MethodListView.swift in Sources */,
+				F93FD7BC2F3A615E0009322A /* SyncStatusView.swift in Sources */,
+				F93FD7BD2F3A615E0009322A /* BrewTimerView.swift in Sources */,
+				F93FD7BE2F3A615E0009322A /* TastingNoteEntryView.swift in Sources */,
+				F93FD7BF2F3A615E0009322A /* BagLabelParser.swift in Sources */,
+				F93FD7C02F3A615E0009322A /* RoastLevel.swift in Sources */,
+				F93FD7C12F3A615E0009322A /* SettingsView.swift in Sources */,
+				F93FD7C22F3A615E0009322A /* NetworkMonitor.swift in Sources */,
+				F93FD7C32F3A615E0009322A /* AddBrewLogView.swift in Sources */,
+				F93FD7C42F3A615E0009322A /* TastingNoteViewModel.swift in Sources */,
+				F93FD7C52F3A615E0009322A /* ContentView.swift in Sources */,
+				F93FD7C62F3A615E0009322A /* AddBeanView.swift in Sources */,
+				F93FD7C72F3A615E0009322A /* EquipmentRow.swift in Sources */,
+				F93FD7C82F3A615E0009322A /* BeanRow.swift in Sources */,
+				F93FD7C92F3A615E0009322A /* AppStorageKeys.swift in Sources */,
+				F93FD7CA2F3A615E0009322A /* BrewLogListView.swift in Sources */,
+				F93FD7CB2F3A615E0009322A /* FreshnessIndicatorView.swift in Sources */,
+				F93FD7CC2F3A615E0009322A /* WelcomeStepView.swift in Sources */,
+				F93FD7CD2F3A615E0009322A /* EmptyStateView.swift in Sources */,
+				F93FD7CE2F3A615E0009322A /* SetupWizardViewModel.swift in Sources */,
+				F93FD7CF2F3A615E0009322A /* EquipmentPhotoPickerView.swift in Sources */,
+				F93FD7D02F3A615E0009322A /* BagScannerView.swift in Sources */,
+				F93FD7D12F3A615E0009322A /* FlowLayout.swift in Sources */,
+				F93FD7D22F3A615E0009322A /* BeanListView.swift in Sources */,
+				F93FD7D32F3A615E0009322A /* BrewComparisonView.swift in Sources */,
+				F93FD7D42F3A615E0009322A /* MainTabView.swift in Sources */,
 				6F05A9589B19151BDB738763 /* BrewFilterSheet.swift in Sources */,
 				905DA35770B61C1EACBB3574 /* BrewHistoryListContent.swift in Sources */,
 				62D0BA785D1306EC24309363 /* StatisticsDashboardView.swift in Sources */,
