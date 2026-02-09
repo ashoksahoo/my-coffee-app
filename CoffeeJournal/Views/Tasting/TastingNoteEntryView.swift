@@ -6,6 +6,7 @@ struct TastingNoteEntryView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
     @State private var viewModel = TastingNoteViewModel()
+    @State private var showWheelView: Bool = true
 
     var body: some View {
         Form {
@@ -53,23 +54,46 @@ struct TastingNoteEntryView: View {
         }
     }
 
-    // MARK: - Flavor Notes (Hierarchical Browser)
+    // MARK: - Flavor Notes (Wheel / List Toggle)
 
     private var flavorNotesSection: some View {
         Section("Flavor Notes") {
-            ForEach(FlavorWheel.categories) { category in
-                DisclosureGroup(category.name) {
-                    if category.isLeaf {
-                        flavorLeafRow(category)
-                    } else {
-                        ForEach(category.children) { subcategory in
-                            if subcategory.isLeaf {
-                                flavorLeafRow(subcategory)
-                            } else {
-                                DisclosureGroup(subcategory.name) {
-                                    ForEach(subcategory.children) { descriptor in
-                                        flavorLeafRow(descriptor)
-                                    }
+            Picker("Browse Mode", selection: $showWheelView) {
+                Text("Wheel").tag(true)
+                Text("List").tag(false)
+            }
+            .pickerStyle(.segmented)
+            .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
+
+            if showWheelView {
+                VStack(spacing: AppSpacing.sm) {
+                    FlavorWheelView(selectedFlavorIds: $viewModel.selectedFlavorIds)
+                        .frame(height: 320)
+
+                    Text("Tap a category to explore flavors")
+                        .font(AppTypography.caption)
+                        .foregroundStyle(AppColors.subtle)
+                }
+                .listRowInsets(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8))
+            } else {
+                flavorListContent
+            }
+        }
+    }
+
+    private var flavorListContent: some View {
+        ForEach(FlavorWheel.categories) { category in
+            DisclosureGroup(category.name) {
+                if category.isLeaf {
+                    flavorLeafRow(category)
+                } else {
+                    ForEach(category.children) { subcategory in
+                        if subcategory.isLeaf {
+                            flavorLeafRow(subcategory)
+                        } else {
+                            DisclosureGroup(subcategory.name) {
+                                ForEach(subcategory.children) { descriptor in
+                                    flavorLeafRow(descriptor)
                                 }
                             }
                         }
