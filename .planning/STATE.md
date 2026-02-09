@@ -5,24 +5,24 @@
 See: .planning/PROJECT.md (updated 2026-02-07)
 
 **Core value:** Remember and improve your coffee brewing by tracking what works
-**Current focus:** Phase 4 - Tasting & Flavor Notes (Complete)
+**Current focus:** Phase 5 - History & Search (In Progress)
 
 ## Current Position
 
-Phase: 4 of 8 (Tasting & Flavor Notes)
-Plan: 3 of 3 complete in current phase
-Status: Phase complete
-Last activity: 2026-02-09 -- Completed 04-03-PLAN.md (flavor profile visualization and brew comparison)
+Phase: 5 of 8 (History & Search)
+Plan: 1 of 2 complete in current phase
+Status: In progress
+Last activity: 2026-02-09 -- Completed 05-01-PLAN.md (brew history search and multi-criteria filtering)
 
-Progress: [████████████████] 3/3 plans complete in phase
-Overall: [██████████████████████████████████████████████] 13/13 plans defined
+Progress: [████████░░░░░░░░] 1/2 plans complete in phase
+Overall: [██████████████████████████████████████████████░░] 14/15 plans
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 13
+- Total plans completed: 14
 - Average duration: ~5min
-- Total execution time: ~61min
+- Total execution time: ~64min
 
 **By Phase:**
 
@@ -32,9 +32,10 @@ Overall: [███████████████████████�
 | 02-coffee-bean-tracking | 2/2 | ~5min | ~2.5min |
 | 03-brew-logging | 3/3 | ~7min | ~2.3min |
 | 04-tasting-flavor-notes | 3/3 | ~9min | ~3min |
+| 05-history-search | 1/2 | ~3min | ~3min |
 
 **Recent Trend:**
-- Last 5 plans: 03-03 (~2min), 04-01 (~4min), 04-02 (~2min), 04-03 (~3min)
+- Last 5 plans: 04-01 (~4min), 04-02 (~2min), 04-03 (~3min), 05-01 (~3min)
 - Trend: Stable (consistent 2-4min per plan)
 
 *Updated after each plan completion*
@@ -98,6 +99,10 @@ Recent decisions affecting current work:
 - [04-03]: Shared flavor tags highlighted in BrewComparisonView via isSelected chip state
 - [04-03]: Compare button always visible in BrewLogListView toolbar (view handles empty state)
 - [04-03]: FlavorProfileView empty state shows message only, no inline nav to entry (sheet on detail view)
+- [05-01]: Hybrid predicate approach -- #Predicate for scalar filters, in-memory post-filter for relationships via PersistentIdentifier
+- [05-01]: Filter state owned by parent BrewLogListView, passed to child BrewHistoryListContent as init params for @Query reinitialization
+- [05-01]: Date range filter uses toggle pattern with 30-day default window when enabled
+- [05-01]: Empty state shows "No Matches" with filter adjustment suggestion when filters/search active
 
 ### Pending Todos
 
@@ -132,5 +137,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-09
-Stopped at: Phase 04 complete (all 3 plans). Ready for Phase 04 verification, then Phase 05.
-Resume file: .planning/phases/04-tasting-flavor-notes/04-03-SUMMARY.md
+Stopped at: Phase 05 plan 01 complete. Ready for 05-02 execution.
+Resume file: .planning/phases/05-history-search/05-01-SUMMARY.md
