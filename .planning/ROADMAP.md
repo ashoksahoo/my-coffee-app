@@ -115,10 +115,10 @@ Plans:
   1. App works fully offline and syncs automatically when connectivity returns
   2. When the same record is edited on two offline devices, conflicts are resolved gracefully without data loss
   3. Photos are stored as compressed CloudKit assets and sync across devices without consuming excessive iCloud quota
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 06-01: Offline mode, sync status UI, conflict resolution, and photo compression
+- [ ] 06-01-PLAN.md -- SyncMonitor + NetworkMonitor services, sync status UI in Settings, environment injection, offline awareness
 
 ### Phase 7: Apple Intelligence
 **Goal**: Users receive AI-powered insights about their brewing patterns and flavor preferences, all processed on-device
@@ -163,6 +163,6 @@ Note: Phase 6 (Sync & Offline) depends only on Phase 1 and can be executed in pa
 | 3. Brew Logging | 0/3 | Planning complete | - |
 | 4. Tasting & Flavor Notes | 0/3 | Planning complete | - |
 | 5. History & Search | 0/2 | Planning complete | - |
-| 6. Sync & Offline | 0/1 | Not started | - |
+| 6. Sync & Offline | 0/1 | Planning complete | - |
 | 7. Apple Intelligence | 0/2 | Not started | - |
 | 8. Data Export | 0/2 | Not started | - |
