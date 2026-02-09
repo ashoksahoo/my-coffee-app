@@ -38,6 +38,8 @@ let package = Package(
                 "Models/ProcessingMethod.swift",
                 "ViewModels/SetupWizardViewModel.swift",
                 "ViewModels/BrewLogViewModel.swift",
+                "Views/Components/StarRatingView.swift",
+                "Views/Brewing/AddBrewLogView.swift",
             ]
         ),
     ]
