@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-02-07)
 ## Current Position
 
 Phase: 1 of 8 (Foundation + Equipment)
-Plan: 3 of 5 complete in current phase
+Plan: 4 of 5 complete in current phase
 Status: In progress
-Last activity: 2026-02-09 -- Completed 01-03-PLAN.md (Equipment list views with @Query, add sheets, swipe delete)
+Last activity: 2026-02-09 -- Completed 01-04-PLAN.md (Equipment detail views with @Bindable editing, photo picker, brew parameters)
 
-Progress: [=========_______] 3/5 plans complete
+Progress: [============____] 4/5 plans complete
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 3
-- Average duration: ~12min
-- Total execution time: ~35min
+- Total plans completed: 4
+- Average duration: ~10min
+- Total execution time: ~38min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-foundation-equipment | 3/5 | ~35min | ~12min |
+| 01-foundation-equipment | 4/5 | ~38min | ~10min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (~25min), 01-02 (~5min), 01-03 (~5min)
-- Trend: Faster on subsequent plans (foundation established)
+- Last 5 plans: 01-01 (~25min), 01-02 (~5min), 01-03 (~5min), 01-04 (~3min)
+- Trend: Accelerating (foundation + patterns established, reuse increasing)
 
 *Updated after each plan completion*
 
@@ -55,6 +55,10 @@ Recent decisions affecting current work:
 - [01-03]: displayName/iconName properties centralized on enum types (MethodCategory, GrinderType) not inline in views
 - [01-03]: Dual SortDescriptor for @Query (lastUsedDate reverse, createdAt reverse) handles nil dates
 - [01-03]: Stepper controls for grinder setting range to prevent invalid numeric input
+- [01-04]: EquipmentPhotoPickerView accepts @Binding var photoData: Data? for composable model binding
+- [01-04]: Pre-configured brew parameters displayed read-only per method category (computed from enum, not stored)
+- [01-04]: Grinder type Picker bound to typeRawValue String directly (avoids computed property binding issues)
+- [01-04]: onChange modifiers update updatedAt timestamp on editable field changes for auto-save tracking
 
 ### Pending Todos
 
@@ -69,5 +73,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-09
-Stopped at: Plan 01-03 complete, ready for Plan 01-04
-Resume file: .planning/phases/01-foundation-equipment/01-04-PLAN.md
+Stopped at: Plan 01-04 complete, ready for Plan 01-05
+Resume file: .planning/phases/01-foundation-equipment/01-05-PLAN.md
