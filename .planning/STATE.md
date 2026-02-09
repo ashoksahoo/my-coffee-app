@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-02-07)
 ## Current Position
 
 Phase: 1 of 8 (Foundation + Equipment)
-Plan: 1 of 5 complete in current phase
+Plan: 3 of 5 complete in current phase
 Status: In progress
-Last activity: 2026-02-09 -- Completed 01-01-PLAN.md (Xcode project, SwiftData models, design system)
+Last activity: 2026-02-09 -- Completed 01-03-PLAN.md (Equipment list views with @Query, add sheets, swipe delete)
 
-Progress: [===_____________] 1/5 plans complete
+Progress: [=========_______] 3/5 plans complete
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
-- Average duration: ~25min
-- Total execution time: ~0.4 hours
+- Total plans completed: 3
+- Average duration: ~12min
+- Total execution time: ~35min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-foundation-equipment | 1/5 | ~25min | ~25min |
+| 01-foundation-equipment | 3/5 | ~35min | ~12min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (~25min)
-- Trend: First plan, no trend yet
+- Last 5 plans: 01-01 (~25min), 01-02 (~5min), 01-03 (~5min)
+- Trend: Faster on subsequent plans (foundation established)
 
 *Updated after each plan completion*
 
@@ -49,6 +49,12 @@ Recent decisions affecting current work:
 - [01-01]: All 5 models defined upfront for CloudKit schema permanence (CoffeeBean, BrewLog, TastingNote schema-only until Phases 2-4)
 - [01-01]: Package.swift added for CLI build verification (Xcode.app not in dev environment)
 - [01-01]: SchemaV1.versionIdentifier uses `let` for Swift 6 strict concurrency
+- [01-02]: WizardStep uses Int raw values for ordinal step navigation
+- [01-02]: Child wizard views accept @Binding params (not full ViewModel) for isolation
+- [01-02]: Grinder name trimmed before save to prevent whitespace-only entries
+- [01-03]: displayName/iconName properties centralized on enum types (MethodCategory, GrinderType) not inline in views
+- [01-03]: Dual SortDescriptor for @Query (lastUsedDate reverse, createdAt reverse) handles nil dates
+- [01-03]: Stepper controls for grinder setting range to prevent invalid numeric input
 
 ### Pending Todos
 
@@ -63,5 +69,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-09
-Stopped at: Plan 01-01 complete, ready for Plan 01-02
-Resume file: .planning/phases/01-foundation-equipment/01-02-PLAN.md
+Stopped at: Plan 01-03 complete, ready for Plan 01-04
+Resume file: .planning/phases/01-foundation-equipment/01-04-PLAN.md
