@@ -101,11 +101,11 @@ Plans:
   2. User can filter brews by coffee, method, or date range, and combine multiple criteria in an advanced search
   3. User can tap any brew log to see its full detail: parameters, photos, and tasting notes
   4. User can view a statistics dashboard showing favorite methods, top beans, average ratings, and trends over time
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 05-01: Brew history list, filtering, and advanced search
-- [ ] 05-02: Brew detail view and statistics dashboard
+- [ ] 05-01-PLAN.md -- Brew history list with search, multi-criteria filtering (method/bean/date/rating), and parent/child @Query pattern
+- [ ] 05-02-PLAN.md -- Statistics dashboard with Swift Charts (method distribution, rating trends, brew frequency, top beans)
 
 ### Phase 6: Sync & Offline
 **Goal**: Users experience reliable, transparent data sync across devices with graceful offline behavior
@@ -162,7 +162,7 @@ Note: Phase 6 (Sync & Offline) depends only on Phase 1 and can be executed in pa
 | 2. Coffee Bean Tracking | 0/2 | Planning complete | - |
 | 3. Brew Logging | 0/3 | Planning complete | - |
 | 4. Tasting & Flavor Notes | 0/3 | Planning complete | - |
-| 5. History & Search | 0/2 | Not started | - |
+| 5. History & Search | 0/2 | Planning complete | - |
 | 6. Sync & Offline | 0/1 | Not started | - |
 | 7. Apple Intelligence | 0/2 | Not started | - |
 | 8. Data Export | 0/2 | Not started | - |
