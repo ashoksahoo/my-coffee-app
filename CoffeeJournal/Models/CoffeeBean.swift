@@ -20,3 +20,35 @@ final class CoffeeBean {
 
     init() {}
 }
+
+// MARK: - Computed Properties
+
+extension CoffeeBean {
+    var roastLevelEnum: RoastLevel {
+        get { RoastLevel(rawValue: roastLevel) ?? .medium }
+        set { roastLevel = newValue.rawValue }
+    }
+
+    var processingMethodEnum: ProcessingMethod {
+        get { ProcessingMethod(rawValue: processingMethod) ?? .other }
+        set { processingMethod = newValue.rawValue }
+    }
+
+    var daysSinceRoast: Int? {
+        guard let roastDate else { return nil }
+        return FreshnessCalculator.daysSinceRoast(from: roastDate)
+    }
+
+    var freshnessLevel: FreshnessLevel? {
+        guard let days = daysSinceRoast else { return nil }
+        return FreshnessCalculator.freshnessLevel(daysSinceRoast: days)
+    }
+
+    var displayName: String {
+        if !name.isEmpty { return name }
+        if !roaster.isEmpty && !origin.isEmpty { return "\(roaster) - \(origin)" }
+        if !roaster.isEmpty { return roaster }
+        if !origin.isEmpty { return origin }
+        return "Unnamed Coffee"
+    }
+}
