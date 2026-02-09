@@ -68,12 +68,12 @@ Plans:
   3. User can enter method-specific parameters (yield/pressure for espresso, pour stages for pour-over, steep time for immersion)
   4. User can use an integrated brew timer with optional step-by-step guidance for the selected method
   5. User can add photos, rate overall quality, write freeform tasting notes, and have the brew log sync across devices
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 03-01: Brew log entry flow (equipment/bean selection, core parameters, ratio calculation)
-- [ ] 03-02: Method-specific parameters, brew timer, and step-by-step guidance
-- [ ] 03-03: Photos, rating, freeform notes, and iCloud sync validation
+- [ ] 03-01-PLAN.md -- BrewLog model update, BrewLogViewModel, AddBrewLogView form with equipment/bean selection, core parameters, ratio, rating, notes
+- [ ] 03-02-PLAN.md -- Brew timer with state machine controls, step-by-step guidance per method category
+- [ ] 03-03-PLAN.md -- Brew log list/detail views, photo support, Brews tab wiring as first tab
 
 ### Phase 4: Tasting & Flavor Notes
 **Goal**: Users can capture structured tasting profiles and compare brews visually
@@ -159,7 +159,7 @@ Note: Phase 6 (Sync & Offline) depends only on Phase 1 and can be executed in pa
 |-------|----------------|--------|-----------|
 | 1. Foundation + Equipment | 0/5 | Planning complete | - |
 | 2. Coffee Bean Tracking | 0/2 | Planning complete | - |
-| 3. Brew Logging | 0/3 | Not started | - |
+| 3. Brew Logging | 0/3 | Planning complete | - |
 | 4. Tasting & Flavor Notes | 0/2 | Not started | - |
 | 5. History & Search | 0/2 | Not started | - |
 | 6. Sync & Offline | 0/1 | Not started | - |
