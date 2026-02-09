@@ -33,6 +33,11 @@ let package = Package(
                 "Utilities/ImageCompressor.swift",
                 "Utilities/AppStorageKeys.swift",
                 "Utilities/BagLabelParser.swift",
+                "Utilities/FreshnessCalculator.swift",
+                "Models/RoastLevel.swift",
+                "Models/ProcessingMethod.swift",
+                "ViewModels/SetupWizardViewModel.swift",
+                "ViewModels/BrewLogViewModel.swift",
             ]
         ),
     ]
