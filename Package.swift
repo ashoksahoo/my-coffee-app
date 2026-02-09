@@ -40,7 +40,12 @@ let package = Package(
                 "ViewModels/BrewLogViewModel.swift",
                 "Views/Components/StarRatingView.swift",
                 "Utilities/BrewStepTemplates.swift",
+                "Views/Brewing/BrewTimerView.swift",
+                "Views/Brewing/BrewStepGuideView.swift",
                 "Views/Brewing/AddBrewLogView.swift",
+                "Views/Brewing/BrewLogRow.swift",
+                "Views/Brewing/BrewLogListView.swift",
+                "Views/Brewing/BrewLogDetailView.swift",
             ]
         ),
     ]
