@@ -9,10 +9,13 @@ struct CoffeeJournalApp: App {
 
     init() {
         let schema = Schema(versionedSchema: SchemaV1.self)
-        let config = ModelConfiguration(
+
+        // Try to initialize with CloudKit first
+        var config = ModelConfiguration(
             schema: schema,
             cloudKitDatabase: .automatic
         )
+
         do {
             container = try ModelContainer(
                 for: schema,
@@ -20,7 +23,21 @@ struct CoffeeJournalApp: App {
                 configurations: [config]
             )
         } catch {
-            fatalError("Failed to create ModelContainer: \(error)")
+            // If CloudKit setup fails, fall back to local-only storage
+            print("CloudKit initialization failed: \(error). Falling back to local storage.")
+            config = ModelConfiguration(
+                schema: schema,
+                cloudKitDatabase: .none
+            )
+            do {
+                container = try ModelContainer(
+                    for: schema,
+                    migrationPlan: CoffeeJournalMigrationPlan.self,
+                    configurations: [config]
+                )
+            } catch {
+                fatalError("Failed to create ModelContainer even with local storage: \(error)")
+            }
         }
     }
 
