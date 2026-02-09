@@ -53,7 +53,7 @@ struct BrewLogDetailView: View {
 
             if let grinder = brew.grinder {
                 let grindInfo = brew.grinderSetting > 0
-                    ? "\(grinder.name) (Setting: \(brew.grinderSetting, specifier: "%.1f"))"
+                    ? "\(grinder.name) (Setting: \(String(format: "%.1f", brew.grinderSetting)))"
                     : grinder.name
                 detailRow(label: "Grinder", value: grindInfo, icon: "gearshape.2")
             }
@@ -69,18 +69,18 @@ struct BrewLogDetailView: View {
             Text("Parameters")
                 .font(AppTypography.title)
 
-            parameterRow(label: "Dose", value: "\(brew.dose, specifier: "%.1f")g")
+            parameterRow(label: "Dose", value: "\(String(format: "%.1f", brew.dose))g")
 
             if brew.waterAmount > 0 {
-                parameterRow(label: "Water", value: "\(brew.waterAmount, specifier: "%.0f")g")
+                parameterRow(label: "Water", value: "\(String(format: "%.0f", brew.waterAmount))g")
             }
 
             if brew.yieldAmount > 0 {
-                parameterRow(label: "Yield", value: "\(brew.yieldAmount, specifier: "%.1f")g")
+                parameterRow(label: "Yield", value: "\(String(format: "%.1f", brew.yieldAmount))g")
             }
 
             if brew.waterTemperature > 0 {
-                parameterRow(label: "Temperature", value: "\(brew.waterTemperature, specifier: "%.0f")\u{00B0}C")
+                parameterRow(label: "Temperature", value: "\(String(format: "%.0f", brew.waterTemperature))\u{00B0}C")
             }
 
             if !brew.pressureProfile.isEmpty {
