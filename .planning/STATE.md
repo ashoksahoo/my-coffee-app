@@ -5,32 +5,32 @@
 See: .planning/PROJECT.md (updated 2026-02-07)
 
 **Core value:** Remember and improve your coffee brewing by tracking what works
-**Current focus:** Phase 1 - Foundation + Equipment
+**Current focus:** Phase 1 - Foundation + Equipment (COMPLETE)
 
 ## Current Position
 
 Phase: 1 of 8 (Foundation + Equipment)
-Plan: 4 of 5 complete in current phase
-Status: In progress
-Last activity: 2026-02-09 -- Completed 01-04-PLAN.md (Equipment detail views with @Bindable editing, photo picker, brew parameters)
+Plan: 5 of 5 complete in current phase
+Status: Phase complete
+Last activity: 2026-02-09 -- Completed 01-05-PLAN.md (App navigation wiring: ContentView routing, MainTabView, SettingsView)
 
-Progress: [============____] 4/5 plans complete
+Progress: [================] 5/5 plans complete
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
-- Average duration: ~10min
-- Total execution time: ~38min
+- Total plans completed: 5
+- Average duration: ~8min
+- Total execution time: ~40min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-foundation-equipment | 4/5 | ~38min | ~10min |
+| 01-foundation-equipment | 5/5 | ~40min | ~8min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (~25min), 01-02 (~5min), 01-03 (~5min), 01-04 (~3min)
+- Last 5 plans: 01-01 (~25min), 01-02 (~5min), 01-03 (~5min), 01-04 (~3min), 01-05 (~2min)
 - Trend: Accelerating (foundation + patterns established, reuse increasing)
 
 *Updated after each plan completion*
@@ -59,6 +59,11 @@ Recent decisions affecting current work:
 - [01-04]: Pre-configured brew parameters displayed read-only per method category (computed from enum, not stored)
 - [01-04]: Grinder type Picker bound to typeRawValue String directly (avoids computed property binding issues)
 - [01-04]: onChange modifiers update updatedAt timestamp on editable field changes for auto-save tracking
+- [01-05]: ContentView uses @AppStorage(AppStorageKeys.hasCompletedSetup) for persistent first-launch routing
+- [01-05]: TabView .tint(Color.primary) enforces monochrome tab icons across all tabs
+- [01-05]: SettingsView calls viewModel.reset() before presenting wizard sheet for clean re-run state
+- [01-05]: Re-run wizard onComplete dismisses sheet only (does not toggle hasCompletedSetup)
+- [01-05]: Each tab wraps content in NavigationStack; child views do not nest NavigationStacks
 
 ### Pending Todos
 
@@ -73,5 +78,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-09
-Stopped at: Plan 01-04 complete, ready for Plan 01-05
-Resume file: .planning/phases/01-foundation-equipment/01-05-PLAN.md
+Stopped at: Phase 01 complete, ready for Phase 02 planning
+Resume file: .planning/ROADMAP.md
