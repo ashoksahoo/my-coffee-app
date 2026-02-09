@@ -32,6 +32,7 @@ let package = Package(
                 "Views/Components/EquipmentRow.swift",
                 "Utilities/ImageCompressor.swift",
                 "Utilities/AppStorageKeys.swift",
+                "Utilities/BagLabelParser.swift",
             ]
         ),
     ]
