@@ -178,22 +178,27 @@ struct AddBrewLogView: View {
         }
     }
 
-    // MARK: - Brew Time (Manual Entry)
+    // MARK: - Brew Timer
 
     @ViewBuilder
     private var brewTimeSection: some View {
-        Section("Brew Time") {
-            Stepper("Minutes: \(viewModel.brewTimeMinutes)", value: $viewModel.brewTimeMinutes, in: 0...60)
+        Section("Brew Timer") {
+            BrewTimerView(viewModel: viewModel)
 
-            Stepper("Seconds: \(viewModel.brewTimeSeconds)", value: $viewModel.brewTimeSeconds, in: 0...59)
+            BrewStepGuideView(viewModel: viewModel)
 
-            let totalSeconds = viewModel.brewTimeMinutes * 60 + viewModel.brewTimeSeconds
-            let minutes = totalSeconds / 60
-            let seconds = totalSeconds % 60
-            Text("Total: \(String(format: "%d:%02d", minutes, seconds))")
-                .font(AppTypography.headline)
-                .foregroundStyle(AppColors.secondary)
-                .frame(maxWidth: .infinity, alignment: .center)
+            // Manual time entry fallback -- only when timer not started
+            if viewModel.timerState == .idle {
+                VStack(spacing: AppSpacing.sm) {
+                    Text("or enter manually")
+                        .font(AppTypography.caption)
+                        .foregroundStyle(AppColors.subtle)
+
+                    Stepper("Minutes: \(viewModel.brewTimeMinutes)", value: $viewModel.brewTimeMinutes, in: 0...60)
+
+                    Stepper("Seconds: \(viewModel.brewTimeSeconds)", value: $viewModel.brewTimeSeconds, in: 0...59)
+                }
+            }
         }
     }
 
