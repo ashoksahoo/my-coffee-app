@@ -170,6 +170,17 @@ struct BrewLogDetailView: View {
                         .foregroundStyle(AppColors.secondary)
                 }
 
+                if hasFlavorProfileData(note) {
+                    NavigationLink {
+                        FlavorProfileView(brewLog: brew)
+                    } label: {
+                        Label("View Flavor Profile", systemImage: "chart.bar")
+                            .font(AppTypography.body)
+                    }
+                    .foregroundStyle(AppColors.primary)
+                    .padding(.top, AppSpacing.xs)
+                }
+
                 Button {
                     showTastingEntry = true
                 } label: {
@@ -235,5 +246,11 @@ struct BrewLogDetailView: View {
             Spacer()
             Text(value)
         }
+    }
+
+    private func hasFlavorProfileData(_ note: TastingNote) -> Bool {
+        let hasRatings = note.acidity > 0 || note.body > 0 || note.sweetness > 0
+        let hasTags = !note.flavorTags.isEmpty
+        return hasRatings || hasTags
     }
 }
