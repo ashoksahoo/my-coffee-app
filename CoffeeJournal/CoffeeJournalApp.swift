@@ -4,6 +4,8 @@ import SwiftData
 @main
 struct CoffeeJournalApp: App {
     let container: ModelContainer
+    @State private var syncMonitor = SyncMonitor()
+    @State private var networkMonitor = NetworkMonitor()
 
     init() {
         let schema = Schema(versionedSchema: SchemaV1.self)
@@ -25,6 +27,8 @@ struct CoffeeJournalApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(syncMonitor)
+                .environment(networkMonitor)
         }
         .modelContainer(container)
     }

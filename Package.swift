@@ -62,6 +62,7 @@ let package = Package(
                 "Views/Tasting/BrewComparisonView.swift",
                 "Services/SyncMonitor.swift",
                 "Services/NetworkMonitor.swift",
+                "Views/Components/SyncStatusView.swift",
             ]
         ),
     ]

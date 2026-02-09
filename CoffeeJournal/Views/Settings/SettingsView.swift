@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @Environment(SyncMonitor.self) private var syncMonitor
     @State private var showingSetupWizard = false
     @State private var wizardViewModel = SetupWizardViewModel()
 
@@ -36,20 +37,12 @@ struct SettingsView: View {
                 }
             }
 
-            Section {
-                HStack {
-                    Text("iCloud Sync")
-                    Spacer()
-                    Text("Enabled")
-                        .foregroundStyle(AppColors.subtle)
-                }
-            } header: {
-                Text("Data")
-            } footer: {
-                Text("Your equipment syncs automatically across your iOS devices")
-            }
+            SyncStatusSection()
         }
         .navigationTitle("Settings")
+        .task {
+            await syncMonitor.checkAccountStatus()
+        }
         .sheet(isPresented: $showingSetupWizard) {
             SetupWizardView(onComplete: {
                 showingSetupWizard = false
