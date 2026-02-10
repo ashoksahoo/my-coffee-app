@@ -5,24 +5,24 @@
 See: .planning/PROJECT.md (updated 2026-02-07)
 
 **Core value:** Remember and improve your coffee brewing by tracking what works
-**Current focus:** Phase 6 - Sync & Offline (Complete)
+**Current focus:** Phase 7 - Apple Intelligence (In Progress)
 
 ## Current Position
 
-Phase: 6 of 8 (Sync & Offline)
-Plan: 1 of 1 complete in current phase
-Status: Phase complete
-Last activity: 2026-02-09 -- Completed 06-01-PLAN.md (sync monitoring and offline awareness)
+Phase: 7 of 8 (Apple Intelligence)
+Plan: 1 of 2 complete in current phase
+Status: In progress
+Last activity: 2026-02-10 -- Completed 07-01-PLAN.md (AI insights service layer)
 
-Progress: [████████████████] 1/1 plans complete in phase
-Overall: [████████████████████████████████████████████████████] 16/16 plans
+Progress: [████████░░░░░░░░] 1/2 plans complete in phase
+Overall: [█████████████████████████████████████████████████████░░░] 17/18 plans
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 16
+- Total plans completed: 17
 - Average duration: ~4min
-- Total execution time: ~69min
+- Total execution time: ~72min
 
 **By Phase:**
 
@@ -34,9 +34,10 @@ Overall: [███████████████████████�
 | 04-tasting-flavor-notes | 3/3 | ~9min | ~3min |
 | 05-history-search | 2/2 | ~5min | ~2.5min |
 | 06-sync-offline | 1/1 | ~3min | ~3min |
+| 07-apple-intelligence | 1/2 | ~3min | ~3min |
 
 **Recent Trend:**
-- Last 5 plans: 04-03 (~3min), 05-01 (~3min), 05-02 (~2min), 06-01 (~3min)
+- Last 5 plans: 05-01 (~3min), 05-02 (~2min), 06-01 (~3min), 07-01 (~3min)
 - Trend: Stable (consistent 2-3min per plan)
 
 *Updated after each plan completion*
@@ -113,6 +114,11 @@ Recent decisions affecting current work:
 - [06-01]: OfflineBanner available as component but NOT wired into MainTabView -- Settings is primary sync status surface per Apple's pattern
 - [06-01]: CloudKit last-writer-wins conflict resolution accepted -- personal coffee journal with 1-2 devices has low conflict probability
 - [06-01]: Existing ImageCompressor satisfies SYNC-05 photo compression -- no changes needed
+- [07-01]: FlavorExtractor stores both multi-word descriptors and individual word fallbacks in vocabulary map
+- [07-01]: BrewPatternAnalyzer uses rating-weighted averages for grind preference patterns
+- [07-01]: FoundationModelInsightsService falls back to FlavorExtractor on any Foundation Models error
+- [07-01]: FoundationModelInsightsService entire file wrapped in #if canImport(FoundationModels) -- excluded when SDK not present
+- [07-01]: All insight types marked Sendable for Swift 6 strict concurrency compliance
 
 ### Pending Todos
 
@@ -146,6 +152,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-09
-Stopped at: Phase 06 complete. All 16 plans across 6 phases executed.
-Resume file: .planning/phases/06-sync-offline/06-01-SUMMARY.md
+Last session: 2026-02-10
+Stopped at: Phase 07 plan 01 complete. 17/18 plans executed. Plan 07-02 (insights UI) remaining.
+Resume file: .planning/phases/07-apple-intelligence/07-01-SUMMARY.md
