@@ -5,24 +5,24 @@
 See: .planning/PROJECT.md (updated 2026-02-07)
 
 **Core value:** Remember and improve your coffee brewing by tracking what works
-**Current focus:** Phase 8 - Data Export (In progress)
+**Current focus:** Phase 9 - Automated QA Suite (In progress)
 
 ## Current Position
 
-Phase: 8 of 8 (Data Export)
-Plan: 1 of 2 complete in current phase
+Phase: 9 of 9 (Automated QA Suite)
+Plan: 1 of 3 complete in current phase
 Status: In progress
-Last activity: 2026-02-10 -- Completed 08-01-PLAN.md (PDF/CSV export services)
+Last activity: 2026-02-10 -- Completed 09-01-PLAN.md (Unit test infrastructure and business logic tests)
 
-Progress: [████████░░░░░░░░] 1/2 plans complete in phase
-Overall: [██████████████████████████████████████████████████████████░░] 19/20 plans
+Progress: [█████░░░░░░░░░░░] 1/3 plans complete in phase
+Overall: [██████████████████████████████████████████████████████████████████████░░░░░░] 21/23 plans
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 19
+- Total plans completed: 21
 - Average duration: ~4min
-- Total execution time: ~78min
+- Total execution time: ~84min
 
 **By Phase:**
 
@@ -35,11 +35,12 @@ Overall: [███████████████████████�
 | 05-history-search | 2/2 | ~5min | ~2.5min |
 | 06-sync-offline | 1/1 | ~3min | ~3min |
 | 07-apple-intelligence | 2/2 | ~6min | ~3min |
-| 08-data-export | 1/2 | ~3min | ~3min |
+| 08-data-export | 2/2 | ~6min | ~3min |
+| 09-automated-qa-suite | 1/3 | ~6min | ~6min |
 
 **Recent Trend:**
-- Last 5 plans: 06-01 (~3min), 07-01 (~3min), 07-02 (~3min), 08-01 (~3min)
-- Trend: Stable (consistent 3min per plan)
+- Last 5 plans: 07-02 (~3min), 08-01 (~3min), 08-02 (~3min), 09-01 (~6min)
+- Trend: Slightly longer for test infrastructure (more files)
 
 *Updated after each plan completion*
 
@@ -128,6 +129,10 @@ Recent decisions affecting current work:
 - [08-01]: Export Menu placed in existing ToolbarItemGroup alongside Compare/Statistics buttons
 - [08-01]: ShareLink presented in .sheet for consistent share experience
 - [08-01]: CSV flavor tags joined with semicolons to avoid CSV comma conflicts
+- [09-01]: Swift Testing (@Suite/@Test/#expect) used over XCTest for all unit tests -- modern syntax, parallel by default
+- [09-01]: Both UITESTING and UI_TESTING launch arguments supported for backward compatibility
+- [09-01]: ViewModel tests skip @Model-dependent paths -- espresso/canSave covered in Plan 03 integration tests
+- [09-01]: AccessibilityIdentifiers.swift in CoffeeJournal/Utilities/ compiled into both app and test targets
 
 ### Pending Todos
 
@@ -166,5 +171,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-10
-Stopped at: Phase 08 plan 01 complete. 19/20 plans executed. Plan 08-02 remaining.
-Resume file: .planning/phases/08-data-export/08-01-SUMMARY.md
+Stopped at: Completed 09-01-PLAN.md (unit test infrastructure + 119 business logic tests)
+Resume file: .planning/phases/09-automated-qa-suite/09-01-SUMMARY.md
