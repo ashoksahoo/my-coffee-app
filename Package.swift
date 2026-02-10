@@ -64,6 +64,10 @@ let package = Package(
                 "Services/NetworkMonitor.swift",
                 "Services/Insights/InsightsService.swift",
                 "Services/Insights/FlavorExtractor.swift",
+                "Services/Insights/NLInsightsService.swift",
+                "Services/Insights/FoundationModelInsightsService.swift",
+                "Services/Insights/BrewPatternAnalyzer.swift",
+                "Services/Insights/BrewSuggestionEngine.swift",
                 "Views/Components/SyncStatusView.swift",
             ]
         ),
