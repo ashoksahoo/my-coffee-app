@@ -166,6 +166,7 @@ Note: Phase 6 (Sync & Offline) depends only on Phase 1 and can be executed in pa
 | 6. Sync & Offline | 0/1 | Planning complete | - |
 | 7. Apple Intelligence | 0/2 | Planning complete | - |
 | 8. Data Export | 2/2 | Complete | 2026-02-10 |
+| 9. Automated QA Suite | 3/3 | Complete | 2026-02-10 |
 
 ### Phase 9: Automated QA Suite
 
@@ -181,6 +182,6 @@ Note: Phase 6 (Sync & Offline) depends only on Phase 1 and can be executed in pa
 **Plans:** 3 plans
 
 Plans:
-- [ ] 09-01-PLAN.md -- Test infrastructure (AccessibilityIdentifiers, UITESTING support, test target) + pure logic unit tests for utilities and ViewModels
-- [ ] 09-02-PLAN.md -- Accessibility identifiers wired into views + XCUITest suites for setup wizard, equipment, beans, brew log CRUD flows
-- [ ] 09-03-PLAN.md -- SwiftData integration tests (model CRUD, computed properties, relationships) + GitHub Actions CI/CD pipeline
+- [x] 09-01-PLAN.md -- Test infrastructure (AccessibilityIdentifiers, UITESTING support, test target) + pure logic unit tests for utilities and ViewModels
+- [x] 09-02-PLAN.md -- Accessibility identifiers wired into views + XCUITest suites for setup wizard, equipment, beans, brew log CRUD flows
+- [x] 09-03-PLAN.md -- SwiftData integration tests (model CRUD, computed properties, relationships) + GitHub Actions CI/CD pipeline
