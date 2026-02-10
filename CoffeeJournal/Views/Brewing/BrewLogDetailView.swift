@@ -4,6 +4,7 @@ import SwiftData
 struct BrewLogDetailView: View {
     let brew: BrewLog
     @State private var showTastingEntry = false
+    @State private var insightsViewModel = InsightsViewModel()
 
     var body: some View {
         ScrollView {
@@ -20,6 +21,19 @@ struct BrewLogDetailView: View {
         }
         .navigationTitle("Brew Detail")
         .navigationBarTitleDisplayMode(.inline)
+        .task {
+            var textParts: [String] = []
+            if let freeform = brew.tastingNote?.freeformNotes, !freeform.isEmpty {
+                textParts.append(freeform)
+            }
+            if !brew.notes.isEmpty {
+                textParts.append(brew.notes)
+            }
+            let combinedText = textParts.joined(separator: " ")
+            if !combinedText.isEmpty {
+                await insightsViewModel.extractFlavors(from: combinedText)
+            }
+        }
         .sheet(isPresented: $showTastingEntry) {
             NavigationStack {
                 TastingNoteEntryView(brewLog: brew)
@@ -169,6 +183,12 @@ struct BrewLogDetailView: View {
                         .font(AppTypography.body)
                         .foregroundStyle(AppColors.secondary)
                 }
+
+                // AI-extracted flavors from freeform notes
+                FlavorInsightView(
+                    flavors: insightsViewModel.extractedFlavors,
+                    isLoading: insightsViewModel.isExtractingFlavors
+                )
 
                 if hasFlavorProfileData(note) {
                     NavigationLink {

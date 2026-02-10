@@ -4,6 +4,7 @@ import Charts
 
 struct StatisticsDashboardView: View {
     @Query(sort: \BrewLog.createdAt, order: .reverse) private var brews: [BrewLog]
+    @State private var insightsViewModel = InsightsViewModel()
 
     var body: some View {
         ScrollView {
@@ -20,12 +21,18 @@ struct StatisticsDashboardView: View {
                     ratingTrendChart
                     brewFrequencyChart
                     topBeansChart
+                    insightsSection
                 }
             }
             .padding(AppSpacing.md)
         }
         .navigationTitle("Statistics")
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear {
+            if !brews.isEmpty {
+                insightsViewModel.analyzePatterns(brews: brews)
+            }
+        }
     }
 
     // MARK: - Summary Cards
@@ -147,6 +154,22 @@ struct StatisticsDashboardView: View {
                     .foregroundStyle(AppColors.primary.opacity(0.8))
                 }
                 .frame(height: max(120, CGFloat(topBeans.count) * 40))
+            }
+        }
+    }
+
+    // MARK: - Brewing Insights
+
+    @ViewBuilder
+    private var insightsSection: some View {
+        if !insightsViewModel.patterns.isEmpty {
+            VStack(alignment: .leading, spacing: AppSpacing.sm) {
+                Label("Brewing Insights", systemImage: "sparkles")
+                    .font(AppTypography.headline)
+
+                ForEach(insightsViewModel.patterns) { pattern in
+                    BrewPatternCard(pattern: pattern)
+                }
             }
         }
     }

@@ -3,6 +3,8 @@ import SwiftData
 
 struct AddBrewLogView: View {
     @State private var viewModel = BrewLogViewModel()
+    @State private var insightsViewModel = InsightsViewModel()
+    @State private var showSuggestion: Bool = true
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
 
@@ -10,12 +12,14 @@ struct AddBrewLogView: View {
     @Query(sort: \Grinder.name) private var grinders: [Grinder]
     @Query(filter: #Predicate<CoffeeBean> { !$0.isArchived },
            sort: \CoffeeBean.createdAt, order: .reverse) private var beans: [CoffeeBean]
+    @Query(sort: \BrewLog.createdAt, order: .reverse) private var allBrews: [BrewLog]
 
     var body: some View {
         Form {
             brewMethodSection
             coffeeSection
             grinderSection
+            suggestionSection
             brewParametersSection
             brewRatioSection
             brewTimeSection
@@ -43,6 +47,22 @@ struct AddBrewLogView: View {
             }
         }
         .interactiveDismissDisabled(viewModel.hasUnsavedChanges)
+        .onChange(of: viewModel.selectedBean) {
+            showSuggestion = true
+            insightsViewModel.fetchSuggestion(
+                for: viewModel.selectedBean,
+                method: viewModel.selectedMethod,
+                history: allBrews
+            )
+        }
+        .onChange(of: viewModel.selectedMethod) {
+            showSuggestion = true
+            insightsViewModel.fetchSuggestion(
+                for: viewModel.selectedBean,
+                method: viewModel.selectedMethod,
+                history: allBrews
+            )
+        }
     }
 
     // MARK: - Brew Method
@@ -227,5 +247,35 @@ struct AddBrewLogView: View {
         Section("Photo") {
             EquipmentPhotoPickerView(photoData: $viewModel.photoData)
         }
+    }
+
+    // MARK: - Suggestion
+
+    @ViewBuilder
+    private var suggestionSection: some View {
+        if let suggestion = insightsViewModel.currentSuggestion, showSuggestion {
+            Section {
+                BrewSuggestionBanner(suggestion: suggestion) {
+                    applySuggestion(suggestion)
+                }
+            }
+        }
+    }
+
+    private func applySuggestion(_ suggestion: BrewSuggestion) {
+        viewModel.dose = suggestion.dose
+        if let waterAmount = suggestion.waterAmount {
+            viewModel.waterAmount = waterAmount
+        }
+        if let yieldAmount = suggestion.yieldAmount {
+            viewModel.yieldAmount = yieldAmount
+        }
+        viewModel.waterTemperature = suggestion.waterTemperature
+        if let grinderSetting = suggestion.grinderSetting {
+            viewModel.grinderSetting = grinderSetting
+        }
+        viewModel.brewTime = suggestion.brewTime
+        viewModel.brewTimeMinutes = Int(suggestion.brewTime) / 60
+        viewModel.brewTimeSeconds = Int(suggestion.brewTime) % 60
     }
 }
