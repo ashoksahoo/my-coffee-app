@@ -89,6 +89,7 @@ struct BrewLogListView: View {
                     Image(systemName: "plus")
                         .foregroundStyle(AppColors.primary)
                 }
+                .accessibilityIdentifier(AccessibilityID.Brews.addButton)
             }
         }
         .sheet(isPresented: $showingAddSheet) {

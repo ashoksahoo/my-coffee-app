@@ -45,6 +45,7 @@ struct MethodListView: View {
                     }
                 }
                 .listStyle(.plain)
+                .accessibilityIdentifier(AccessibilityID.Equipment.methodList)
             }
         }
         .navigationTitle("Methods")
@@ -56,6 +57,7 @@ struct MethodListView: View {
                     Image(systemName: "plus")
                         .foregroundStyle(AppColors.primary)
                 }
+                .accessibilityIdentifier(AccessibilityID.Equipment.addMethodButton)
             }
         }
         .sheet(isPresented: $showingAddSheet) {

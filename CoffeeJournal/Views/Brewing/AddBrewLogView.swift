@@ -34,6 +34,7 @@ struct AddBrewLogView: View {
                     dismiss()
                 }
                 .foregroundStyle(AppColors.primary)
+                .accessibilityIdentifier(AccessibilityID.Brews.cancelButton)
             }
 
             ToolbarItem(placement: .topBarTrailing) {
@@ -44,6 +45,7 @@ struct AddBrewLogView: View {
                 .fontWeight(.semibold)
                 .foregroundStyle(AppColors.primary)
                 .disabled(!viewModel.canSave)
+                .accessibilityIdentifier(AccessibilityID.Brews.saveButton)
             }
         }
         .interactiveDismissDisabled(viewModel.hasUnsavedChanges)
@@ -143,6 +145,7 @@ struct AddBrewLogView: View {
                     .keyboardType(.decimalPad)
                     .multilineTextAlignment(.trailing)
                     .frame(width: 80)
+                    .accessibilityIdentifier(AccessibilityID.Brews.doseField)
             }
 
             if viewModel.showsWaterAmount {
@@ -153,6 +156,7 @@ struct AddBrewLogView: View {
                         .keyboardType(.decimalPad)
                         .multilineTextAlignment(.trailing)
                         .frame(width: 80)
+                        .accessibilityIdentifier(AccessibilityID.Brews.waterAmountField)
                 }
             }
 

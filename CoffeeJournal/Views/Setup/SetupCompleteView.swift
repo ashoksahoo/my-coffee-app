@@ -17,6 +17,7 @@ struct SetupCompleteView: View {
             Text("You're Ready!")
                 .font(AppTypography.largeTitle)
                 .foregroundStyle(AppColors.primary)
+                .accessibilityIdentifier(AccessibilityID.Setup.completeTitle)
 
             // Summary
             VStack(spacing: AppSpacing.sm) {

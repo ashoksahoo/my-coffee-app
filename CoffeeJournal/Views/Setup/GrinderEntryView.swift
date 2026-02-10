@@ -31,6 +31,7 @@ struct GrinderEntryView: View {
                         .font(AppTypography.body)
                         .foregroundStyle(AppColors.primary)
                         .padding(.vertical, AppSpacing.sm)
+                        .accessibilityIdentifier(AccessibilityID.Equipment.grinderNameField)
                         .overlay(
                             Rectangle()
                                 .frame(height: 1)

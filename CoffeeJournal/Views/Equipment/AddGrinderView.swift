@@ -21,6 +21,7 @@ struct AddGrinderView: View {
             Section {
                 TextField("Grinder Name", text: $name)
                     .font(AppTypography.body)
+                    .accessibilityIdentifier(AccessibilityID.Equipment.grinderNameField)
 
                 Picker("Type", selection: $selectedType) {
                     ForEach(GrinderType.allCases, id: \.self) { type in
@@ -83,6 +84,7 @@ struct AddGrinderView: View {
                 .fontWeight(.semibold)
                 .foregroundStyle(AppColors.primary)
                 .disabled(!canSave)
+                .accessibilityIdentifier(AccessibilityID.Equipment.grinderSaveButton)
             }
         }
     }

@@ -44,6 +44,7 @@ struct AddBeanView: View {
                 .fontWeight(.semibold)
                 .foregroundStyle(AppColors.primary)
                 .disabled(!canSave)
+                .accessibilityIdentifier(AccessibilityID.Beans.saveButton)
             }
         }
     }
@@ -55,12 +56,15 @@ struct AddBeanView: View {
         Section("Coffee Info") {
             TextField("Name (optional)", text: $name)
                 .font(AppTypography.body)
+                .accessibilityIdentifier(AccessibilityID.Beans.nameField)
 
             TextField("Roaster", text: $roaster)
                 .font(AppTypography.body)
+                .accessibilityIdentifier(AccessibilityID.Beans.roasterField)
 
             TextField("Origin", text: $origin)
                 .font(AppTypography.body)
+                .accessibilityIdentifier(AccessibilityID.Beans.originField)
         }
     }
 

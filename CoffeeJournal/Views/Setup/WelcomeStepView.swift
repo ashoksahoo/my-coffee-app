@@ -16,6 +16,7 @@ struct WelcomeStepView: View {
             Text("Coffee Journal")
                 .font(AppTypography.largeTitle)
                 .foregroundStyle(AppColors.primary)
+                .accessibilityIdentifier(AccessibilityID.Setup.welcomeTitle)
 
             // Subtitle
             Text("Track your brews, remember what works, and make every cup better than the last.")
@@ -34,6 +35,7 @@ struct WelcomeStepView: View {
                     .font(AppTypography.footnote)
                     .foregroundStyle(AppColors.subtle)
             }
+            .accessibilityIdentifier(AccessibilityID.Setup.skipButton)
             .padding(.bottom, AppSpacing.md)
         }
     }

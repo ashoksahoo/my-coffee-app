@@ -44,6 +44,7 @@ struct BeanListView: View {
                     Image(systemName: "plus")
                         .foregroundStyle(AppColors.primary)
                 }
+                .accessibilityIdentifier(AccessibilityID.Beans.addButton)
             }
         }
         .sheet(isPresented: $showingAddSheet) {
@@ -127,6 +128,7 @@ struct BeanListContent: View {
                 }
             }
             .listStyle(.plain)
+            .accessibilityIdentifier(AccessibilityID.Beans.list)
         }
     }
 }

@@ -9,6 +9,7 @@ struct MainTabView: View {
             .tabItem {
                 Label("Brews", systemImage: "mug")
             }
+            .accessibilityIdentifier(AccessibilityID.Tabs.brews)
 
             NavigationStack {
                 BeanListView()
@@ -16,6 +17,7 @@ struct MainTabView: View {
             .tabItem {
                 Label("Beans", systemImage: "leaf")
             }
+            .accessibilityIdentifier(AccessibilityID.Tabs.beans)
 
             NavigationStack {
                 MethodListView()
@@ -23,6 +25,7 @@ struct MainTabView: View {
             .tabItem {
                 Label("Methods", systemImage: "cup.and.saucer")
             }
+            .accessibilityIdentifier(AccessibilityID.Tabs.methods)
 
             NavigationStack {
                 GrinderListView()
@@ -30,6 +33,7 @@ struct MainTabView: View {
             .tabItem {
                 Label("Grinders", systemImage: "gearshape.2")
             }
+            .accessibilityIdentifier(AccessibilityID.Tabs.grinders)
 
             NavigationStack {
                 SettingsView()
@@ -37,6 +41,7 @@ struct MainTabView: View {
             .tabItem {
                 Label("Settings", systemImage: "gearshape")
             }
+            .accessibilityIdentifier(AccessibilityID.Tabs.settings)
         }
         .tint(Color.primary)
     }

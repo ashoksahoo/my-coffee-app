@@ -45,6 +45,7 @@ struct GrinderListView: View {
                     }
                 }
                 .listStyle(.plain)
+                .accessibilityIdentifier(AccessibilityID.Equipment.grinderList)
             }
         }
         .navigationTitle("Grinders")
@@ -56,6 +57,7 @@ struct GrinderListView: View {
                     Image(systemName: "plus")
                         .foregroundStyle(AppColors.primary)
                 }
+                .accessibilityIdentifier(AccessibilityID.Equipment.addGrinderButton)
             }
         }
         .sheet(isPresented: $showingAddSheet) {

@@ -72,6 +72,7 @@ struct BrewHistoryListContent: View {
                     }
                 }
                 .listStyle(.plain)
+                .accessibilityIdentifier(AccessibilityID.Brews.list)
             }
         }
         .onAppear { exportBrews = filteredBrews }

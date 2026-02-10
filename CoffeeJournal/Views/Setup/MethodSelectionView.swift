@@ -12,6 +12,7 @@ struct MethodSelectionView: View {
                 Text("Select Your Brew Methods")
                     .font(AppTypography.title)
                     .foregroundStyle(AppColors.primary)
+                    .accessibilityIdentifier(AccessibilityID.Setup.methodSelectionTitle)
 
                 Text("\(selectedMethods.count) method\(selectedMethods.count == 1 ? "" : "s") selected")
                     .font(AppTypography.caption)

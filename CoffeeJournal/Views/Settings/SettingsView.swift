@@ -14,6 +14,7 @@ struct SettingsView: View {
                     Label("Re-run Setup Wizard", systemImage: "wand.and.stars")
                         .foregroundStyle(AppColors.primary)
                 }
+                .accessibilityIdentifier(AccessibilityID.Settings.rerunWizardButton)
             } header: {
                 Text("Equipment Setup")
             } footer: {

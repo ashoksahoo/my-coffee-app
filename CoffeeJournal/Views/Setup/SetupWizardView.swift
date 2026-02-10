@@ -124,6 +124,11 @@ struct SetupWizardView: View {
                     )
             }
             .disabled(!viewModel.canProceed)
+            .accessibilityIdentifier(
+                viewModel.currentStep == .welcome
+                    ? AccessibilityID.Setup.getStartedButton
+                    : AccessibilityID.Setup.continueButton
+            )
         }
     }
 }
