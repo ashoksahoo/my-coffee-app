@@ -152,7 +152,7 @@ Plans:
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 
 Note: Phase 6 (Sync & Offline) depends only on Phase 1 and can be executed in parallel with Phases 2-5 if desired, but is sequenced here after Phase 5 to allow sync testing with real data across all entity types.
 
@@ -178,7 +178,9 @@ Note: Phase 6 (Sync & Offline) depends only on Phase 1 and can be executed in pa
   3. Tests run reliably in CI/CD pipeline with clear pass/fail signals
   4. Test suite covers critical user journeys end-to-end (setup wizard, create brew, add tasting notes)
   5. Developers can run full test suite locally with single command and see results in under 2 minutes
-**Plans:** TBD
+**Plans:** 3 plans
 
 Plans:
-- [ ] TBD (planning in progress)
+- [ ] 09-01-PLAN.md -- Test infrastructure (AccessibilityIdentifiers, UITESTING support, test target) + pure logic unit tests for utilities and ViewModels
+- [ ] 09-02-PLAN.md -- Accessibility identifiers wired into views + XCUITest suites for setup wizard, equipment, beans, brew log CRUD flows
+- [ ] 09-03-PLAN.md -- SwiftData integration tests (model CRUD, computed properties, relationships) + GitHub Actions CI/CD pipeline
