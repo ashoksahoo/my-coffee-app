@@ -5,24 +5,24 @@
 See: .planning/PROJECT.md (updated 2026-02-07)
 
 **Core value:** Remember and improve your coffee brewing by tracking what works
-**Current focus:** Phase 7 - Apple Intelligence (Complete)
+**Current focus:** Phase 8 - Data Export (In progress)
 
 ## Current Position
 
-Phase: 7 of 8 (Apple Intelligence)
-Plan: 2 of 2 complete in current phase
-Status: Phase complete
-Last activity: 2026-02-10 -- Completed 07-02-PLAN.md (AI insights UI layer)
+Phase: 8 of 8 (Data Export)
+Plan: 1 of 2 complete in current phase
+Status: In progress
+Last activity: 2026-02-10 -- Completed 08-01-PLAN.md (PDF/CSV export services)
 
-Progress: [████████████████] 2/2 plans complete in phase
-Overall: [████████████████████████████████████████████████████████] 18/18 plans
+Progress: [████████░░░░░░░░] 1/2 plans complete in phase
+Overall: [██████████████████████████████████████████████████████████░░] 19/20 plans
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 18
+- Total plans completed: 19
 - Average duration: ~4min
-- Total execution time: ~75min
+- Total execution time: ~78min
 
 **By Phase:**
 
@@ -35,10 +35,11 @@ Overall: [███████████████████████�
 | 05-history-search | 2/2 | ~5min | ~2.5min |
 | 06-sync-offline | 1/1 | ~3min | ~3min |
 | 07-apple-intelligence | 2/2 | ~6min | ~3min |
+| 08-data-export | 1/2 | ~3min | ~3min |
 
 **Recent Trend:**
-- Last 5 plans: 05-02 (~2min), 06-01 (~3min), 07-01 (~3min), 07-02 (~3min)
-- Trend: Stable (consistent 2-3min per plan)
+- Last 5 plans: 06-01 (~3min), 07-01 (~3min), 07-02 (~3min), 08-01 (~3min)
+- Trend: Stable (consistent 3min per plan)
 
 *Updated after each plan completion*
 
@@ -123,6 +124,10 @@ Recent decisions affecting current work:
 - [07-02]: BrewSuggestionBanner uses local @State isDismissed for dismiss without removing suggestion data
 - [07-02]: AddBrewLogView resets showSuggestion=true on bean/method change so dismissed banner reappears for new combinations
 - [07-02]: InsightsViewModel.extractFlavors guards against empty text to prevent unnecessary NL processing
+- [08-01]: BrewHistoryListContent passes filtered brews to parent via @Binding for export (default .constant([]) preserves backward compatibility)
+- [08-01]: Export Menu placed in existing ToolbarItemGroup alongside Compare/Statistics buttons
+- [08-01]: ShareLink presented in .sheet for consistent share experience
+- [08-01]: CSV flavor tags joined with semicolons to avoid CSV comma conflicts
 
 ### Pending Todos
 
@@ -133,6 +138,10 @@ None.
 - [Tech Stack]: Switched from KMP to pure Swift for v1 simplicity -- research findings (SwiftData, CloudKit, Apple Intelligence) still apply
 - [Research]: Foundation Models requires iOS 26+ with A17 Pro/M1+ -- Phase 7 features must degrade gracefully
 - [Environment]: Xcode.app not installed -- only Command Line Tools. SwiftData @Model macro expansion requires Xcode.app. User verified Xcode build for 01-01.
+
+### Roadmap Evolution
+
+- Phase 9 added: Automated QA Suite
 
 ## Verification Status
 
@@ -157,5 +166,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-10
-Stopped at: Phase 07 complete. All 18/18 plans executed. All 7 phases complete.
-Resume file: .planning/phases/07-apple-intelligence/07-02-SUMMARY.md
+Stopped at: Phase 08 plan 01 complete. 19/20 plans executed. Plan 08-02 remaining.
+Resume file: .planning/phases/08-data-export/08-01-SUMMARY.md
