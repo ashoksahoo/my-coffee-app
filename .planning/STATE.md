@@ -129,6 +129,9 @@ Recent decisions affecting current work:
 - [08-01]: Export Menu placed in existing ToolbarItemGroup alongside Compare/Statistics buttons
 - [08-01]: ShareLink presented in .sheet for consistent share experience
 - [08-01]: CSV flavor tags joined with semicolons to avoid CSV comma conflicts
+- [08-02]: BrewCardView uses explicit Color.black/Color.gray plus .environment(colorScheme, .light) for consistent white-background card regardless of device dark mode
+- [08-02]: BrewImageRenderer renders at 3x scale for retina-quality share images
+- [08-02]: Image rendering added to existing .task modifier alongside flavor extraction for single async initialization point
 - [09-01]: Swift Testing (@Suite/@Test/#expect) used over XCTest for all unit tests -- modern syntax, parallel by default
 - [09-01]: Both UITESTING and UI_TESTING launch arguments supported for backward compatibility
 - [09-01]: ViewModel tests skip @Model-dependent paths -- espresso/canSave covered in Plan 03 integration tests
