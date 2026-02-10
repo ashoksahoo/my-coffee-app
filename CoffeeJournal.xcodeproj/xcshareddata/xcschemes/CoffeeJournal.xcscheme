@@ -15,7 +15,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3346B019B6444328"
+               BlueprintIdentifier = "73E613D43D49E06EF501B539"
                BuildableName = "CoffeeJournal.app"
                BlueprintName = "CoffeeJournal"
                ReferencedContainer = "container:CoffeeJournal.xcodeproj">
@@ -29,6 +29,28 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AA400001AA400001"
+               BuildableName = "CoffeeJournalTests.xctest"
+               BlueprintName = "CoffeeJournalTests"
+               ReferencedContainer = "container:CoffeeJournal.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F5912D86DA94EDD637BD212E"
+               BuildableName = "CoffeeJournalUITests.xctest"
+               BlueprintName = "CoffeeJournalUITests"
+               ReferencedContainer = "container:CoffeeJournal.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -44,7 +66,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3346B019B6444328"
+            BlueprintIdentifier = "73E613D43D49E06EF501B539"
             BuildableName = "CoffeeJournal.app"
             BlueprintName = "CoffeeJournal"
             ReferencedContainer = "container:CoffeeJournal.xcodeproj">
@@ -61,7 +83,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3346B019B6444328"
+            BlueprintIdentifier = "73E613D43D49E06EF501B539"
             BuildableName = "CoffeeJournal.app"
             BlueprintName = "CoffeeJournal"
             ReferencedContainer = "container:CoffeeJournal.xcodeproj">
