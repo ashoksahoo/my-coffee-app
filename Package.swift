@@ -73,6 +73,9 @@ let package = Package(
                 "Views/Insights/FlavorInsightView.swift",
                 "Views/Insights/BrewPatternCard.swift",
                 "Views/Insights/BrewSuggestionBanner.swift",
+                "Services/Export/PDFExporter.swift",
+                "Services/Export/CSVExporter.swift",
+                "Services/Export/ExportTypes.swift",
             ]
         ),
     ]

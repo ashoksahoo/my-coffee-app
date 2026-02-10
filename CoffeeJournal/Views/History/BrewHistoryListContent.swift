@@ -6,11 +6,13 @@ import SwiftData
 struct BrewHistoryListContent: View {
     @Query private var brews: [BrewLog]
     @Environment(\.modelContext) private var modelContext
+    @Binding var exportBrews: [BrewLog]
 
     let methodID: PersistentIdentifier?
     let beanID: PersistentIdentifier?
 
-    init(searchText: String, methodID: PersistentIdentifier?, beanID: PersistentIdentifier?, startDate: Date?, endDate: Date?, minimumRating: Int) {
+    init(searchText: String, methodID: PersistentIdentifier?, beanID: PersistentIdentifier?, startDate: Date?, endDate: Date?, minimumRating: Int, exportBrews: Binding<[BrewLog]> = .constant([])) {
+        self._exportBrews = exportBrews
         self.methodID = methodID
         self.beanID = beanID
 
@@ -45,30 +47,34 @@ struct BrewHistoryListContent: View {
     }
 
     var body: some View {
-        if filteredBrews.isEmpty {
-            EmptyStateView(
-                systemImage: "magnifyingglass",
-                title: "No Matches",
-                message: "Try adjusting your filters or search text"
-            )
-        } else {
-            List {
-                ForEach(filteredBrews) { brew in
-                    NavigationLink {
-                        BrewLogDetailView(brew: brew)
-                    } label: {
-                        BrewLogRow(brew: brew)
-                    }
-                    .swipeActions(edge: .trailing, allowsFullSwipe: false) {
-                        Button(role: .destructive) {
-                            modelContext.delete(brew)
+        Group {
+            if filteredBrews.isEmpty {
+                EmptyStateView(
+                    systemImage: "magnifyingglass",
+                    title: "No Matches",
+                    message: "Try adjusting your filters or search text"
+                )
+            } else {
+                List {
+                    ForEach(filteredBrews) { brew in
+                        NavigationLink {
+                            BrewLogDetailView(brew: brew)
                         } label: {
-                            Label("Delete", systemImage: "trash")
+                            BrewLogRow(brew: brew)
+                        }
+                        .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                            Button(role: .destructive) {
+                                modelContext.delete(brew)
+                            } label: {
+                                Label("Delete", systemImage: "trash")
+                            }
                         }
                     }
                 }
+                .listStyle(.plain)
             }
-            .listStyle(.plain)
         }
+        .onAppear { exportBrews = filteredBrews }
+        .onChange(of: filteredBrews.count) { exportBrews = filteredBrews }
     }
 }
