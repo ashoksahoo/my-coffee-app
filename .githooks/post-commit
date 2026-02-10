@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Post-commit hook to run tests locally after each commit
+# This runs in the background so it doesn't block you from continuing work
+#
+# Installation: cp .githooks/post-commit .git/hooks/post-commit && chmod +x .git/hooks/post-commit
+
+echo ""
+echo "🧪 Running tests in background..."
+echo ""
+
+# Run tests in background
+(
+  # Give a moment for any file system operations to settle
+  sleep 1
+
+  # Run unit tests
+  echo "📝 Running unit tests..."
+  xcodebuild test \
+    -project CoffeeJournal.xcodeproj \
+    -scheme CoffeeJournal \
+    -destination 'platform=iOS Simulator,name=iPhone 17' \
+    -only-testing:CoffeeJournalTests \
+    -quiet \
+    2>&1 | grep -E "(Test Suite|passed|failed|error)" || true
+
+  TEST_EXIT_CODE=${PIPESTATUS[0]}
+
+  echo ""
+  if [ $TEST_EXIT_CODE -eq 0 ]; then
+    echo "✅ All tests passed!"
+  else
+    echo "❌ Some tests failed. Run tests manually to see details:"
+    echo "   xcodebuild test -project CoffeeJournal.xcodeproj -scheme CoffeeJournal -destination 'platform=iOS Simulator,name=iPhone 17' -only-testing:CoffeeJournalTests"
+  fi
+  echo ""
+) &
+
+# Don't wait for background process
+disown
+
+echo "Tests running in background. You can continue working..."
+echo ""
