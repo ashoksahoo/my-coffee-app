@@ -1,0 +1,68 @@
+name: Tests
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  unit-tests:
+    name: Unit & Integration Tests
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_16.0.app/Contents/Developer
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: List available simulators
+        run: xcrun simctl list devices available | head -30
+
+      - name: Run Unit & Integration Tests
+        run: |
+          xcodebuild test \
+            -project CoffeeJournal.xcodeproj \
+            -scheme CoffeeJournal \
+            -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
+            -only-testing:CoffeeJournalTests \
+            CODE_SIGNING_ALLOWED='NO' \
+            -parallel-testing-enabled NO \
+            -resultBundlePath TestResults/unit-tests.xcresult
+
+      - name: Upload Unit Test Results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: unit-test-results
+          path: TestResults/unit-tests.xcresult
+
+  ui-tests:
+    name: UI Tests
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_16.0.app/Contents/Developer
+
+      - name: Run UI Tests
+        run: |
+          xcodebuild test \
+            -project CoffeeJournal.xcodeproj \
+            -scheme CoffeeJournal \
+            -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
+            -only-testing:CoffeeJournalUITests \
+            CODE_SIGNING_ALLOWED='NO' \
+            -parallel-testing-enabled NO \
+            -resultBundlePath TestResults/ui-tests.xcresult
+
+      - name: Upload UI Test Results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ui-test-results
+          path: TestResults/ui-tests.xcresult
