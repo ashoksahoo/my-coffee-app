@@ -143,11 +143,11 @@ Plans:
   1. User can export a collection of brew logs as a formatted PDF journal
   2. User can export brew data as a CSV file for spreadsheet analysis
   3. User can export an individual brew as a shareable image
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 08-01: PDF and CSV export
-- [ ] 08-02: Individual brew image export
+- [ ] 08-01-PLAN.md -- PDF and CSV export services, Transferable wrappers, BrewLogListView export menu
+- [ ] 08-02-PLAN.md -- BrewCardView, BrewImageRenderer, BrewLogDetailView share button
 
 ## Progress
 
@@ -166,3 +166,19 @@ Note: Phase 6 (Sync & Offline) depends only on Phase 1 and can be executed in pa
 | 6. Sync & Offline | 0/1 | Planning complete | - |
 | 7. Apple Intelligence | 0/2 | Planning complete | - |
 | 8. Data Export | 0/2 | Not started | - |
+
+### Phase 9: Automated QA Suite
+
+**Goal:** Users and developers can verify app behavior through automated UI tests and integration tests covering all CRUD operations
+**Depends on:** Phase 8
+**Requirements**: TEST-01, TEST-02, TEST-03, TEST-04, TEST-05
+**Success Criteria** (what must be TRUE):
+  1. Automated UI tests verify user flows for equipment, beans, and brew logging across creation, editing, and deletion
+  2. Integration tests validate SwiftData persistence and CloudKit sync behavior
+  3. Tests run reliably in CI/CD pipeline with clear pass/fail signals
+  4. Test suite covers critical user journeys end-to-end (setup wizard, create brew, add tasting notes)
+  5. Developers can run full test suite locally with single command and see results in under 2 minutes
+**Plans:** TBD
+
+Plans:
+- [ ] TBD (planning in progress)
