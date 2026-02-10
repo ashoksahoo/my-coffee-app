@@ -69,6 +69,10 @@ let package = Package(
                 "Services/Insights/BrewPatternAnalyzer.swift",
                 "Services/Insights/BrewSuggestionEngine.swift",
                 "Views/Components/SyncStatusView.swift",
+                "ViewModels/InsightsViewModel.swift",
+                "Views/Insights/FlavorInsightView.swift",
+                "Views/Insights/BrewPatternCard.swift",
+                "Views/Insights/BrewSuggestionBanner.swift",
             ]
         ),
     ]
