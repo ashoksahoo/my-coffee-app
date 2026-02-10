@@ -10,19 +10,19 @@ See: .planning/PROJECT.md (updated 2026-02-07)
 ## Current Position
 
 Phase: 9 of 9 (Automated QA Suite)
-Plan: 1 of 3 complete in current phase
+Plan: 2 of 3 complete in current phase
 Status: In progress
-Last activity: 2026-02-10 -- Completed 09-01-PLAN.md (Unit test infrastructure and business logic tests)
+Last activity: 2026-02-10 -- Completed 09-03-PLAN.md (SwiftData integration tests and CI/CD pipeline)
 
-Progress: [█████░░░░░░░░░░░] 1/3 plans complete in phase
-Overall: [██████████████████████████████████████████████████████████████████████░░░░░░] 21/23 plans
+Progress: [██████████░░░░░░] 2/3 plans complete in phase
+Overall: [██████████████████████████████████████████████████████████████████████████░░░] 22/23 plans
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 21
+- Total plans completed: 22
 - Average duration: ~4min
-- Total execution time: ~84min
+- Total execution time: ~87min
 
 **By Phase:**
 
@@ -36,11 +36,11 @@ Overall: [███████████████████████�
 | 06-sync-offline | 1/1 | ~3min | ~3min |
 | 07-apple-intelligence | 2/2 | ~6min | ~3min |
 | 08-data-export | 2/2 | ~6min | ~3min |
-| 09-automated-qa-suite | 1/3 | ~6min | ~6min |
+| 09-automated-qa-suite | 2/3 | ~9min | ~4.5min |
 
 **Recent Trend:**
-- Last 5 plans: 07-02 (~3min), 08-01 (~3min), 08-02 (~3min), 09-01 (~6min)
-- Trend: Slightly longer for test infrastructure (more files)
+- Last 5 plans: 08-01 (~3min), 08-02 (~3min), 09-01 (~6min), 09-03 (~3min)
+- Trend: Integration tests + CI faster than unit test infrastructure
 
 *Updated after each plan completion*
 
@@ -136,6 +136,10 @@ Recent decisions affecting current work:
 - [09-01]: Both UITESTING and UI_TESTING launch arguments supported for backward compatibility
 - [09-01]: ViewModel tests skip @Model-dependent paths -- espresso/canSave covered in Plan 03 integration tests
 - [09-01]: AccessibilityIdentifiers.swift in CoffeeJournal/Utilities/ compiled into both app and test targets
+- [09-03]: XCTest (not Swift Testing) for SwiftData integration tests -- @MainActor requirements more reliable with XCTestCase lifecycle
+- [09-03]: In-memory ModelContainer per test class for complete isolation -- no persistent state between test runs
+- [09-03]: GitHub Actions macos-14 runner with Xcode 16 for CI stability -- avoids macOS-15 parallel testing bugs
+- [09-03]: Separate CI jobs for unit and UI tests -- faster feedback, clearer pass/fail signals
 
 ### Pending Todos
 
@@ -174,5 +178,5 @@ None.
 ## Session Continuity
 
 Last session: 2026-02-10
-Stopped at: Completed 09-01-PLAN.md (unit test infrastructure + 119 business logic tests)
-Resume file: .planning/phases/09-automated-qa-suite/09-01-SUMMARY.md
+Stopped at: Completed 09-03-PLAN.md (SwiftData integration tests + CI/CD pipeline)
+Resume file: .planning/phases/09-automated-qa-suite/09-03-SUMMARY.md
