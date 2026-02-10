@@ -129,11 +129,11 @@ Plans:
   2. System identifies brewing patterns (preferred grind settings by origin, optimal ratios) and displays them in the statistics dashboard
   3. When logging a new brew with a similar coffee, system suggests brew parameters based on past successful brews
   4. All ML processing runs on-device with no data sent to external servers, and features degrade gracefully on unsupported hardware
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 07-01: NaturalLanguage flavor extraction and Foundation Models service
-- [ ] 07-02: Pattern recognition, brew suggestions, and insights integration
+- [ ] 07-01-PLAN.md -- InsightsService protocol, FlavorExtractor (NLTagger + NLEmbedding), BrewPatternAnalyzer, BrewSuggestionEngine, Foundation Models enhancement
+- [ ] 07-02-PLAN.md -- InsightsViewModel, insight views (FlavorInsightView, BrewPatternCard, BrewSuggestionBanner), wiring into BrewLogDetailView, StatisticsDashboardView, AddBrewLogView
 
 ### Phase 8: Data Export
 **Goal**: Users can export their brewing data in multiple formats for sharing and archival
@@ -164,5 +164,5 @@ Note: Phase 6 (Sync & Offline) depends only on Phase 1 and can be executed in pa
 | 4. Tasting & Flavor Notes | 0/3 | Planning complete | - |
 | 5. History & Search | 0/2 | Planning complete | - |
 | 6. Sync & Offline | 0/1 | Planning complete | - |
-| 7. Apple Intelligence | 0/2 | Not started | - |
+| 7. Apple Intelligence | 0/2 | Planning complete | - |
 | 8. Data Export | 0/2 | Not started | - |
