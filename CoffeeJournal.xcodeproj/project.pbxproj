@@ -76,6 +76,7 @@
 		B1686A8E3CE4BB03C39166B8 /* BeanListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7F52F3A61B00009322A /* BeanListView.swift */; };
 		B69AC492964121DC57C4DF24 /* SpiderChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD8232F3A61B00009322A /* SpiderChartView.swift */; };
 		BA855F1B6C1C44ECEA715B14 /* FlavorWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7DC2F3A61B00009322A /* FlavorWheel.swift */; };
+		BD35EFD57B68B74247C7A0A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14366588D5B5125A73E229BE /* Foundation.framework */; };
 		BDC9378804C55720942013A2 /* BrewLogRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7FC2F3A61B00009322A /* BrewLogRow.swift */; };
 		BEE82EC3A427E603063DFDAF /* AttributeSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD81D2F3A61B00009322A /* AttributeSliderView.swift */; };
 		C13D9ACA95E119A0619A82A8 /* Grinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F5A161AEFE43D3 /* Grinder.swift */; };
@@ -102,10 +103,21 @@
 		E2A740761D03C13C92BA44B5 /* BrewComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD81E2F3A61B00009322A /* BrewComparisonView.swift */; };
 		EFF5E490C62200419F9C3EF1 /* AddMethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD8072F3A61B00009322A /* AddMethodView.swift */; };
 		F8ADDCE9372721F564446D20 /* GrinderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD300003DD300003 /* GrinderListView.swift */; };
+		FC4938A6E491B049251E45DD /* CoffeeJournalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FC0037C626A91019B651FF /* CoffeeJournalUITests.swift */; };
 		FCC8394937A7D10809C2575D /* TastingNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7E32F3A61B00009322A /* TastingNote.swift */; };
 		FF22FBAFCD679E31DA8317CC /* BrewHistoryListContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD80F2F3A61B00009322A /* BrewHistoryListContent.swift */; };
 		FFE8F145E968F17CAAF5709B /* BeanDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7F42F3A61B00009322A /* BeanDetailView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B3C8D6AAEF6E67EFFA4CF64B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8843C961065C44B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73E613D43D49E06EF501B539;
+			remoteInfo = CoffeeJournal;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		00B78D46303D1E4D38BEB631 /* CoffeeJournal.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = CoffeeJournal/CoffeeJournal.entitlements; sourceTree = "<group>"; };
@@ -120,6 +132,7 @@
 		220FEE4DBA4815598D2B30B6 /* BrewStepGuideView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewStepGuideView.swift; path = CoffeeJournal/Views/Brewing/BrewStepGuideView.swift; sourceTree = "<group>"; };
 		232D9ACF1EFC32A5EBB4DFFF /* SyncStatusView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SyncStatusView.swift; path = CoffeeJournal/Views/Components/SyncStatusView.swift; sourceTree = "<group>"; };
 		28835F6529C54E9F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2DBDB6069B7FF255C0372CFC /* CoffeeJournalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeJournalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADA646FE5FCB43C2561F54B /* FreshnessCalculator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FreshnessCalculator.swift; path = CoffeeJournal/Utilities/FreshnessCalculator.swift; sourceTree = "<group>"; };
 		3E81B81B5B851FB1577073F2 /* FlavorProfileView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlavorProfileView.swift; path = CoffeeJournal/Views/Tasting/FlavorProfileView.swift; sourceTree = "<group>"; };
 		4855878F441948B3 /* BrewLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewLog.swift; sourceTree = "<group>"; };
@@ -156,6 +169,7 @@
 		D059234F1C99CA8A88B7636C /* BrewLogRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewLogRow.swift; path = CoffeeJournal/Views/Brewing/BrewLogRow.swift; sourceTree = "<group>"; };
 		D09E04E786C944E3 /* MigrationPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationPlan.swift; sourceTree = "<group>"; };
 		D2814EFA61DF81FDB739F927 /* BrewStepTemplates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewStepTemplates.swift; path = CoffeeJournal/Utilities/BrewStepTemplates.swift; sourceTree = "<group>"; };
+		D4FC0037C626A91019B651FF /* CoffeeJournalUITests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoffeeJournalUITests.swift; sourceTree = "<group>"; };
 		DB97BACF80DA36C5C1B42EBE /* SpiderChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpiderChartView.swift; path = CoffeeJournal/Views/Tasting/SpiderChartView.swift; sourceTree = "<group>"; };
 		DD200001DD200001 /* SetupWizardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupWizardViewModel.swift; sourceTree = "<group>"; };
 		DD300001DD300001 /* MethodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodListView.swift; sourceTree = "<group>"; };
@@ -252,6 +266,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5366BF536E4A5C9EB911126A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD35EFD57B68B74247C7A0A8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5EE1F179BC2CC1161104D61C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -317,6 +339,15 @@
 			path = CoffeeJournal;
 			sourceTree = "<group>";
 		};
+		500F851DD8802F075D0EBCDB /* CoffeeJournalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D4FC0037C626A91019B651FF /* CoffeeJournalUITests.swift */,
+			);
+			name = CoffeeJournalUITests;
+			path = CoffeeJournalUITests;
+			sourceTree = "<group>";
+		};
 		77BCD03B956B4346 = {
 			isa = PBXGroup;
 			children = (
@@ -362,6 +393,8 @@
 				7B68E1C3C4A7A546FCB54B2C /* SetupWizardView.swift */,
 				E5E4D73FDE65A061C9AE33CB /* CoffeeJournal.app */,
 				0D0D707461489AE51D67ED07 /* Frameworks */,
+				2DBDB6069B7FF255C0372CFC /* CoffeeJournalUITests.xctest */,
+				500F851DD8802F075D0EBCDB /* CoffeeJournalUITests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -646,6 +679,24 @@
 			productReference = E5E4D73FDE65A061C9AE33CB /* CoffeeJournal.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F5912D86DA94EDD637BD212E /* CoffeeJournalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3D66B3E6F9F5D163228F3E1 /* Build configuration list for PBXNativeTarget "CoffeeJournalUITests" */;
+			buildPhases = (
+				6FC834D86688672AE6D1341C /* Sources */,
+				5366BF536E4A5C9EB911126A /* Frameworks */,
+				4C7BB8CC119266AE9B5AC45E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90905A9521D65CB972D80F8A /* PBXTargetDependency */,
+			);
+			name = CoffeeJournalUITests;
+			productName = CoffeeJournalUITests;
+			productReference = 2DBDB6069B7FF255C0372CFC /* CoffeeJournalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -670,11 +721,19 @@
 			projectRoot = "";
 			targets = (
 				73E613D43D49E06EF501B539 /* CoffeeJournal */,
+				F5912D86DA94EDD637BD212E /* CoffeeJournalUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4C7BB8CC119266AE9B5AC45E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C883B00D4C831DA4610BC64E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -789,9 +848,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6FC834D86688672AE6D1341C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC4938A6E491B049251E45DD /* CoffeeJournalUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		90905A9521D65CB972D80F8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CoffeeJournal;
+			target = 73E613D43D49E06EF501B539 /* CoffeeJournal */;
+			targetProxy = B3C8D6AAEF6E67EFFA4CF64B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		97680244F7EC81E7D5A3B228 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.ashok.mycoffeeapp.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CoffeeJournal;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		A1234567890ABCDE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -877,6 +969,21 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C7425B3A10BDAECDBCBF3DCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.ashok.mycoffeeapp.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CoffeeJournal;
 			};
 			name = Debug;
 		};
@@ -993,6 +1100,15 @@
 			buildConfigurations = (
 				F16D786FD89241C7 /* Debug */,
 				A1234567890ABCDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3D66B3E6F9F5D163228F3E1 /* Build configuration list for PBXNativeTarget "CoffeeJournalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97680244F7EC81E7D5A3B228 /* Release */,
+				C7425B3A10BDAECDBCBF3DCB /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
