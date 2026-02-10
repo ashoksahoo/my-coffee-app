@@ -8,127 +8,236 @@
 
 /* Begin PBXBuildFile section */
 		00446567795F92D700D3968B /* MethodDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD80B2F3A61B00009322A /* MethodDetailView.swift */; };
+		0046E5ECB33E93476B20BEE0 /* MethodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5B1B670423B0CA89181CC7 /* MethodCategory.swift */; };
 		00939977041C836C6F3D34B7 /* MethodTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3F3B1D28442E1 /* MethodTemplate.swift */; };
 		0185192E7EB43CB04D2F4192 /* MonochromeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB100001BB100001 /* MonochromeStyle.swift */; };
+		01D35C15033901102992B0CF /* SwiftDataPersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB21F9F7156DFBCB78B2107C /* SwiftDataPersistenceTests.swift */; };
+		0287EE01077563CF1C266D8E /* ImageCompressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDF31C91F4B0E70725C27AD /* ImageCompressor.swift */; };
+		04AE840B3E3A315C10DE089F /* FlavorExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB542AFA1E0023D17366746 /* FlavorExtractor.swift */; };
 		065CD976829E31F0A57F1293 /* ImageCompressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7ED2F3A61B00009322A /* ImageCompressor.swift */; };
+		06B40052E874CEA9BF3A75BC /* BrewStepGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDA11497079541029CE4B40 /* BrewStepGuideView.swift */; };
+		09FF925D0E975018BB2C8308 /* BrewLogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E55FFA72D28E279100B61 /* BrewLogListView.swift */; };
+		0AB42E54085ED2C1067AC3D1 /* BrewPatternCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDA9D1F307A7CAEA6661DE /* BrewPatternCard.swift */; };
 		0D81D380974C75497E627EC8 /* SchemaV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774C71094AD5404D /* SchemaV1.swift */; };
 		0F7A165386C9FD57E0CD3B11 /* CoffeeBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C0C689074F4DD9 /* CoffeeBean.swift */; };
+		1232EC8F1638BD379821E645 /* FlavorTagFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31638618D279C0620387AC5D /* FlavorTagFlowView.swift */; };
 		12EEFB14DD2E3A2695BE820D /* MethodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7DF2F3A61B00009322A /* MethodCategory.swift */; };
 		13C4188A53076B403459479E /* FreshnessCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7EC2F3A61B00009322A /* FreshnessCalculator.swift */; };
 		13DA49F3944BD399799DB6D8 /* RoastLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7E22F3A61B00009322A /* RoastLevel.swift */; };
+		13FF74EAF679A869FAB71DDB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18DA98F606008A8668E9628 /* ContentView.swift */; };
+		14EC5D3018D6D7B70B2CA552 /* CoffeeBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85B2C0DF43F7C415458BF37 /* CoffeeBean.swift */; };
+		1744DA01D36A0C503886BF55 /* CoffeeJournalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78F771ABA8CB90658C38A91 /* CoffeeJournalApp.swift */; };
+		177A2D5DE02F64F62C37E982 /* CSVExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E2F4722E2976E3F1FE6EA2 /* CSVExporter.swift */; };
 		184358AA7FF6BA8529139680 /* BrewStepTemplates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7EA2F3A61B00009322A /* BrewStepTemplates.swift */; };
+		1A442BA4A492458B09FD4FA3 /* BeanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497F6B19F37851A703F30F99 /* BeanUITests.swift */; };
+		SS900001SS900001 /* ScreenshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SS900011SS900011 /* ScreenshotTests.swift */; };
+		1C0DAB31FBDDAD1E302D548A /* SetupWizardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AB1B11A593769B478592F3 /* SetupWizardUITests.swift */; };
+		20463355C5ADCACB63D38969 /* BrewTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301BC4E47D025D60D388CAA7 /* BrewTimerView.swift */; };
+		223BCC9677E88D9849CF2471 /* GrinderEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044C40415F8D37FBAE9A162 /* GrinderEntryView.swift */; };
+		22F09229631DE9929A6A2816 /* TastingNoteEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA59562C8DFA0F2C2FFF49A /* TastingNoteEntryView.swift */; };
 		24FF882D8E289A980A68124F /* FlavorWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD8222F3A61B00009322A /* FlavorWheelView.swift */; };
+		2522456BEEDE21A23B7766FC /* BeanRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980E376AC2C0CA7DC9E83713 /* BeanRow.swift */; };
+		2546F98981D5EF1E1FB90797 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4A41083385F476A266673B /* SettingsView.swift */; };
 		26B42C623CE73CDAAC3B986B /* FlavorTagFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD8212F3A61B00009322A /* FlavorTagFlowView.swift */; };
+		275F507A9F30190FB1E3FD89 /* GrinderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC96DA52B877B3218C2E5614 /* GrinderDetailView.swift */; };
 		28CFB4403CE226385949C8DD /* GrinderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD8092F3A61B00009322A /* GrinderDetailView.swift */; };
 		29DD7E3D3954E4B5AAEB9BBD /* Grinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7DD2F3A61B00009322A /* Grinder.swift */; };
+		2B485E8AAF169231B4C60A33 /* UITestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835B9C29F6B88FB04DD75560 /* UITestHelpers.swift */; };
+		2B65B58ADCDBB71D579BF360 /* MethodTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28038D5FC60E8167F82533DC /* MethodTemplate.swift */; };
 		2DB56F74FDFBA554C63FDB41 /* BrewLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7EF2F3A61B00009322A /* BrewLogViewModel.swift */; };
+		2DC27E8C251D8A6321FDF06D /* GrinderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403FE752E16802213D37C1D /* GrinderType.swift */; };
 		3060EC21D3D9839A3D208FF8 /* MethodSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400003DD400003 /* MethodSelectionView.swift */; };
+		31847F6755429CF332807628 /* TastingNoteViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374BA0787836B0B5FBFFE43F /* TastingNoteViewModelTests.swift */; };
+		31BE0FB96914E25FAE0ED34B /* FlavorWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01D626649207DC16C939821 /* FlavorWheel.swift */; };
+		341BFD03DE522900A8F602D5 /* FlavorTagChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A18F1A8AE5E2A1EE25D76F2 /* FlavorTagChipView.swift */; };
+		347500F04107FB9962575ABB /* SchemaV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EC6297987E152F95E835C9 /* SchemaV1.swift */; };
+		34A534B37F6ABE76976786C3 /* RoastLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EDEA86D287365302F98CE4 /* RoastLevel.swift */; };
 		35719FC1A66F3CCAFD665C2E /* BagScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD8122F3A61B00009322A /* BagScannerView.swift */; };
+		35B9651AB368327741214486 /* MethodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132ACD2F83BFE9638DA6F37E /* MethodListView.swift */; };
 		35D4DFD3E78C914244446A9C /* BagLabelParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7E92F3A61B00009322A /* BagLabelParser.swift */; };
 		36D42F5A657282B7391BED4D /* SetupWizardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD81A2F3A61B00009322A /* SetupWizardView.swift */; };
 		3703043EF91D495DEF5FF406 /* BrewFilterSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD80E2F3A61B00009322A /* BrewFilterSheet.swift */; };
 		393806B0D7A6508B73024FE8 /* GrinderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD500002DD500002 /* GrinderDetailView.swift */; };
 		397A7F16E8EEF004C3613FC7 /* FlavorProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD81F2F3A61B00009322A /* FlavorProfileView.swift */; };
+		3AB4A122ABA96F99DF8FA49C /* FreshnessIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BE6618E52B2D764B3CCFC1 /* FreshnessIndicatorView.swift */; };
 		3B6FFB593BF6E21C5537E5BB /* GrinderEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD8172F3A61B00009322A /* GrinderEntryView.swift */; };
 		3BFAEA17619B20F894B817BB /* ProcessingMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7E12F3A61B00009322A /* ProcessingMethod.swift */; };
+		3C4FBA72FC32DF72276A3DAE /* BrewLogComputedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5FB4E7932253C25C0A017 /* BrewLogComputedTests.swift */; };
 		3C707FDCC751653AFDA2DCAD /* GrinderEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400004DD400004 /* GrinderEntryView.swift */; };
 		3E707DAC10DB30C35F4E9984 /* BrewLogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7FA2F3A61B00009322A /* BrewLogDetailView.swift */; };
 		3F9D0BE4640C7826D80A064D /* BrewStepGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7FD2F3A61B00009322A /* BrewStepGuideView.swift */; };
 		40B8D47D8C94E2D1F8B36891 /* SetupCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400005DD400005 /* SetupCompleteView.swift */; };
+		40BC6010361D480CBE67FDFE /* EquipmentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35173A92813A15ACA0C5E506 /* EquipmentRow.swift */; };
+		415073E951BAB5A1F3173A32 /* BrewLogViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D16586B72AD4D60C965C6E9 /* BrewLogViewModelTests.swift */; };
 		4388840120803C2FC3011C76 /* GrinderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C67BC12CA1418C /* GrinderType.swift */; };
+		442BD50C8084EC626B9B4329 /* BrewComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D49114380ADB4B27DEE60B6 /* BrewComparisonView.swift */; };
+		4739B6A75675528ED755C41F /* InsightsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C8E979D45A41F214055CE3 /* InsightsViewModel.swift */; };
+		475075504715FB56E04BCCB9 /* BagLabelParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB35CABC4C37DA1BDC6EB093 /* BagLabelParser.swift */; };
 		4B963405A5F76A72CB1EABD1 /* BrewLogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7FB2F3A61B00009322A /* BrewLogListView.swift */; };
+		4D679016935F7BF8011942DA /* FreshnessCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF3FB14FF6720F0EB2E64EB /* FreshnessCalculatorTests.swift */; };
 		4F01920FBBA27C0A1FBF50D0 /* TastingNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7F12F3A61B00009322A /* TastingNoteViewModel.swift */; };
 		4F7590DB4DF905318D53C742 /* CoffeeJournalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CAFB78E95C45AD /* CoffeeJournalApp.swift */; };
 		5115E7862B5A5353CADCCD4A /* GrinderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD80A2F3A61B00009322A /* GrinderListView.swift */; };
+		531541114990665940B4B39F /* MethodSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A43C245338CC47F0510E341 /* MethodSelectionView.swift */; };
 		53FC98E8C0FAC3BC72ABDCB2 /* BrewTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7FE2F3A61B00009322A /* BrewTimerView.swift */; };
 		54029ABA0A17713CF24A4D8D /* AddMethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD300002DD300002 /* AddMethodView.swift */; };
 		58C1D4CC703AFDAD7F37D97E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28835F6529C54E9F /* ContentView.swift */; };
+		5F318C241AC90E6A635092CA /* BrewStepTemplatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43375BB64FEC401F726F4CF7 /* BrewStepTemplatesTests.swift */; };
 		6046E617E53A3938171D855C /* MethodTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7E02F3A61B00009322A /* MethodTemplate.swift */; };
+		61ECDAD80626D112FFA10B37 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA73C5F3D8C63FAF46536146 /* TestHelpers.swift */; };
 		6560831ABCB3CDC4BAC9D854 /* MethodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD300001DD300001 /* MethodListView.swift */; };
+		664B1254FC2828B567E292AD /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE92E5DEE831E4AA2AF48415 /* NetworkMonitor.swift */; };
+		6AD83247D9518D8149613359 /* CoffeeJournalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4276EB2493D321A02385AB1C /* CoffeeJournalUITests.swift */; };
 		6AE86FDB2D9ACF7FAD8BCA75 /* StatisticsDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD8102F3A61B00009322A /* StatisticsDashboardView.swift */; };
+		6C7801425E3C7E600C0BD198 /* ProcessingMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E18CE88863159EA434CA9 /* ProcessingMethod.swift */; };
 		6CB8BCB1F7782E195DB580B7 /* SetupCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD8192F3A61B00009322A /* SetupCompleteView.swift */; };
+		6CBB8D00DEF99B356E6C11ED /* TastingNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5B095249B115C2069E03B1 /* TastingNote.swift */; };
+		6D769C74711C08F21EA75BA5 /* FlavorWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB936EDC9F8379B47BF85F7B /* FlavorWheelView.swift */; };
 		6E57F8048A5C74ADACA336AC /* BrewMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE64E86DD6A84C13 /* BrewMethod.swift */; };
+		70E8E5BFC42D0F3D84272A5D /* BrewImageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE79FF88E926F9CC15D77A7 /* BrewImageRenderer.swift */; };
+		75B23CD274B123037C457C00 /* Grinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146D7225E6E860B73747BCAF /* Grinder.swift */; };
+		76D6139829B69B297C48FA1C /* GrinderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C7911BCD8CCE150511BF18 /* GrinderListView.swift */; };
+		76F749165808E0F64E95E499 /* SyncMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7637E86C2684BD931F0C99 /* SyncMonitor.swift */; };
 		78021BF0599D2ACA72169CB0 /* AppStorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7E82F3A61B00009322A /* AppStorageKeys.swift */; };
 		781DBA3420024EEF9F91A81B /* WelcomeStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD81B2F3A61B00009322A /* WelcomeStepView.swift */; };
+		7BC3296919881DA005860F67 /* MonochromeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34444AA5632AC17A570E903E /* MonochromeStyle.swift */; };
 		7BE0D3AF0B9C99E5428A60B4 /* WelcomeStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD400002DD400002 /* WelcomeStepView.swift */; };
 		7E41F3044C2556B6771BE1AB /* EquipmentPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD500003DD500003 /* EquipmentPhotoPickerView.swift */; };
+		7EA839D0BB35B00A08BBD33F /* BagScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C23A48D60461CA5AC22E991 /* BagScannerView.swift */; };
+		7EA847E6CC29C44B35A8B540 /* CoffeeBeanComputedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599465EE05D17FFD78BC1E1 /* CoffeeBeanComputedTests.swift */; };
 		7EC23F501E4B4F32E20F4F82 /* BrewLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4855878F441948B3 /* BrewLog.swift */; };
 		815068AA7D53DABF39DF82DC /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7E52F3A61B00009322A /* NetworkMonitor.swift */; };
+		81A147807F29A094E113DC55 /* WelcomeStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F19E80F3623C404CCD48F /* WelcomeStepView.swift */; };
+		81B5A13E3AB85ADF8E00892B /* BrewPatternAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C17A6E3D57ABFD92B23CF41 /* BrewPatternAnalyzer.swift */; };
 		8249E9531A7A180E5A5AC40A /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD8002F3A61B00009322A /* EmptyStateView.swift */; };
 		83E8EFCE1E67CD163A53D746 /* FlavorTagChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD8202F3A61B00009322A /* FlavorTagChipView.swift */; };
 		84D236017428A23D692AAD1B /* GrinderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7DE2F3A61B00009322A /* GrinderType.swift */; };
+		87A47DD3C3EC22B7F6AF5396 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D2AE5A05DAB2B61E3838E /* EmptyStateView.swift */; };
+		8879499F65ECD0895FB071C4 /* BrewHistoryListContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B648354C37B22A38E5FB9B /* BrewHistoryListContent.swift */; };
 		8952CEC4EFAB56ACC70EB2A6 /* AddGrinderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD8062F3A61B00009322A /* AddGrinderView.swift */; };
 		8A35B0A0B68BD42943EE6275 /* MethodDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD500001DD500001 /* MethodDetailView.swift */; };
 		8C50AA3FA95D2EA8ACAD1C42 /* MigrationPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09E04E786C944E3 /* MigrationPlan.swift */; };
+		8CD60E5253873162748212B4 /* AddBrewLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9FE1463B281EF1C42B46B3 /* AddBrewLogView.swift */; };
 		8DAB317C5DF33ED912F62C82 /* TastingNoteEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD8242F3A61B00009322A /* TastingNoteEntryView.swift */; };
+		8E2CA5E1A2100238A4911F8A /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D989582E6058618FE8616161 /* AccessibilityIdentifiers.swift */; };
+		8F4B7787E94F9B3F87391727 /* BagLabelParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA775343F95C298572627F /* BagLabelParserTests.swift */; };
 		915202887C772010B747B1E4 /* BeanRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7F62F3A61B00009322A /* BeanRow.swift */; };
+		936AAFB08C252DF9AB153827 /* AddMethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211105AA47E4337934552241 /* AddMethodView.swift */; };
 		9387ACA43674811E3E4F3E30 /* BrewMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7DA2F3A61B00009322A /* BrewMethod.swift */; };
+		93D1AB7834614DA96F3ADAB5 /* EquipmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63736DE1E62F2E157680ADCF /* EquipmentUITests.swift */; };
+		95550260F932ED7DA680DACC /* EquipmentPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2156247AB9B8A54BB68CEECE /* EquipmentPhotoPickerView.swift */; };
 		983F0E922D8943427E430AE6 /* MethodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD80C2F3A61B00009322A /* MethodListView.swift */; };
+		99E4CC3A8BB8B01858FAEB57 /* BrewLogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1443DD6AF2929D0408D77082 /* BrewLogDetailView.swift */; };
+		9BD0AC7FB86AF9A70E68D814 /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5C4150517C974CD5ED01E4 /* FlowLayout.swift */; };
+		9C3BBFD12338BCB70E50B400 /* BrewFilterSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3A6EC659F58DD1D58221CD /* BrewFilterSheet.swift */; };
+		A0D096DA0029607B82700CD4 /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1E73C19D7DB7F8D2028A62 /* StarRatingView.swift */; };
+		A109C5FED3D3EC83BA1A7DB0 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18BC71FD7DED08CFB55DAE3 /* MainTabView.swift */; };
 		A13868C9425956E2B3DAE8FD /* SetupWizardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD200001DD200001 /* SetupWizardViewModel.swift */; };
+		A27C3003B279034217A14133 /* TastingNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582A3FDD112EAF2BCFDEA85B /* TastingNoteViewModel.swift */; };
+		A34F173D2440D5EAA7966798 /* AddBeanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFB297F485F93E0BC26C0A2 /* AddBeanView.swift */; };
+		A383567B124689CB4F8B4943 /* BrewMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDB3DFA39143C6A2B517AA5 /* BrewMethod.swift */; };
 		A4531AE83BEC338BAE8617A2 /* MethodSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD8182F3A61B00009322A /* MethodSelectionView.swift */; };
 		A4D136F6A44D2FB3B63C03B1 /* SetupWizardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7F02F3A61B00009322A /* SetupWizardViewModel.swift */; };
 		A64C3CA581CB7160A0E95DDB /* MigrationPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7D62F3A61B00009322A /* MigrationPlan.swift */; };
+		A662F895E40F8E4CE9429E3B /* BrewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A100475883BCCBCFA14C2D /* BrewCardView.swift */; };
+		A6A571B05ED942A1F6093191 /* SetupWizardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1287859B8543DC99EECCCE /* SetupWizardViewModel.swift */; };
 		A7D2E3B35C7E4CC37A66EA11 /* MonochromeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD8022F3A61B00009322A /* MonochromeStyle.swift */; };
+		A8040FDB281B35DF464CD635 /* BrewLogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F5C227933E01DFA95C609F /* BrewLogUITests.swift */; };
 		A9E492E43F60F2774F416391 /* AppStorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB100005BB100005 /* AppStorageKeys.swift */; };
+		AA200001AA200001 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100001AA100001 /* TestHelpers.swift */; };
+		AA200002AA200002 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100002AA100002 /* AccessibilityIdentifiers.swift */; };
+		AA200003AA200003 /* FreshnessCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100003AA100003 /* FreshnessCalculatorTests.swift */; };
+		AA200004AA200004 /* BagLabelParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100004AA100004 /* BagLabelParserTests.swift */; };
+		AA200005AA200005 /* BrewStepTemplatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100005AA100005 /* BrewStepTemplatesTests.swift */; };
+		AA200006AA200006 /* BrewLogViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100006AA100006 /* BrewLogViewModelTests.swift */; };
+		AA200007AA200007 /* SetupWizardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100007AA100007 /* SetupWizardViewModelTests.swift */; };
+		AA200008AA200008 /* TastingNoteViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100008AA100008 /* TastingNoteViewModelTests.swift */; };
+		AA200009AA200009 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100002AA100002 /* AccessibilityIdentifiers.swift */; };
+		AA200010AA200010 /* BrewLogComputedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100010AA100010 /* BrewLogComputedTests.swift */; };
+		AA200011AA200011 /* CoffeeBeanComputedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100011AA100011 /* CoffeeBeanComputedTests.swift */; };
+		AA200012AA200012 /* SwiftDataPersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100012AA100012 /* SwiftDataPersistenceTests.swift */; };
+		AA700001AA700001 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14366588D5B5125A73E229BE /* Foundation.framework */; };
+		AB114229BC8CDEC56DF9C798 /* AppStorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CCF5F42DFF8079E092D140 /* AppStorageKeys.swift */; };
+		ADD09F6F8D852E9383C50113 /* InsightsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D972BEB9DF6277902EE963 /* InsightsService.swift */; };
 		AEFB9DEA2C6505FD6FC71DBC /* AddBrewLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7F92F3A61B00009322A /* AddBrewLogView.swift */; };
 		AF36DB524830BC34F8C4EE5E /* EquipmentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD8012F3A61B00009322A /* EquipmentRow.swift */; };
 		AFCECABA249E1D25E6DAB6DB /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7EB2F3A61B00009322A /* FlowLayout.swift */; };
+		AFD1A988FB43A8E8490EA6C7 /* StatisticsDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57CAB162849A252842E831E /* StatisticsDashboardView.swift */; };
+		AFFED26507DEEC07499BDDC9 /* ScanResultReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F3328CE89DB6B731A7ADE /* ScanResultReviewView.swift */; };
 		B1686A8E3CE4BB03C39166B8 /* BeanListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7F52F3A61B00009322A /* BeanListView.swift */; };
+		B25E0F31995E9FA7529BBCBC /* FoundationModelInsightsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75239E2E788CE6066DA4B56 /* FoundationModelInsightsService.swift */; };
+		B4B3B14AC6FA2CA1D2D3938A /* SetupWizardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70792EF3682AD3EE1561878A /* SetupWizardViewModelTests.swift */; };
 		B69AC492964121DC57C4DF24 /* SpiderChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD8232F3A61B00009322A /* SpiderChartView.swift */; };
 		BA855F1B6C1C44ECEA715B14 /* FlavorWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7DC2F3A61B00009322A /* FlavorWheel.swift */; };
+		BAD5B2434366448EF930D660 /* SyncStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7095E2414BD5B622502C86FE /* SyncStatusView.swift */; };
+		BB2F7C91CCD78E357C40085C /* BrewSuggestionBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE45E9914508B738B8362D0 /* BrewSuggestionBanner.swift */; };
+		BB900001BB900001 /* UITestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB900011BB900011 /* UITestHelpers.swift */; };
+		BB900002BB900002 /* SetupWizardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB900012BB900012 /* SetupWizardUITests.swift */; };
+		BB900003BB900003 /* EquipmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB900013BB900013 /* EquipmentUITests.swift */; };
+		BB900004BB900004 /* BeanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB900014BB900014 /* BeanUITests.swift */; };
+		BB900005BB900005 /* BrewLogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB900015BB900015 /* BrewLogUITests.swift */; };
+		BB900006BB900006 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100002AA100002 /* AccessibilityIdentifiers.swift */; };
+		BBC9C41D91CBE061C38F8537 /* FlavorInsightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD97FCDC9120B6DC1CD4442 /* FlavorInsightView.swift */; };
 		BD35EFD57B68B74247C7A0A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14366588D5B5125A73E229BE /* Foundation.framework */; };
 		BDC9378804C55720942013A2 /* BrewLogRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7FC2F3A61B00009322A /* BrewLogRow.swift */; };
 		BEE82EC3A427E603063DFDAF /* AttributeSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD81D2F3A61B00009322A /* AttributeSliderView.swift */; };
 		C13D9ACA95E119A0619A82A8 /* Grinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F5A161AEFE43D3 /* Grinder.swift */; };
+		C162CAD2EAABD879D29BB06C /* AttributeSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FF343BE6AAFE5192B6246F /* AttributeSliderView.swift */; };
+		C1B9CCFE46EBB6E44F66BE79 /* BrewLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA10A2D55E5423C464675FC /* BrewLogViewModel.swift */; };
 		C374C4D7B8444B87EE08251B /* ImageCompressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB100004BB100004 /* ImageCompressor.swift */; };
+		C561D920C11ABDC47EAC2700 /* SetupCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAD298AB1EE75374B73F9F4 /* SetupCompleteView.swift */; };
+		C753604C6B8F1B6313ADDE97 /* NLInsightsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B274C2E33C9C3D561848BF1 /* NLInsightsService.swift */; };
+		C87169B300A39CDCBF4212B7 /* PDFExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0047BBDB8EF8EF44E2D1B5 /* PDFExporter.swift */; };
 		C8C44A61DEDD03269C4EE87A /* EquipmentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB100003BB100003 /* EquipmentRow.swift */; };
+		CA8342A59DD682642007707F /* BeanListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72573003E975E6B3F24B92AB /* BeanListView.swift */; };
+		CDEA9067919E456A1FA0B95A /* SpiderChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21F306376456ABBC06DA710 /* SpiderChartView.swift */; };
 		CE0D721324848102EDE7C790 /* MethodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF05D91D4DB49D7 /* MethodCategory.swift */; };
 		CE3C84A8E46E92787C485BB8 /* TastingNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFE5D8B70148F2 /* TastingNote.swift */; };
+		CF19C440C211DAA7368826EB /* SetupWizardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB1EEE1652C676E87197261 /* SetupWizardView.swift */; };
 		CF62E0954A280DC09C73CB6C /* SyncMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7E62F3A61B00009322A /* SyncMonitor.swift */; };
+		D0CCB139E37DE7D9E5185BC2 /* BrewLogRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18DFB6648877983D2DBE4CD /* BrewLogRow.swift */; };
 		D113891CA246942275A51CE4 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD8262F3A61B00009322A /* MainTabView.swift */; };
 		D205A72851A287DA5F3577EA /* AddBeanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7F32F3A61B00009322A /* AddBeanView.swift */; };
 		D42541E25B7EEDC0D78D3941 /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD8032F3A61B00009322A /* StarRatingView.swift */; };
+		D61DE7F6E136AE7E08B89F09 /* FlavorProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0258F6F4BE9D918A35D98A8F /* FlavorProfileView.swift */; };
+		D63E2F5BDDD0414E44FB0617 /* MigrationPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4A2746CDB67A91C91C382E /* MigrationPlan.swift */; };
 		D6A24DCF4E1DB9034C9972D3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD8152F3A61B00009322A /* SettingsView.swift */; };
 		D6FE87B4F21B9246743841E0 /* AddGrinderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD300004DD300004 /* AddGrinderView.swift */; };
 		D8275AF18B9EB6E99D65AC14 /* EquipmentPhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD8082F3A61B00009322A /* EquipmentPhotoPickerView.swift */; };
 		D9898FD92041CEC62C44F2C6 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB100002BB100002 /* EmptyStateView.swift */; };
 		DA3E661889EA8A44E58CD304 /* ScanResultReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD8132F3A61B00009322A /* ScanResultReviewView.swift */; };
+		DCCF7C98D9545FB296DDBE4F /* MethodDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE06823AC5913D33A30C2A01 /* MethodDetailView.swift */; };
 		DD83A829FB88ED6ABB457099 /* SyncStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD8042F3A61B00009322A /* SyncStatusView.swift */; };
 		DF4EDDC3A15FC07DB08A8437 /* BrewLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7D92F3A61B00009322A /* BrewLog.swift */; };
+		E016B0C94DC9DE3554A3BDAC /* BrewStepTemplates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40544DBE5E79273379D16117 /* BrewStepTemplates.swift */; };
 		E061E57E9BF4E332107D1612 /* SchemaV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7D72F3A61B00009322A /* SchemaV1.swift */; };
 		E0E39BB979489A1E21CE83A7 /* CoffeeBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7DB2F3A61B00009322A /* CoffeeBean.swift */; };
 		E12E497FFA5D953F829AA396 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14366588D5B5125A73E229BE /* Foundation.framework */; };
 		E1BBE704C4051184F811943C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD600002DD600002 /* SettingsView.swift */; };
 		E1F8D6EBE5CAE9D77C1099E8 /* FreshnessIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7F72F3A61B00009322A /* FreshnessIndicatorView.swift */; };
 		E2A740761D03C13C92BA44B5 /* BrewComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD81E2F3A61B00009322A /* BrewComparisonView.swift */; };
+		E4C2EE64EB25AC7471A78EFC /* ExportTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F668CB416AC942F5B2FA69 /* ExportTypes.swift */; };
+		E6A76A2297E4EE54A5954173 /* BrewLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551A4958F9D6C0B9EC87FD18 /* BrewLog.swift */; };
+		E96FE80A7D46C39E17A4B64B /* BrewSuggestionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B6447A818AC033AE5B2B5C /* BrewSuggestionEngine.swift */; };
+		EE0E7980A6AEC2F8F01E52F7 /* AddGrinderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0085DC8726441D9061BE19 /* AddGrinderView.swift */; };
 		EFF5E490C62200419F9C3EF1 /* AddMethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD8072F3A61B00009322A /* AddMethodView.swift */; };
+		F46F5B9C7689DE3BC46EC952 /* FreshnessCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2BBBC8F4030F8C53F97C74 /* FreshnessCalculator.swift */; };
 		F8ADDCE9372721F564446D20 /* GrinderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD300003DD300003 /* GrinderListView.swift */; };
+		FC3E43852E49201F0F1E41D7 /* BeanDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A3EC25255D7C5FBF2E8BC5 /* BeanDetailView.swift */; };
 		FC4938A6E491B049251E45DD /* CoffeeJournalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FC0037C626A91019B651FF /* CoffeeJournalUITests.swift */; };
-BB900001BB900001 /* UITestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB900011BB900011 /* UITestHelpers.swift */; };
-BB900002BB900002 /* SetupWizardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB900012BB900012 /* SetupWizardUITests.swift */; };
-BB900003BB900003 /* EquipmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB900013BB900013 /* EquipmentUITests.swift */; };
-BB900004BB900004 /* BeanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB900014BB900014 /* BeanUITests.swift */; };
-BB900005BB900005 /* BrewLogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB900015BB900015 /* BrewLogUITests.swift */; };
-BB900006BB900006 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100002AA100002 /* AccessibilityIdentifiers.swift */; };
 		FCC8394937A7D10809C2575D /* TastingNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7E32F3A61B00009322A /* TastingNote.swift */; };
 		FF22FBAFCD679E31DA8317CC /* BrewHistoryListContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD80F2F3A61B00009322A /* BrewHistoryListContent.swift */; };
 		FFE8F145E968F17CAAF5709B /* BeanDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7F42F3A61B00009322A /* BeanDetailView.swift */; };
-AA200001AA200001 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100001AA100001 /* TestHelpers.swift */; };
-AA200002AA200002 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100002AA100002 /* AccessibilityIdentifiers.swift */; };
-AA200003AA200003 /* FreshnessCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100003AA100003 /* FreshnessCalculatorTests.swift */; };
-AA200004AA200004 /* BagLabelParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100004AA100004 /* BagLabelParserTests.swift */; };
-AA200005AA200005 /* BrewStepTemplatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100005AA100005 /* BrewStepTemplatesTests.swift */; };
-AA200006AA200006 /* BrewLogViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100006AA100006 /* BrewLogViewModelTests.swift */; };
-AA200007AA200007 /* SetupWizardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100007AA100007 /* SetupWizardViewModelTests.swift */; };
-AA200008AA200008 /* TastingNoteViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100008AA100008 /* TastingNoteViewModelTests.swift */; };
-AA200009AA200009 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100002AA100002 /* AccessibilityIdentifiers.swift */; };
-AA200010AA200010 /* BrewLogComputedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100010AA100010 /* BrewLogComputedTests.swift */; };
-AA200011AA200011 /* CoffeeBeanComputedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100011AA100011 /* CoffeeBeanComputedTests.swift */; };
-AA200012AA200012 /* SwiftDataPersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100012AA100012 /* SwiftDataPersistenceTests.swift */; };
-AA700001AA700001 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14366588D5B5125A73E229BE /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		AA600002AA600002 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8843C961065C44B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73E613D43D49E06EF501B539;
+			remoteInfo = CoffeeJournal;
+		};
 		B3C8D6AAEF6E67EFFA4CF64B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8843C961065C44B0 /* Project object */;
@@ -136,72 +245,168 @@ AA700001AA700001 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile;
 			remoteGlobalIDString = 73E613D43D49E06EF501B539;
 			remoteInfo = CoffeeJournal;
 		};
-AA600002AA600002 /* PBXContainerItemProxy */ = {
-	isa = PBXContainerItemProxy;
-	containerPortal = 8843C961065C44B0 /* Project object */;
-	proxyType = 1;
-	remoteGlobalIDString = 73E613D43D49E06EF501B539;
-	remoteInfo = CoffeeJournal;
-};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		00B78D46303D1E4D38BEB631 /* CoffeeJournal.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = CoffeeJournal/CoffeeJournal.entitlements; sourceTree = "<group>"; };
 		014FFB2DA26C4B6B8A779504 /* BeanRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeanRow.swift; path = CoffeeJournal/Views/Beans/BeanRow.swift; sourceTree = "<group>"; };
+		0258F6F4BE9D918A35D98A8F /* FlavorProfileView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlavorProfileView.swift; path = CoffeeJournal/Views/Tasting/FlavorProfileView.swift; sourceTree = SOURCE_ROOT; };
+		042F3328CE89DB6B731A7ADE /* ScanResultReviewView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScanResultReviewView.swift; path = CoffeeJournal/Views/Scanner/ScanResultReviewView.swift; sourceTree = SOURCE_ROOT; };
+		05E2F4722E2976E3F1FE6EA2 /* CSVExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CSVExporter.swift; path = CoffeeJournal/Services/Export/CSVExporter.swift; sourceTree = SOURCE_ROOT; };
 		08E8293CAE4B037A0915CE21 /* TastingNoteEntryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TastingNoteEntryView.swift; path = CoffeeJournal/Views/Tasting/TastingNoteEntryView.swift; sourceTree = "<group>"; };
 		099E721499955159C235059F /* NetworkMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkMonitor.swift; path = CoffeeJournal/Services/NetworkMonitor.swift; sourceTree = "<group>"; };
+		0A18F1A8AE5E2A1EE25D76F2 /* FlavorTagChipView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlavorTagChipView.swift; path = CoffeeJournal/Views/Tasting/FlavorTagChipView.swift; sourceTree = SOURCE_ROOT; };
+		0BDB3DFA39143C6A2B517AA5 /* BrewMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewMethod.swift; path = CoffeeJournal/Models/BrewMethod.swift; sourceTree = SOURCE_ROOT; };
+		0DFB297F485F93E0BC26C0A2 /* AddBeanView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AddBeanView.swift; path = CoffeeJournal/Views/Beans/AddBeanView.swift; sourceTree = SOURCE_ROOT; };
 		11191DF7658ECF46018DA633 /* TastingNoteViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TastingNoteViewModel.swift; path = CoffeeJournal/ViewModels/TastingNoteViewModel.swift; sourceTree = "<group>"; };
+		132ACD2F83BFE9638DA6F37E /* MethodListView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MethodListView.swift; path = CoffeeJournal/Views/Equipment/MethodListView.swift; sourceTree = SOURCE_ROOT; };
 		14366588D5B5125A73E229BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		1443DD6AF2929D0408D77082 /* BrewLogDetailView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewLogDetailView.swift; path = CoffeeJournal/Views/Brewing/BrewLogDetailView.swift; sourceTree = SOURCE_ROOT; };
+		146D7225E6E860B73747BCAF /* Grinder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Grinder.swift; path = CoffeeJournal/Models/Grinder.swift; sourceTree = SOURCE_ROOT; };
 		14DB8BC64E9A1BA324750B4E /* FlavorWheelView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlavorWheelView.swift; path = CoffeeJournal/Views/Tasting/FlavorWheelView.swift; sourceTree = "<group>"; };
+		15F5C227933E01DFA95C609F /* BrewLogUITests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewLogUITests.swift; path = CoffeeJournalUITests/BrewLogUITests.swift; sourceTree = SOURCE_ROOT; };
+		1B1287859B8543DC99EECCCE /* SetupWizardViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SetupWizardViewModel.swift; path = CoffeeJournal/ViewModels/SetupWizardViewModel.swift; sourceTree = SOURCE_ROOT; };
 		1BDFE5D8B70148F2 /* TastingNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingNote.swift; sourceTree = "<group>"; };
+		1E2BBBC8F4030F8C53F97C74 /* FreshnessCalculator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FreshnessCalculator.swift; path = CoffeeJournal/Utilities/FreshnessCalculator.swift; sourceTree = SOURCE_ROOT; };
 		1FF05D91D4DB49D7 /* MethodCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodCategory.swift; sourceTree = "<group>"; };
+		211105AA47E4337934552241 /* AddMethodView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AddMethodView.swift; path = CoffeeJournal/Views/Equipment/AddMethodView.swift; sourceTree = SOURCE_ROOT; };
+		2156247AB9B8A54BB68CEECE /* EquipmentPhotoPickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EquipmentPhotoPickerView.swift; path = CoffeeJournal/Views/Equipment/EquipmentPhotoPickerView.swift; sourceTree = SOURCE_ROOT; };
+		21C7911BCD8CCE150511BF18 /* GrinderListView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GrinderListView.swift; path = CoffeeJournal/Views/Equipment/GrinderListView.swift; sourceTree = SOURCE_ROOT; };
 		220FEE4DBA4815598D2B30B6 /* BrewStepGuideView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewStepGuideView.swift; path = CoffeeJournal/Views/Brewing/BrewStepGuideView.swift; sourceTree = "<group>"; };
 		232D9ACF1EFC32A5EBB4DFFF /* SyncStatusView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SyncStatusView.swift; path = CoffeeJournal/Views/Components/SyncStatusView.swift; sourceTree = "<group>"; };
+		243E55FFA72D28E279100B61 /* BrewLogListView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewLogListView.swift; path = CoffeeJournal/Views/Brewing/BrewLogListView.swift; sourceTree = SOURCE_ROOT; };
+		28038D5FC60E8167F82533DC /* MethodTemplate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MethodTemplate.swift; path = CoffeeJournal/Models/MethodTemplate.swift; sourceTree = SOURCE_ROOT; };
 		28835F6529C54E9F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2B274C2E33C9C3D561848BF1 /* NLInsightsService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NLInsightsService.swift; path = CoffeeJournal/Services/Insights/NLInsightsService.swift; sourceTree = SOURCE_ROOT; };
 		2DBDB6069B7FF255C0372CFC /* CoffeeJournalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeJournalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		301BC4E47D025D60D388CAA7 /* BrewTimerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewTimerView.swift; path = CoffeeJournal/Views/Brewing/BrewTimerView.swift; sourceTree = SOURCE_ROOT; };
+		31638618D279C0620387AC5D /* FlavorTagFlowView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlavorTagFlowView.swift; path = CoffeeJournal/Views/Tasting/FlavorTagFlowView.swift; sourceTree = SOURCE_ROOT; };
+		34444AA5632AC17A570E903E /* MonochromeStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MonochromeStyle.swift; path = CoffeeJournal/Views/Components/MonochromeStyle.swift; sourceTree = SOURCE_ROOT; };
+		35173A92813A15ACA0C5E506 /* EquipmentRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EquipmentRow.swift; path = CoffeeJournal/Views/Components/EquipmentRow.swift; sourceTree = SOURCE_ROOT; };
+		374BA0787836B0B5FBFFE43F /* TastingNoteViewModelTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TastingNoteViewModelTests.swift; path = CoffeeJournalTests/ViewModels/TastingNoteViewModelTests.swift; sourceTree = SOURCE_ROOT; };
+		3ACA775343F95C298572627F /* BagLabelParserTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BagLabelParserTests.swift; path = CoffeeJournalTests/Utilities/BagLabelParserTests.swift; sourceTree = SOURCE_ROOT; };
 		3ADA646FE5FCB43C2561F54B /* FreshnessCalculator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FreshnessCalculator.swift; path = CoffeeJournal/Utilities/FreshnessCalculator.swift; sourceTree = "<group>"; };
+		3D3D2AE5A05DAB2B61E3838E /* EmptyStateView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmptyStateView.swift; path = CoffeeJournal/Views/Components/EmptyStateView.swift; sourceTree = SOURCE_ROOT; };
+		3D49114380ADB4B27DEE60B6 /* BrewComparisonView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewComparisonView.swift; path = CoffeeJournal/Views/Tasting/BrewComparisonView.swift; sourceTree = SOURCE_ROOT; };
 		3E81B81B5B851FB1577073F2 /* FlavorProfileView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlavorProfileView.swift; path = CoffeeJournal/Views/Tasting/FlavorProfileView.swift; sourceTree = "<group>"; };
+		40544DBE5E79273379D16117 /* BrewStepTemplates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewStepTemplates.swift; path = CoffeeJournal/Utilities/BrewStepTemplates.swift; sourceTree = SOURCE_ROOT; };
+		4276EB2493D321A02385AB1C /* CoffeeJournalUITests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoffeeJournalUITests.swift; path = CoffeeJournalUITests/CoffeeJournalUITests.swift; sourceTree = SOURCE_ROOT; };
+		42CCF5F42DFF8079E092D140 /* AppStorageKeys.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppStorageKeys.swift; path = CoffeeJournal/Utilities/AppStorageKeys.swift; sourceTree = SOURCE_ROOT; };
+		43375BB64FEC401F726F4CF7 /* BrewStepTemplatesTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewStepTemplatesTests.swift; path = CoffeeJournalTests/Utilities/BrewStepTemplatesTests.swift; sourceTree = SOURCE_ROOT; };
 		4855878F441948B3 /* BrewLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewLog.swift; sourceTree = "<group>"; };
+		497F6B19F37851A703F30F99 /* BeanUITests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeanUITests.swift; path = CoffeeJournalUITests/BeanUITests.swift; sourceTree = SOURCE_ROOT; };
+		SS900011SS900011 /* ScreenshotTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScreenshotTests.swift; path = CoffeeJournalUITests/ScreenshotTests.swift; sourceTree = SOURCE_ROOT; };
+		4C23A48D60461CA5AC22E991 /* BagScannerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BagScannerView.swift; path = CoffeeJournal/Views/Scanner/BagScannerView.swift; sourceTree = SOURCE_ROOT; };
+		4C5B095249B115C2069E03B1 /* TastingNote.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TastingNote.swift; path = CoffeeJournal/Models/TastingNote.swift; sourceTree = SOURCE_ROOT; };
+		4FE45E9914508B738B8362D0 /* BrewSuggestionBanner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewSuggestionBanner.swift; path = CoffeeJournal/Views/Insights/BrewSuggestionBanner.swift; sourceTree = SOURCE_ROOT; };
 		51C0C689074F4DD9 /* CoffeeBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeBean.swift; sourceTree = "<group>"; };
+		5403FE752E16802213D37C1D /* GrinderType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GrinderType.swift; path = CoffeeJournal/Models/GrinderType.swift; sourceTree = SOURCE_ROOT; };
+		551A4958F9D6C0B9EC87FD18 /* BrewLog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewLog.swift; path = CoffeeJournal/Models/BrewLog.swift; sourceTree = SOURCE_ROOT; };
+		56F5FB4E7932253C25C0A017 /* BrewLogComputedTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewLogComputedTests.swift; path = CoffeeJournalTests/Models/BrewLogComputedTests.swift; sourceTree = SOURCE_ROOT; };
 		57F5BDF145E168A949FB613C /* StarRatingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarRatingView.swift; path = CoffeeJournal/Views/Components/StarRatingView.swift; sourceTree = "<group>"; };
+		582A3FDD112EAF2BCFDEA85B /* TastingNoteViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TastingNoteViewModel.swift; path = CoffeeJournal/ViewModels/TastingNoteViewModel.swift; sourceTree = SOURCE_ROOT; };
 		583CADBB699967F37724C44B /* BeanDetailView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeanDetailView.swift; path = CoffeeJournal/Views/Beans/BeanDetailView.swift; sourceTree = "<group>"; };
 		583E59E7C49B7DB63A561769 /* FlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlowLayout.swift; path = CoffeeJournal/Utilities/FlowLayout.swift; sourceTree = "<group>"; };
 		59A3F3B1D28442E1 /* MethodTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodTemplate.swift; sourceTree = "<group>"; };
+		5DD97FCDC9120B6DC1CD4442 /* FlavorInsightView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlavorInsightView.swift; path = CoffeeJournal/Views/Insights/FlavorInsightView.swift; sourceTree = SOURCE_ROOT; };
+		5EAD298AB1EE75374B73F9F4 /* SetupCompleteView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SetupCompleteView.swift; path = CoffeeJournal/Views/Setup/SetupCompleteView.swift; sourceTree = SOURCE_ROOT; };
+		63736DE1E62F2E157680ADCF /* EquipmentUITests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EquipmentUITests.swift; path = CoffeeJournalUITests/EquipmentUITests.swift; sourceTree = SOURCE_ROOT; };
 		643684D30DF8FD245AB070D6 /* AddBeanView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AddBeanView.swift; path = CoffeeJournal/Views/Beans/AddBeanView.swift; sourceTree = "<group>"; };
 		6495D6C497ADB554A6FAF342 /* BrewLogDetailView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewLogDetailView.swift; path = CoffeeJournal/Views/Brewing/BrewLogDetailView.swift; sourceTree = "<group>"; };
+		668E18CE88863159EA434CA9 /* ProcessingMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProcessingMethod.swift; path = CoffeeJournal/Models/ProcessingMethod.swift; sourceTree = SOURCE_ROOT; };
+		66A100475883BCCBCFA14C2D /* BrewCardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewCardView.swift; path = CoffeeJournal/Views/Export/BrewCardView.swift; sourceTree = SOURCE_ROOT; };
+		66BE6618E52B2D764B3CCFC1 /* FreshnessIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FreshnessIndicatorView.swift; path = CoffeeJournal/Views/Beans/FreshnessIndicatorView.swift; sourceTree = SOURCE_ROOT; };
 		6A2383C59E886044D05CB816 /* AttributeSliderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AttributeSliderView.swift; path = CoffeeJournal/Views/Tasting/AttributeSliderView.swift; sourceTree = "<group>"; };
+		6A43C245338CC47F0510E341 /* MethodSelectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MethodSelectionView.swift; path = CoffeeJournal/Views/Setup/MethodSelectionView.swift; sourceTree = SOURCE_ROOT; };
+		6C1E73C19D7DB7F8D2028A62 /* StarRatingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarRatingView.swift; path = CoffeeJournal/Views/Components/StarRatingView.swift; sourceTree = SOURCE_ROOT; };
+		6DA59562C8DFA0F2C2FFF49A /* TastingNoteEntryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TastingNoteEntryView.swift; path = CoffeeJournal/Views/Tasting/TastingNoteEntryView.swift; sourceTree = SOURCE_ROOT; };
+		6EDF31C91F4B0E70725C27AD /* ImageCompressor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCompressor.swift; path = CoffeeJournal/Utilities/ImageCompressor.swift; sourceTree = SOURCE_ROOT; };
+		6F4A2746CDB67A91C91C382E /* MigrationPlan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MigrationPlan.swift; path = CoffeeJournal/Models/Schema/MigrationPlan.swift; sourceTree = SOURCE_ROOT; };
+		70792EF3682AD3EE1561878A /* SetupWizardViewModelTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SetupWizardViewModelTests.swift; path = CoffeeJournalTests/ViewModels/SetupWizardViewModelTests.swift; sourceTree = SOURCE_ROOT; };
+		7095E2414BD5B622502C86FE /* SyncStatusView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SyncStatusView.swift; path = CoffeeJournal/Views/Components/SyncStatusView.swift; sourceTree = SOURCE_ROOT; };
+		72573003E975E6B3F24B92AB /* BeanListView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeanListView.swift; path = CoffeeJournal/Views/Beans/BeanListView.swift; sourceTree = SOURCE_ROOT; };
 		7394808331836AD2CE4C62B2 /* BrewTimerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewTimerView.swift; path = CoffeeJournal/Views/Brewing/BrewTimerView.swift; sourceTree = "<group>"; };
 		774C71094AD5404D /* SchemaV1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemaV1.swift; sourceTree = "<group>"; };
+		7AB1EEE1652C676E87197261 /* SetupWizardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SetupWizardView.swift; path = CoffeeJournal/Views/Setup/SetupWizardView.swift; sourceTree = SOURCE_ROOT; };
 		7B68E1C3C4A7A546FCB54B2C /* SetupWizardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SetupWizardView.swift; path = CoffeeJournal/Views/Setup/SetupWizardView.swift; sourceTree = "<group>"; };
+		7D16586B72AD4D60C965C6E9 /* BrewLogViewModelTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewLogViewModelTests.swift; path = CoffeeJournalTests/ViewModels/BrewLogViewModelTests.swift; sourceTree = SOURCE_ROOT; };
+		7DB542AFA1E0023D17366746 /* FlavorExtractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlavorExtractor.swift; path = CoffeeJournal/Services/Insights/FlavorExtractor.swift; sourceTree = SOURCE_ROOT; };
+		80A3EC25255D7C5FBF2E8BC5 /* BeanDetailView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeanDetailView.swift; path = CoffeeJournal/Views/Beans/BeanDetailView.swift; sourceTree = SOURCE_ROOT; };
 		834E68B8BC14C4387DEB0F7E /* MainTabView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MainTabView.swift; path = CoffeeJournal/Views/MainTabView.swift; sourceTree = "<group>"; };
+		835B9C29F6B88FB04DD75560 /* UITestHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITestHelpers.swift; path = CoffeeJournalUITests/Helpers/UITestHelpers.swift; sourceTree = SOURCE_ROOT; };
 		8A16D77223A6EBF512F8A3FA /* BrewLogListView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewLogListView.swift; path = CoffeeJournal/Views/Brewing/BrewLogListView.swift; sourceTree = "<group>"; };
+		8A3A6EC659F58DD1D58221CD /* BrewFilterSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewFilterSheet.swift; path = CoffeeJournal/Views/History/BrewFilterSheet.swift; sourceTree = SOURCE_ROOT; };
+		91B648354C37B22A38E5FB9B /* BrewHistoryListContent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewHistoryListContent.swift; path = CoffeeJournal/Views/History/BrewHistoryListContent.swift; sourceTree = SOURCE_ROOT; };
 		91F5A161AEFE43D3 /* Grinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grinder.swift; sourceTree = "<group>"; };
+		92FDA9D1F307A7CAEA6661DE /* BrewPatternCard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewPatternCard.swift; path = CoffeeJournal/Views/Insights/BrewPatternCard.swift; sourceTree = SOURCE_ROOT; };
+		937F19E80F3623C404CCD48F /* WelcomeStepView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WelcomeStepView.swift; path = CoffeeJournal/Views/Setup/WelcomeStepView.swift; sourceTree = SOURCE_ROOT; };
+		96D972BEB9DF6277902EE963 /* InsightsService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InsightsService.swift; path = CoffeeJournal/Services/Insights/InsightsService.swift; sourceTree = SOURCE_ROOT; };
+		980E376AC2C0CA7DC9E83713 /* BeanRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeanRow.swift; path = CoffeeJournal/Views/Beans/BeanRow.swift; sourceTree = SOURCE_ROOT; };
+		9C17A6E3D57ABFD92B23CF41 /* BrewPatternAnalyzer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewPatternAnalyzer.swift; path = CoffeeJournal/Services/Insights/BrewPatternAnalyzer.swift; sourceTree = SOURCE_ROOT; };
+		9E5C4150517C974CD5ED01E4 /* FlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlowLayout.swift; path = CoffeeJournal/Utilities/FlowLayout.swift; sourceTree = SOURCE_ROOT; };
+		A044C40415F8D37FBAE9A162 /* GrinderEntryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GrinderEntryView.swift; path = CoffeeJournal/Views/Setup/GrinderEntryView.swift; sourceTree = SOURCE_ROOT; };
+		A1AB1B11A593769B478592F3 /* SetupWizardUITests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SetupWizardUITests.swift; path = CoffeeJournalUITests/SetupWizardUITests.swift; sourceTree = SOURCE_ROOT; };
+		A5EDEA86D287365302F98CE4 /* RoastLevel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RoastLevel.swift; path = CoffeeJournal/Models/RoastLevel.swift; sourceTree = SOURCE_ROOT; };
 		A941563CDE4C692D6540F903 /* BrewFilterSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewFilterSheet.swift; path = CoffeeJournal/Views/History/BrewFilterSheet.swift; sourceTree = "<group>"; };
+		AA100001AA100001 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		AA100002AA100002 /* AccessibilityIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifiers.swift; sourceTree = "<group>"; };
+		AA100003AA100003 /* FreshnessCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshnessCalculatorTests.swift; sourceTree = "<group>"; };
+		AA100004AA100004 /* BagLabelParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagLabelParserTests.swift; sourceTree = "<group>"; };
+		AA100005AA100005 /* BrewStepTemplatesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewStepTemplatesTests.swift; sourceTree = "<group>"; };
+		AA100006AA100006 /* BrewLogViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewLogViewModelTests.swift; sourceTree = "<group>"; };
+		AA100007AA100007 /* SetupWizardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupWizardViewModelTests.swift; sourceTree = "<group>"; };
+		AA100008AA100008 /* TastingNoteViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingNoteViewModelTests.swift; sourceTree = "<group>"; };
+		AA100010AA100010 /* BrewLogComputedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewLogComputedTests.swift; sourceTree = "<group>"; };
+		AA100011AA100011 /* CoffeeBeanComputedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeBeanComputedTests.swift; sourceTree = "<group>"; };
+		AA100012AA100012 /* SwiftDataPersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataPersistenceTests.swift; sourceTree = "<group>"; };
+		AA400002AA400002 /* CoffeeJournalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeJournalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB936EDC9F8379B47BF85F7B /* FlavorWheelView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlavorWheelView.swift; path = CoffeeJournal/Views/Tasting/FlavorWheelView.swift; sourceTree = SOURCE_ROOT; };
 		AC39C5E3DBFE72A185ACCC14 /* ProcessingMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProcessingMethod.swift; path = CoffeeJournal/Models/ProcessingMethod.swift; sourceTree = "<group>"; };
+		ACA10A2D55E5423C464675FC /* BrewLogViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewLogViewModel.swift; path = CoffeeJournal/ViewModels/BrewLogViewModel.swift; sourceTree = SOURCE_ROOT; };
+		AF5B1B670423B0CA89181CC7 /* MethodCategory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MethodCategory.swift; path = CoffeeJournal/Models/MethodCategory.swift; sourceTree = SOURCE_ROOT; };
 		B2436F912F5FE42AC4FF6B1A /* RoastLevel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RoastLevel.swift; path = CoffeeJournal/Models/RoastLevel.swift; sourceTree = "<group>"; };
 		B4509551441EFD3582D6F22F /* BrewLogViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewLogViewModel.swift; path = CoffeeJournal/ViewModels/BrewLogViewModel.swift; sourceTree = "<group>"; };
 		B59C7EB1A962B1E4F323122D /* BeanListView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeanListView.swift; path = CoffeeJournal/Views/Beans/BeanListView.swift; sourceTree = "<group>"; };
 		B6C0E8EC351431F2A6AD4BCC /* ScanResultReviewView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScanResultReviewView.swift; path = CoffeeJournal/Views/Scanner/ScanResultReviewView.swift; sourceTree = "<group>"; };
+		B75239E2E788CE6066DA4B56 /* FoundationModelInsightsService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoundationModelInsightsService.swift; path = CoffeeJournal/Services/Insights/FoundationModelInsightsService.swift; sourceTree = SOURCE_ROOT; };
+		B78F771ABA8CB90658C38A91 /* CoffeeJournalApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoffeeJournalApp.swift; path = CoffeeJournal/CoffeeJournalApp.swift; sourceTree = SOURCE_ROOT; };
+		B85B2C0DF43F7C415458BF37 /* CoffeeBean.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoffeeBean.swift; path = CoffeeJournal/Models/CoffeeBean.swift; sourceTree = SOURCE_ROOT; };
 		BA43B6C37F11E6A02C6E49BB /* BrewComparisonView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewComparisonView.swift; path = CoffeeJournal/Views/Tasting/BrewComparisonView.swift; sourceTree = "<group>"; };
 		BB100001BB100001 /* MonochromeStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonochromeStyle.swift; sourceTree = "<group>"; };
 		BB100002BB100002 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		BB100003BB100003 /* EquipmentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentRow.swift; sourceTree = "<group>"; };
 		BB100004BB100004 /* ImageCompressor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCompressor.swift; sourceTree = "<group>"; };
 		BB100005BB100005 /* AppStorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageKeys.swift; sourceTree = "<group>"; };
+		BB21F9F7156DFBCB78B2107C /* SwiftDataPersistenceTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftDataPersistenceTests.swift; path = CoffeeJournalTests/Integration/SwiftDataPersistenceTests.swift; sourceTree = SOURCE_ROOT; };
+		BB35CABC4C37DA1BDC6EB093 /* BagLabelParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BagLabelParser.swift; path = CoffeeJournal/Utilities/BagLabelParser.swift; sourceTree = SOURCE_ROOT; };
 		BB541A864E7F7C731601FB97 /* BagScannerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BagScannerView.swift; path = CoffeeJournal/Views/Scanner/BagScannerView.swift; sourceTree = "<group>"; };
+		BB900011BB900011 /* UITestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestHelpers.swift; sourceTree = "<group>"; };
+		BB900012BB900012 /* SetupWizardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupWizardUITests.swift; sourceTree = "<group>"; };
+		BB900013BB900013 /* EquipmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentUITests.swift; sourceTree = "<group>"; };
+		BB900014BB900014 /* BeanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanUITests.swift; sourceTree = "<group>"; };
+		SS900012SS900012 /* ScreenshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotTests.swift; sourceTree = "<group>"; };
+		BB900015BB900015 /* BrewLogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewLogUITests.swift; sourceTree = "<group>"; };
+		BE06823AC5913D33A30C2A01 /* MethodDetailView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MethodDetailView.swift; path = CoffeeJournal/Views/Equipment/MethodDetailView.swift; sourceTree = SOURCE_ROOT; };
+		BE7637E86C2684BD931F0C99 /* SyncMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SyncMonitor.swift; path = CoffeeJournal/Services/SyncMonitor.swift; sourceTree = SOURCE_ROOT; };
+		C01D626649207DC16C939821 /* FlavorWheel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlavorWheel.swift; path = CoffeeJournal/Models/FlavorWheel.swift; sourceTree = SOURCE_ROOT; };
+		C18BC71FD7DED08CFB55DAE3 /* MainTabView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MainTabView.swift; path = CoffeeJournal/Views/MainTabView.swift; sourceTree = SOURCE_ROOT; };
 		C267B644831A545872F517B9 /* FlavorWheel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlavorWheel.swift; path = CoffeeJournal/Models/FlavorWheel.swift; sourceTree = "<group>"; };
+		C8EC6297987E152F95E835C9 /* SchemaV1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SchemaV1.swift; path = CoffeeJournal/Models/Schema/SchemaV1.swift; sourceTree = SOURCE_ROOT; };
+		C8FF343BE6AAFE5192B6246F /* AttributeSliderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AttributeSliderView.swift; path = CoffeeJournal/Views/Tasting/AttributeSliderView.swift; sourceTree = SOURCE_ROOT; };
+		CA73C5F3D8C63FAF46536146 /* TestHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TestHelpers.swift; path = CoffeeJournalTests/Helpers/TestHelpers.swift; sourceTree = SOURCE_ROOT; };
 		CD9B8A943C7499703D46828B /* BagLabelParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BagLabelParser.swift; path = CoffeeJournal/Utilities/BagLabelParser.swift; sourceTree = "<group>"; };
+		CE0047BBDB8EF8EF44E2D1B5 /* PDFExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PDFExporter.swift; path = CoffeeJournal/Services/Export/PDFExporter.swift; sourceTree = SOURCE_ROOT; };
+		CE92E5DEE831E4AA2AF48415 /* NetworkMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkMonitor.swift; path = CoffeeJournal/Services/NetworkMonitor.swift; sourceTree = SOURCE_ROOT; };
 		CFB4A5F277759EB94453DE6B /* SyncMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SyncMonitor.swift; path = CoffeeJournal/Services/SyncMonitor.swift; sourceTree = "<group>"; };
+		CFE79FF88E926F9CC15D77A7 /* BrewImageRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewImageRenderer.swift; path = CoffeeJournal/Services/Export/BrewImageRenderer.swift; sourceTree = SOURCE_ROOT; };
 		D059234F1C99CA8A88B7636C /* BrewLogRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewLogRow.swift; path = CoffeeJournal/Views/Brewing/BrewLogRow.swift; sourceTree = "<group>"; };
 		D09E04E786C944E3 /* MigrationPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationPlan.swift; sourceTree = "<group>"; };
 		D2814EFA61DF81FDB739F927 /* BrewStepTemplates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewStepTemplates.swift; path = CoffeeJournal/Utilities/BrewStepTemplates.swift; sourceTree = "<group>"; };
 		D4FC0037C626A91019B651FF /* CoffeeJournalUITests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoffeeJournalUITests.swift; sourceTree = "<group>"; };
-BB900011BB900011 /* UITestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestHelpers.swift; sourceTree = "<group>"; };
-BB900012BB900012 /* SetupWizardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupWizardUITests.swift; sourceTree = "<group>"; };
-BB900013BB900013 /* EquipmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentUITests.swift; sourceTree = "<group>"; };
-BB900014BB900014 /* BeanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanUITests.swift; sourceTree = "<group>"; };
-BB900015BB900015 /* BrewLogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewLogUITests.swift; sourceTree = "<group>"; };
+		D8C8E979D45A41F214055CE3 /* InsightsViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InsightsViewModel.swift; path = CoffeeJournal/ViewModels/InsightsViewModel.swift; sourceTree = SOURCE_ROOT; };
+		D989582E6058618FE8616161 /* AccessibilityIdentifiers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AccessibilityIdentifiers.swift; path = CoffeeJournal/Utilities/AccessibilityIdentifiers.swift; sourceTree = SOURCE_ROOT; };
 		DB97BACF80DA36C5C1B42EBE /* SpiderChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpiderChartView.swift; path = CoffeeJournal/Views/Tasting/SpiderChartView.swift; sourceTree = "<group>"; };
+		DBDA11497079541029CE4B40 /* BrewStepGuideView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewStepGuideView.swift; path = CoffeeJournal/Views/Brewing/BrewStepGuideView.swift; sourceTree = SOURCE_ROOT; };
 		DD200001DD200001 /* SetupWizardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupWizardViewModel.swift; sourceTree = "<group>"; };
 		DD300001DD300001 /* MethodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodListView.swift; sourceTree = "<group>"; };
 		DD300002DD300002 /* AddMethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMethodView.swift; sourceTree = "<group>"; };
@@ -215,15 +420,26 @@ BB900015BB900015 /* BrewLogUITests.swift */ = {isa = PBXFileReference; lastKnown
 		DD500002DD500002 /* GrinderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrinderDetailView.swift; sourceTree = "<group>"; };
 		DD500003DD500003 /* EquipmentPhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentPhotoPickerView.swift; sourceTree = "<group>"; };
 		DD600002DD600002 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		DF9FE1463B281EF1C42B46B3 /* AddBrewLogView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AddBrewLogView.swift; path = CoffeeJournal/Views/Brewing/AddBrewLogView.swift; sourceTree = SOURCE_ROOT; };
+		E18DA98F606008A8668E9628 /* ContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = CoffeeJournal/ContentView.swift; sourceTree = SOURCE_ROOT; };
+		E18DFB6648877983D2DBE4CD /* BrewLogRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewLogRow.swift; path = CoffeeJournal/Views/Brewing/BrewLogRow.swift; sourceTree = SOURCE_ROOT; };
+		E21F306376456ABBC06DA710 /* SpiderChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpiderChartView.swift; path = CoffeeJournal/Views/Tasting/SpiderChartView.swift; sourceTree = SOURCE_ROOT; };
 		E340F0D707FFC301F9549D58 /* StatisticsDashboardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StatisticsDashboardView.swift; path = CoffeeJournal/Views/History/StatisticsDashboardView.swift; sourceTree = "<group>"; };
 		E40163B2BA83D83F734CD147 /* AddBrewLogView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AddBrewLogView.swift; path = CoffeeJournal/Views/Brewing/AddBrewLogView.swift; sourceTree = "<group>"; };
 		E470DF322519F0065469A3CD /* FreshnessIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FreshnessIndicatorView.swift; path = CoffeeJournal/Views/Beans/FreshnessIndicatorView.swift; sourceTree = "<group>"; };
 		E5E4D73FDE65A061C9AE33CB /* CoffeeJournal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeJournal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6B6447A818AC033AE5B2B5C /* BrewSuggestionEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewSuggestionEngine.swift; path = CoffeeJournal/Services/Insights/BrewSuggestionEngine.swift; sourceTree = SOURCE_ROOT; };
+		EA0085DC8726441D9061BE19 /* AddGrinderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AddGrinderView.swift; path = CoffeeJournal/Views/Equipment/AddGrinderView.swift; sourceTree = SOURCE_ROOT; };
 		EC93D345EF06CC8BC6BC7D52 /* FlavorTagFlowView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlavorTagFlowView.swift; path = CoffeeJournal/Views/Tasting/FlavorTagFlowView.swift; sourceTree = "<group>"; };
+		EC96DA52B877B3218C2E5614 /* GrinderDetailView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GrinderDetailView.swift; path = CoffeeJournal/Views/Equipment/GrinderDetailView.swift; sourceTree = SOURCE_ROOT; };
+		EDF3FB14FF6720F0EB2E64EB /* FreshnessCalculatorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FreshnessCalculatorTests.swift; path = CoffeeJournalTests/Utilities/FreshnessCalculatorTests.swift; sourceTree = SOURCE_ROOT; };
 		EE64E86DD6A84C13 /* BrewMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewMethod.swift; sourceTree = "<group>"; };
+		F57CAB162849A252842E831E /* StatisticsDashboardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StatisticsDashboardView.swift; path = CoffeeJournal/Views/History/StatisticsDashboardView.swift; sourceTree = SOURCE_ROOT; };
+		F599465EE05D17FFD78BC1E1 /* CoffeeBeanComputedTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoffeeBeanComputedTests.swift; path = CoffeeJournalTests/Models/CoffeeBeanComputedTests.swift; sourceTree = SOURCE_ROOT; };
 		F5CAFB78E95C45AD /* CoffeeJournalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeJournalApp.swift; sourceTree = "<group>"; };
 		F6C67BC12CA1418C /* GrinderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrinderType.swift; sourceTree = "<group>"; };
 		F6F77C01FAE13CE97AF82F53 /* BrewHistoryListContent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewHistoryListContent.swift; path = CoffeeJournal/Views/History/BrewHistoryListContent.swift; sourceTree = "<group>"; };
+		F8F668CB416AC942F5B2FA69 /* ExportTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExportTypes.swift; path = CoffeeJournal/Services/Export/ExportTypes.swift; sourceTree = SOURCE_ROOT; };
 		F93FD7D52F3A61B00009322A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F93FD7D62F3A61B00009322A /* MigrationPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationPlan.swift; sourceTree = "<group>"; };
 		F93FD7D72F3A61B00009322A /* SchemaV1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemaV1.swift; sourceTree = "<group>"; };
@@ -293,19 +509,8 @@ BB900015BB900015 /* BrewLogUITests.swift */ = {isa = PBXFileReference; lastKnown
 		F93FD8242F3A61B00009322A /* TastingNoteEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingNoteEntryView.swift; sourceTree = "<group>"; };
 		F93FD8262F3A61B00009322A /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		F93FD9022F3A705C0009322A /* CoffeeJournalRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoffeeJournalRelease.entitlements; sourceTree = "<group>"; };
+		FB4A41083385F476A266673B /* SettingsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = CoffeeJournal/Views/Settings/SettingsView.swift; sourceTree = SOURCE_ROOT; };
 		FE673B250EB6C64EB09B7050 /* FlavorTagChipView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlavorTagChipView.swift; path = CoffeeJournal/Views/Tasting/FlavorTagChipView.swift; sourceTree = "<group>"; };
-AA100001AA100001 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
-AA100002AA100002 /* AccessibilityIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifiers.swift; sourceTree = "<group>"; };
-AA100003AA100003 /* FreshnessCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshnessCalculatorTests.swift; sourceTree = "<group>"; };
-AA100004AA100004 /* BagLabelParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagLabelParserTests.swift; sourceTree = "<group>"; };
-AA100005AA100005 /* BrewStepTemplatesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewStepTemplatesTests.swift; sourceTree = "<group>"; };
-AA100006AA100006 /* BrewLogViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewLogViewModelTests.swift; sourceTree = "<group>"; };
-AA100007AA100007 /* SetupWizardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupWizardViewModelTests.swift; sourceTree = "<group>"; };
-AA100008AA100008 /* TastingNoteViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingNoteViewModelTests.swift; sourceTree = "<group>"; };
-AA100010AA100010 /* BrewLogComputedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewLogComputedTests.swift; sourceTree = "<group>"; };
-AA100011AA100011 /* CoffeeBeanComputedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeBeanComputedTests.swift; sourceTree = "<group>"; };
-AA100012AA100012 /* SwiftDataPersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataPersistenceTests.swift; sourceTree = "<group>"; };
-AA400002AA400002 /* CoffeeJournalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeJournalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,17 +530,28 @@ AA400002AA400002 /* CoffeeJournalTests.xctest */ = {isa = PBXFileReference; expl
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-AA400004AA400004 /* Frameworks */ = {
-	isa = PBXFrameworksBuildPhase;
-	buildActionMask = 2147483647;
-	files = (
-		AA700001AA700001 /* Foundation.framework in Frameworks */,
-	);
-	runOnlyForDeploymentPostprocessing = 0;
-};
+		AA400004AA400004 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA700001AA700001 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C55EF2BA300F42FDF47E356 /* Export */ = {
+			isa = PBXGroup;
+			children = (
+				CFE79FF88E926F9CC15D77A7 /* BrewImageRenderer.swift */,
+				05E2F4722E2976E3F1FE6EA2 /* CSVExporter.swift */,
+				F8F668CB416AC942F5B2FA69 /* ExportTypes.swift */,
+				CE0047BBDB8EF8EF44E2D1B5 /* PDFExporter.swift */,
+			);
+			name = Export;
+			sourceTree = "<group>";
+		};
 		0D0D707461489AE51D67ED07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +585,16 @@ AA400004AA400004 /* Frameworks */ = {
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		4CE9FCE9CEC63D86D9AD1D64 /* Insights */ = {
+			isa = PBXGroup;
+			children = (
+				92FDA9D1F307A7CAEA6661DE /* BrewPatternCard.swift */,
+				4FE45E9914508B738B8362D0 /* BrewSuggestionBanner.swift */,
+				5DD97FCDC9120B6DC1CD4442 /* FlavorInsightView.swift */,
+			);
+			name = Insights;
+			sourceTree = "<group>";
+		};
 		4D19A6222C704378 /* CoffeeJournal */ = {
 			isa = PBXGroup;
 			children = (
@@ -386,6 +612,8 @@ AA400004AA400004 /* Frameworks */ = {
 				EE200001EE200001 /* ViewModels */,
 				32312D707D2F41478 /* Utilities */,
 				00B78D46303D1E4D38BEB631 /* CoffeeJournal.entitlements */,
+				B78F771ABA8CB90658C38A91 /* CoffeeJournalApp.swift */,
+				E18DA98F606008A8668E9628 /* ContentView.swift */,
 			);
 			path = CoffeeJournal;
 			sourceTree = "<group>";
@@ -398,18 +626,17 @@ AA400004AA400004 /* Frameworks */ = {
 				BB900012BB900012 /* SetupWizardUITests.swift */,
 				BB900013BB900013 /* EquipmentUITests.swift */,
 				BB900014BB900014 /* BeanUITests.swift */,
+				SS900012SS900012 /* ScreenshotTests.swift */,
 				BB900015BB900015 /* BrewLogUITests.swift */,
+				497F6B19F37851A703F30F99 /* BeanUITests.swift */,
+				SS900011SS900011 /* ScreenshotTests.swift */,
+				15F5C227933E01DFA95C609F /* BrewLogUITests.swift */,
+				4276EB2493D321A02385AB1C /* CoffeeJournalUITests.swift */,
+				63736DE1E62F2E157680ADCF /* EquipmentUITests.swift */,
+				A1AB1B11A593769B478592F3 /* SetupWizardUITests.swift */,
 			);
 			name = CoffeeJournalUITests;
 			path = CoffeeJournalUITests;
-			sourceTree = "<group>";
-		};
-		BB900021BB900021 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				BB900011BB900011 /* UITestHelpers.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		77BCD03B956B4346 = {
@@ -464,6 +691,19 @@ AA400004AA400004 /* Frameworks */ = {
 			);
 			sourceTree = "<group>";
 		};
+		7DAE989DE5AF631039F82C7C /* Insights */ = {
+			isa = PBXGroup;
+			children = (
+				9C17A6E3D57ABFD92B23CF41 /* BrewPatternAnalyzer.swift */,
+				E6B6447A818AC033AE5B2B5C /* BrewSuggestionEngine.swift */,
+				7DB542AFA1E0023D17366746 /* FlavorExtractor.swift */,
+				B75239E2E788CE6066DA4B56 /* FoundationModelInsightsService.swift */,
+				96D972BEB9DF6277902EE963 /* InsightsService.swift */,
+				2B274C2E33C9C3D561848BF1 /* NLInsightsService.swift */,
+			);
+			name = Insights;
+			sourceTree = "<group>";
+		};
 		9ED56D77D9FD4B5D /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -481,6 +721,93 @@ AA400004AA400004 /* Frameworks */ = {
 				14366588D5B5125A73E229BE /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		AA300001AA300001 /* CoffeeJournalTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA300004AA300004 /* Helpers */,
+				AA300006AA300006 /* Integration */,
+				AA300005AA300005 /* Models */,
+				AA300002AA300002 /* Utilities */,
+				AA300003AA300003 /* ViewModels */,
+			);
+			name = CoffeeJournalTests;
+			path = CoffeeJournalTests;
+			sourceTree = "<group>";
+		};
+		AA300002AA300002 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AA100003AA100003 /* FreshnessCalculatorTests.swift */,
+				AA100004AA100004 /* BagLabelParserTests.swift */,
+				AA100005AA100005 /* BrewStepTemplatesTests.swift */,
+				3ACA775343F95C298572627F /* BagLabelParserTests.swift */,
+				43375BB64FEC401F726F4CF7 /* BrewStepTemplatesTests.swift */,
+				EDF3FB14FF6720F0EB2E64EB /* FreshnessCalculatorTests.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		AA300003AA300003 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AA100006AA100006 /* BrewLogViewModelTests.swift */,
+				AA100007AA100007 /* SetupWizardViewModelTests.swift */,
+				AA100008AA100008 /* TastingNoteViewModelTests.swift */,
+				7D16586B72AD4D60C965C6E9 /* BrewLogViewModelTests.swift */,
+				70792EF3682AD3EE1561878A /* SetupWizardViewModelTests.swift */,
+				374BA0787836B0B5FBFFE43F /* TastingNoteViewModelTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AA300004AA300004 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AA100001AA100001 /* TestHelpers.swift */,
+				CA73C5F3D8C63FAF46536146 /* TestHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		AA300005AA300005 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA100010AA100010 /* BrewLogComputedTests.swift */,
+				AA100011AA100011 /* CoffeeBeanComputedTests.swift */,
+				56F5FB4E7932253C25C0A017 /* BrewLogComputedTests.swift */,
+				F599465EE05D17FFD78BC1E1 /* CoffeeBeanComputedTests.swift */,
+			);
+			name = Models;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AA300006AA300006 /* Integration */ = {
+			isa = PBXGroup;
+			children = (
+				AA100012AA100012 /* SwiftDataPersistenceTests.swift */,
+				BB21F9F7156DFBCB78B2107C /* SwiftDataPersistenceTests.swift */,
+			);
+			name = Integration;
+			path = Integration;
+			sourceTree = "<group>";
+		};
+		AAC93DFEAB6288AE3655C4B7 /* Export */ = {
+			isa = PBXGroup;
+			children = (
+				66A100475883BCCBCFA14C2D /* BrewCardView.swift */,
+			);
+			name = Export;
+			sourceTree = "<group>";
+		};
+		BB900021BB900021 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BB900011BB900011 /* UITestHelpers.swift */,
+				835B9C29F6B88FB04DD75560 /* UITestHelpers.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		C19B8FC2A7054CE4 /* Schema */ = {
@@ -515,6 +842,8 @@ AA400004AA400004 /* Frameworks */ = {
 			children = (
 				F93FD7D62F3A61B00009322A /* MigrationPlan.swift */,
 				F93FD7D72F3A61B00009322A /* SchemaV1.swift */,
+				6F4A2746CDB67A91C91C382E /* MigrationPlan.swift */,
+				C8EC6297987E152F95E835C9 /* SchemaV1.swift */,
 			);
 			path = Schema;
 			sourceTree = "<group>";
@@ -534,6 +863,17 @@ AA400004AA400004 /* Frameworks */ = {
 				F93FD7E12F3A61B00009322A /* ProcessingMethod.swift */,
 				F93FD7E22F3A61B00009322A /* RoastLevel.swift */,
 				F93FD7E32F3A61B00009322A /* TastingNote.swift */,
+				551A4958F9D6C0B9EC87FD18 /* BrewLog.swift */,
+				0BDB3DFA39143C6A2B517AA5 /* BrewMethod.swift */,
+				B85B2C0DF43F7C415458BF37 /* CoffeeBean.swift */,
+				C01D626649207DC16C939821 /* FlavorWheel.swift */,
+				146D7225E6E860B73747BCAF /* Grinder.swift */,
+				5403FE752E16802213D37C1D /* GrinderType.swift */,
+				AF5B1B670423B0CA89181CC7 /* MethodCategory.swift */,
+				28038D5FC60E8167F82533DC /* MethodTemplate.swift */,
+				668E18CE88863159EA434CA9 /* ProcessingMethod.swift */,
+				A5EDEA86D287365302F98CE4 /* RoastLevel.swift */,
+				4C5B095249B115C2069E03B1 /* TastingNote.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -543,6 +883,10 @@ AA400004AA400004 /* Frameworks */ = {
 			children = (
 				F93FD7E52F3A61B00009322A /* NetworkMonitor.swift */,
 				F93FD7E62F3A61B00009322A /* SyncMonitor.swift */,
+				0C55EF2BA300F42FDF47E356 /* Export */,
+				7DAE989DE5AF631039F82C7C /* Insights */,
+				CE92E5DEE831E4AA2AF48415 /* NetworkMonitor.swift */,
+				BE7637E86C2684BD931F0C99 /* SyncMonitor.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -557,6 +901,13 @@ AA400004AA400004 /* Frameworks */ = {
 				F93FD7EC2F3A61B00009322A /* FreshnessCalculator.swift */,
 				F93FD7ED2F3A61B00009322A /* ImageCompressor.swift */,
 				AA100002AA100002 /* AccessibilityIdentifiers.swift */,
+				D989582E6058618FE8616161 /* AccessibilityIdentifiers.swift */,
+				42CCF5F42DFF8079E092D140 /* AppStorageKeys.swift */,
+				BB35CABC4C37DA1BDC6EB093 /* BagLabelParser.swift */,
+				40544DBE5E79273379D16117 /* BrewStepTemplates.swift */,
+				9E5C4150517C974CD5ED01E4 /* FlowLayout.swift */,
+				1E2BBBC8F4030F8C53F97C74 /* FreshnessCalculator.swift */,
+				6EDF31C91F4B0E70725C27AD /* ImageCompressor.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -567,6 +918,10 @@ AA400004AA400004 /* Frameworks */ = {
 				F93FD7EF2F3A61B00009322A /* BrewLogViewModel.swift */,
 				F93FD7F02F3A61B00009322A /* SetupWizardViewModel.swift */,
 				F93FD7F12F3A61B00009322A /* TastingNoteViewModel.swift */,
+				ACA10A2D55E5423C464675FC /* BrewLogViewModel.swift */,
+				D8C8E979D45A41F214055CE3 /* InsightsViewModel.swift */,
+				1B1287859B8543DC99EECCCE /* SetupWizardViewModel.swift */,
+				582A3FDD112EAF2BCFDEA85B /* TastingNoteViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -579,6 +934,11 @@ AA400004AA400004 /* Frameworks */ = {
 				F93FD7F52F3A61B00009322A /* BeanListView.swift */,
 				F93FD7F62F3A61B00009322A /* BeanRow.swift */,
 				F93FD7F72F3A61B00009322A /* FreshnessIndicatorView.swift */,
+				0DFB297F485F93E0BC26C0A2 /* AddBeanView.swift */,
+				80A3EC25255D7C5FBF2E8BC5 /* BeanDetailView.swift */,
+				72573003E975E6B3F24B92AB /* BeanListView.swift */,
+				980E376AC2C0CA7DC9E83713 /* BeanRow.swift */,
+				66BE6618E52B2D764B3CCFC1 /* FreshnessIndicatorView.swift */,
 			);
 			path = Beans;
 			sourceTree = "<group>";
@@ -592,6 +952,12 @@ AA400004AA400004 /* Frameworks */ = {
 				F93FD7FC2F3A61B00009322A /* BrewLogRow.swift */,
 				F93FD7FD2F3A61B00009322A /* BrewStepGuideView.swift */,
 				F93FD7FE2F3A61B00009322A /* BrewTimerView.swift */,
+				DF9FE1463B281EF1C42B46B3 /* AddBrewLogView.swift */,
+				1443DD6AF2929D0408D77082 /* BrewLogDetailView.swift */,
+				243E55FFA72D28E279100B61 /* BrewLogListView.swift */,
+				E18DFB6648877983D2DBE4CD /* BrewLogRow.swift */,
+				DBDA11497079541029CE4B40 /* BrewStepGuideView.swift */,
+				301BC4E47D025D60D388CAA7 /* BrewTimerView.swift */,
 			);
 			path = Brewing;
 			sourceTree = "<group>";
@@ -604,6 +970,11 @@ AA400004AA400004 /* Frameworks */ = {
 				F93FD8022F3A61B00009322A /* MonochromeStyle.swift */,
 				F93FD8032F3A61B00009322A /* StarRatingView.swift */,
 				F93FD8042F3A61B00009322A /* SyncStatusView.swift */,
+				3D3D2AE5A05DAB2B61E3838E /* EmptyStateView.swift */,
+				35173A92813A15ACA0C5E506 /* EquipmentRow.swift */,
+				34444AA5632AC17A570E903E /* MonochromeStyle.swift */,
+				6C1E73C19D7DB7F8D2028A62 /* StarRatingView.swift */,
+				7095E2414BD5B622502C86FE /* SyncStatusView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -618,6 +989,13 @@ AA400004AA400004 /* Frameworks */ = {
 				F93FD80A2F3A61B00009322A /* GrinderListView.swift */,
 				F93FD80B2F3A61B00009322A /* MethodDetailView.swift */,
 				F93FD80C2F3A61B00009322A /* MethodListView.swift */,
+				EA0085DC8726441D9061BE19 /* AddGrinderView.swift */,
+				211105AA47E4337934552241 /* AddMethodView.swift */,
+				2156247AB9B8A54BB68CEECE /* EquipmentPhotoPickerView.swift */,
+				EC96DA52B877B3218C2E5614 /* GrinderDetailView.swift */,
+				21C7911BCD8CCE150511BF18 /* GrinderListView.swift */,
+				BE06823AC5913D33A30C2A01 /* MethodDetailView.swift */,
+				132ACD2F83BFE9638DA6F37E /* MethodListView.swift */,
 			);
 			path = Equipment;
 			sourceTree = "<group>";
@@ -628,6 +1006,9 @@ AA400004AA400004 /* Frameworks */ = {
 				F93FD80E2F3A61B00009322A /* BrewFilterSheet.swift */,
 				F93FD80F2F3A61B00009322A /* BrewHistoryListContent.swift */,
 				F93FD8102F3A61B00009322A /* StatisticsDashboardView.swift */,
+				8A3A6EC659F58DD1D58221CD /* BrewFilterSheet.swift */,
+				91B648354C37B22A38E5FB9B /* BrewHistoryListContent.swift */,
+				F57CAB162849A252842E831E /* StatisticsDashboardView.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -637,6 +1018,8 @@ AA400004AA400004 /* Frameworks */ = {
 			children = (
 				F93FD8122F3A61B00009322A /* BagScannerView.swift */,
 				F93FD8132F3A61B00009322A /* ScanResultReviewView.swift */,
+				4C23A48D60461CA5AC22E991 /* BagScannerView.swift */,
+				042F3328CE89DB6B731A7ADE /* ScanResultReviewView.swift */,
 			);
 			path = Scanner;
 			sourceTree = "<group>";
@@ -645,6 +1028,7 @@ AA400004AA400004 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				F93FD8152F3A61B00009322A /* SettingsView.swift */,
+				FB4A41083385F476A266673B /* SettingsView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -657,6 +1041,11 @@ AA400004AA400004 /* Frameworks */ = {
 				F93FD8192F3A61B00009322A /* SetupCompleteView.swift */,
 				F93FD81A2F3A61B00009322A /* SetupWizardView.swift */,
 				F93FD81B2F3A61B00009322A /* WelcomeStepView.swift */,
+				A044C40415F8D37FBAE9A162 /* GrinderEntryView.swift */,
+				6A43C245338CC47F0510E341 /* MethodSelectionView.swift */,
+				5EAD298AB1EE75374B73F9F4 /* SetupCompleteView.swift */,
+				7AB1EEE1652C676E87197261 /* SetupWizardView.swift */,
+				937F19E80F3623C404CCD48F /* WelcomeStepView.swift */,
 			);
 			path = Setup;
 			sourceTree = "<group>";
@@ -672,6 +1061,14 @@ AA400004AA400004 /* Frameworks */ = {
 				F93FD8222F3A61B00009322A /* FlavorWheelView.swift */,
 				F93FD8232F3A61B00009322A /* SpiderChartView.swift */,
 				F93FD8242F3A61B00009322A /* TastingNoteEntryView.swift */,
+				C8FF343BE6AAFE5192B6246F /* AttributeSliderView.swift */,
+				3D49114380ADB4B27DEE60B6 /* BrewComparisonView.swift */,
+				0258F6F4BE9D918A35D98A8F /* FlavorProfileView.swift */,
+				0A18F1A8AE5E2A1EE25D76F2 /* FlavorTagChipView.swift */,
+				31638618D279C0620387AC5D /* FlavorTagFlowView.swift */,
+				AB936EDC9F8379B47BF85F7B /* FlavorWheelView.swift */,
+				E21F306376456ABBC06DA710 /* SpiderChartView.swift */,
+				6DA59562C8DFA0F2C2FFF49A /* TastingNoteEntryView.swift */,
 			);
 			path = Tasting;
 			sourceTree = "<group>";
@@ -689,6 +1086,9 @@ AA400004AA400004 /* Frameworks */ = {
 				F93FD81C2F3A61B00009322A /* Setup */,
 				F93FD8252F3A61B00009322A /* Tasting */,
 				F93FD8262F3A61B00009322A /* MainTabView.swift */,
+				AAC93DFEAB6288AE3655C4B7 /* Export */,
+				4CE9FCE9CEC63D86D9AD1D64 /* Insights */,
+				C18BC71FD7DED08CFB55DAE3 /* MainTabView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -726,66 +1126,6 @@ AA400004AA400004 /* Frameworks */ = {
 			path = Settings;
 			sourceTree = "<group>";
 		};
-AA300004AA300004 /* Helpers */ = {
-	isa = PBXGroup;
-	children = (
-		AA100001AA100001 /* TestHelpers.swift */,
-	);
-	path = Helpers;
-	sourceTree = "<group>";
-};
-AA300002AA300002 /* Utilities */ = {
-	isa = PBXGroup;
-	children = (
-		AA100003AA100003 /* FreshnessCalculatorTests.swift */,
-		AA100004AA100004 /* BagLabelParserTests.swift */,
-		AA100005AA100005 /* BrewStepTemplatesTests.swift */,
-	);
-	path = Utilities;
-	sourceTree = "<group>";
-};
-AA300003AA300003 /* ViewModels */ = {
-	isa = PBXGroup;
-	children = (
-		AA100006AA100006 /* BrewLogViewModelTests.swift */,
-		AA100007AA100007 /* SetupWizardViewModelTests.swift */,
-		AA100008AA100008 /* TastingNoteViewModelTests.swift */,
-	);
-	path = ViewModels;
-	sourceTree = "<group>";
-};
-AA300005AA300005 /* Models */ = {
-	isa = PBXGroup;
-	children = (
-		AA100010AA100010 /* BrewLogComputedTests.swift */,
-		AA100011AA100011 /* CoffeeBeanComputedTests.swift */,
-	);
-	name = Models;
-	path = Models;
-	sourceTree = "<group>";
-};
-AA300006AA300006 /* Integration */ = {
-	isa = PBXGroup;
-	children = (
-		AA100012AA100012 /* SwiftDataPersistenceTests.swift */,
-	);
-	name = Integration;
-	path = Integration;
-	sourceTree = "<group>";
-};
-AA300001AA300001 /* CoffeeJournalTests */ = {
-	isa = PBXGroup;
-	children = (
-		AA300004AA300004 /* Helpers */,
-		AA300006AA300006 /* Integration */,
-		AA300005AA300005 /* Models */,
-		AA300002AA300002 /* Utilities */,
-		AA300003AA300003 /* ViewModels */,
-	);
-	name = CoffeeJournalTests;
-	path = CoffeeJournalTests;
-	sourceTree = "<group>";
-};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -806,6 +1146,24 @@ AA300001AA300001 /* CoffeeJournalTests */ = {
 			productReference = E5E4D73FDE65A061C9AE33CB /* CoffeeJournal.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AA400001AA400001 /* CoffeeJournalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA500003AA500003 /* Build configuration list for PBXNativeTarget "CoffeeJournalTests" */;
+			buildPhases = (
+				AA400003AA400003 /* Sources */,
+				AA400004AA400004 /* Frameworks */,
+				AA400005AA400005 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA600001AA600001 /* PBXTargetDependency */,
+			);
+			name = CoffeeJournalTests;
+			productName = CoffeeJournalTests;
+			productReference = AA400002AA400002 /* CoffeeJournalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F5912D86DA94EDD637BD212E /* CoffeeJournalUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3D66B3E6F9F5D163228F3E1 /* Build configuration list for PBXNativeTarget "CoffeeJournalUITests" */;
@@ -824,24 +1182,6 @@ AA300001AA300001 /* CoffeeJournalTests */ = {
 			productReference = 2DBDB6069B7FF255C0372CFC /* CoffeeJournalUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-AA400001AA400001 /* CoffeeJournalTests */ = {
-	isa = PBXNativeTarget;
-	buildConfigurationList = AA500003AA500003 /* Build configuration list for PBXNativeTarget "CoffeeJournalTests" */;
-	buildPhases = (
-		AA400003AA400003 /* Sources */,
-		AA400004AA400004 /* Frameworks */,
-		AA400005AA400005 /* Resources */,
-	);
-	buildRules = (
-	);
-	dependencies = (
-		AA600001AA600001 /* PBXTargetDependency */,
-	);
-	name = CoffeeJournalTests;
-	productName = CoffeeJournalTests;
-	productReference = AA400002AA400002 /* CoffeeJournalTests.xctest */;
-	productType = "com.apple.product-type.bundle.unit-test";
-};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -880,6 +1220,13 @@ AA400001AA400001 /* CoffeeJournalTests */ = {
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AA400005AA400005 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C883B00D4C831DA4610BC64E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -887,13 +1234,6 @@ AA400001AA400001 /* CoffeeJournalTests */ = {
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-AA400005AA400005 /* Resources */ = {
-	isa = PBXResourcesBuildPhase;
-	buildActionMask = 2147483647;
-	files = (
-	);
-	runOnlyForDeploymentPostprocessing = 0;
-};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -999,6 +1339,91 @@ AA400005AA400005 /* Resources */ = {
 				C374C4D7B8444B87EE08251B /* ImageCompressor.swift in Sources */,
 				A9E492E43F60F2774F416391 /* AppStorageKeys.swift in Sources */,
 				AA200009AA200009 /* AccessibilityIdentifiers.swift in Sources */,
+				1744DA01D36A0C503886BF55 /* CoffeeJournalApp.swift in Sources */,
+				13FF74EAF679A869FAB71DDB /* ContentView.swift in Sources */,
+				E6A76A2297E4EE54A5954173 /* BrewLog.swift in Sources */,
+				A383567B124689CB4F8B4943 /* BrewMethod.swift in Sources */,
+				14EC5D3018D6D7B70B2CA552 /* CoffeeBean.swift in Sources */,
+				31BE0FB96914E25FAE0ED34B /* FlavorWheel.swift in Sources */,
+				75B23CD274B123037C457C00 /* Grinder.swift in Sources */,
+				2DC27E8C251D8A6321FDF06D /* GrinderType.swift in Sources */,
+				0046E5ECB33E93476B20BEE0 /* MethodCategory.swift in Sources */,
+				2B65B58ADCDBB71D579BF360 /* MethodTemplate.swift in Sources */,
+				6C7801425E3C7E600C0BD198 /* ProcessingMethod.swift in Sources */,
+				34A534B37F6ABE76976786C3 /* RoastLevel.swift in Sources */,
+				D63E2F5BDDD0414E44FB0617 /* MigrationPlan.swift in Sources */,
+				347500F04107FB9962575ABB /* SchemaV1.swift in Sources */,
+				6CBB8D00DEF99B356E6C11ED /* TastingNote.swift in Sources */,
+				70E8E5BFC42D0F3D84272A5D /* BrewImageRenderer.swift in Sources */,
+				177A2D5DE02F64F62C37E982 /* CSVExporter.swift in Sources */,
+				E4C2EE64EB25AC7471A78EFC /* ExportTypes.swift in Sources */,
+				C87169B300A39CDCBF4212B7 /* PDFExporter.swift in Sources */,
+				81B5A13E3AB85ADF8E00892B /* BrewPatternAnalyzer.swift in Sources */,
+				E96FE80A7D46C39E17A4B64B /* BrewSuggestionEngine.swift in Sources */,
+				04AE840B3E3A315C10DE089F /* FlavorExtractor.swift in Sources */,
+				B25E0F31995E9FA7529BBCBC /* FoundationModelInsightsService.swift in Sources */,
+				ADD09F6F8D852E9383C50113 /* InsightsService.swift in Sources */,
+				C753604C6B8F1B6313ADDE97 /* NLInsightsService.swift in Sources */,
+				664B1254FC2828B567E292AD /* NetworkMonitor.swift in Sources */,
+				76F749165808E0F64E95E499 /* SyncMonitor.swift in Sources */,
+				8E2CA5E1A2100238A4911F8A /* AccessibilityIdentifiers.swift in Sources */,
+				AB114229BC8CDEC56DF9C798 /* AppStorageKeys.swift in Sources */,
+				475075504715FB56E04BCCB9 /* BagLabelParser.swift in Sources */,
+				E016B0C94DC9DE3554A3BDAC /* BrewStepTemplates.swift in Sources */,
+				9BD0AC7FB86AF9A70E68D814 /* FlowLayout.swift in Sources */,
+				F46F5B9C7689DE3BC46EC952 /* FreshnessCalculator.swift in Sources */,
+				0287EE01077563CF1C266D8E /* ImageCompressor.swift in Sources */,
+				C1B9CCFE46EBB6E44F66BE79 /* BrewLogViewModel.swift in Sources */,
+				4739B6A75675528ED755C41F /* InsightsViewModel.swift in Sources */,
+				A6A571B05ED942A1F6093191 /* SetupWizardViewModel.swift in Sources */,
+				A27C3003B279034217A14133 /* TastingNoteViewModel.swift in Sources */,
+				A34F173D2440D5EAA7966798 /* AddBeanView.swift in Sources */,
+				FC3E43852E49201F0F1E41D7 /* BeanDetailView.swift in Sources */,
+				CA8342A59DD682642007707F /* BeanListView.swift in Sources */,
+				2522456BEEDE21A23B7766FC /* BeanRow.swift in Sources */,
+				3AB4A122ABA96F99DF8FA49C /* FreshnessIndicatorView.swift in Sources */,
+				8CD60E5253873162748212B4 /* AddBrewLogView.swift in Sources */,
+				99E4CC3A8BB8B01858FAEB57 /* BrewLogDetailView.swift in Sources */,
+				09FF925D0E975018BB2C8308 /* BrewLogListView.swift in Sources */,
+				D0CCB139E37DE7D9E5185BC2 /* BrewLogRow.swift in Sources */,
+				06B40052E874CEA9BF3A75BC /* BrewStepGuideView.swift in Sources */,
+				20463355C5ADCACB63D38969 /* BrewTimerView.swift in Sources */,
+				87A47DD3C3EC22B7F6AF5396 /* EmptyStateView.swift in Sources */,
+				40BC6010361D480CBE67FDFE /* EquipmentRow.swift in Sources */,
+				7BC3296919881DA005860F67 /* MonochromeStyle.swift in Sources */,
+				A0D096DA0029607B82700CD4 /* StarRatingView.swift in Sources */,
+				BAD5B2434366448EF930D660 /* SyncStatusView.swift in Sources */,
+				EE0E7980A6AEC2F8F01E52F7 /* AddGrinderView.swift in Sources */,
+				936AAFB08C252DF9AB153827 /* AddMethodView.swift in Sources */,
+				95550260F932ED7DA680DACC /* EquipmentPhotoPickerView.swift in Sources */,
+				275F507A9F30190FB1E3FD89 /* GrinderDetailView.swift in Sources */,
+				76D6139829B69B297C48FA1C /* GrinderListView.swift in Sources */,
+				DCCF7C98D9545FB296DDBE4F /* MethodDetailView.swift in Sources */,
+				35B9651AB368327741214486 /* MethodListView.swift in Sources */,
+				A662F895E40F8E4CE9429E3B /* BrewCardView.swift in Sources */,
+				9C3BBFD12338BCB70E50B400 /* BrewFilterSheet.swift in Sources */,
+				8879499F65ECD0895FB071C4 /* BrewHistoryListContent.swift in Sources */,
+				AFD1A988FB43A8E8490EA6C7 /* StatisticsDashboardView.swift in Sources */,
+				0AB42E54085ED2C1067AC3D1 /* BrewPatternCard.swift in Sources */,
+				BB2F7C91CCD78E357C40085C /* BrewSuggestionBanner.swift in Sources */,
+				BBC9C41D91CBE061C38F8537 /* FlavorInsightView.swift in Sources */,
+				A109C5FED3D3EC83BA1A7DB0 /* MainTabView.swift in Sources */,
+				7EA839D0BB35B00A08BBD33F /* BagScannerView.swift in Sources */,
+				AFFED26507DEEC07499BDDC9 /* ScanResultReviewView.swift in Sources */,
+				2546F98981D5EF1E1FB90797 /* SettingsView.swift in Sources */,
+				223BCC9677E88D9849CF2471 /* GrinderEntryView.swift in Sources */,
+				531541114990665940B4B39F /* MethodSelectionView.swift in Sources */,
+				C561D920C11ABDC47EAC2700 /* SetupCompleteView.swift in Sources */,
+				CF19C440C211DAA7368826EB /* SetupWizardView.swift in Sources */,
+				81A147807F29A094E113DC55 /* WelcomeStepView.swift in Sources */,
+				C162CAD2EAABD879D29BB06C /* AttributeSliderView.swift in Sources */,
+				442BD50C8084EC626B9B4329 /* BrewComparisonView.swift in Sources */,
+				D61DE7F6E136AE7E08B89F09 /* FlavorProfileView.swift in Sources */,
+				341BFD03DE522900A8F602D5 /* FlavorTagChipView.swift in Sources */,
+				1232EC8F1638BD379821E645 /* FlavorTagFlowView.swift in Sources */,
+				6D769C74711C08F21EA75BA5 /* FlavorWheelView.swift in Sources */,
+				CDEA9067919E456A1FA0B95A /* SpiderChartView.swift in Sources */,
+				22F09229631DE9929A6A2816 /* TastingNoteEntryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1013,27 +1438,44 @@ AA400005AA400005 /* Resources */ = {
 				BB900004BB900004 /* BeanUITests.swift in Sources */,
 				BB900005BB900005 /* BrewLogUITests.swift in Sources */,
 				BB900006BB900006 /* AccessibilityIdentifiers.swift in Sources */,
+				1A442BA4A492458B09FD4FA3 /* BeanUITests.swift in Sources */,
+				SS900001SS900001 /* ScreenshotTests.swift in Sources */,
+				A8040FDB281B35DF464CD635 /* BrewLogUITests.swift in Sources */,
+				6AD83247D9518D8149613359 /* CoffeeJournalUITests.swift in Sources */,
+				93D1AB7834614DA96F3ADAB5 /* EquipmentUITests.swift in Sources */,
+				2B485E8AAF169231B4C60A33 /* UITestHelpers.swift in Sources */,
+				1C0DAB31FBDDAD1E302D548A /* SetupWizardUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-AA400003AA400003 /* Sources */ = {
-	isa = PBXSourcesBuildPhase;
-	buildActionMask = 2147483647;
-	files = (
-		AA200001AA200001 /* TestHelpers.swift in Sources */,
-		AA200002AA200002 /* AccessibilityIdentifiers.swift in Sources */,
-		AA200003AA200003 /* FreshnessCalculatorTests.swift in Sources */,
-		AA200004AA200004 /* BagLabelParserTests.swift in Sources */,
-		AA200005AA200005 /* BrewStepTemplatesTests.swift in Sources */,
-		AA200006AA200006 /* BrewLogViewModelTests.swift in Sources */,
-		AA200007AA200007 /* SetupWizardViewModelTests.swift in Sources */,
-		AA200008AA200008 /* TastingNoteViewModelTests.swift in Sources */,
-		AA200010AA200010 /* BrewLogComputedTests.swift in Sources */,
-		AA200011AA200011 /* CoffeeBeanComputedTests.swift in Sources */,
-		AA200012AA200012 /* SwiftDataPersistenceTests.swift in Sources */,
-	);
-	runOnlyForDeploymentPostprocessing = 0;
-};
+		AA400003AA400003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA200001AA200001 /* TestHelpers.swift in Sources */,
+				AA200002AA200002 /* AccessibilityIdentifiers.swift in Sources */,
+				AA200003AA200003 /* FreshnessCalculatorTests.swift in Sources */,
+				AA200004AA200004 /* BagLabelParserTests.swift in Sources */,
+				AA200005AA200005 /* BrewStepTemplatesTests.swift in Sources */,
+				AA200006AA200006 /* BrewLogViewModelTests.swift in Sources */,
+				AA200007AA200007 /* SetupWizardViewModelTests.swift in Sources */,
+				AA200008AA200008 /* TastingNoteViewModelTests.swift in Sources */,
+				AA200010AA200010 /* BrewLogComputedTests.swift in Sources */,
+				AA200011AA200011 /* CoffeeBeanComputedTests.swift in Sources */,
+				AA200012AA200012 /* SwiftDataPersistenceTests.swift in Sources */,
+				61ECDAD80626D112FFA10B37 /* TestHelpers.swift in Sources */,
+				01D35C15033901102992B0CF /* SwiftDataPersistenceTests.swift in Sources */,
+				3C4FBA72FC32DF72276A3DAE /* BrewLogComputedTests.swift in Sources */,
+				7EA847E6CC29C44B35A8B540 /* CoffeeBeanComputedTests.swift in Sources */,
+				8F4B7787E94F9B3F87391727 /* BagLabelParserTests.swift in Sources */,
+				5F318C241AC90E6A635092CA /* BrewStepTemplatesTests.swift in Sources */,
+				4D679016935F7BF8011942DA /* FreshnessCalculatorTests.swift in Sources */,
+				415073E951BAB5A1F3173A32 /* BrewLogViewModelTests.swift in Sources */,
+				B4B3B14AC6FA2CA1D2D3938A /* SetupWizardViewModelTests.swift in Sources */,
+				31847F6755429CF332807628 /* TastingNoteViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1043,12 +1485,12 @@ AA400003AA400003 /* Sources */ = {
 			target = 73E613D43D49E06EF501B539 /* CoffeeJournal */;
 			targetProxy = B3C8D6AAEF6E67EFFA4CF64B /* PBXContainerItemProxy */;
 		};
-AA600001AA600001 /* PBXTargetDependency */ = {
-	isa = PBXTargetDependency;
-	name = CoffeeJournal;
-	target = 73E613D43D49E06EF501B539 /* CoffeeJournal */;
-	targetProxy = AA600002AA600002 /* PBXContainerItemProxy */;
-};
+		AA600001AA600001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CoffeeJournal;
+			target = 73E613D43D49E06EF501B539 /* CoffeeJournal */;
+			targetProxy = AA600002AA600002 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -1057,6 +1499,7 @@ AA600001AA600001 /* PBXTargetDependency */ = {
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.ashok.mycoffeeapp.uitests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1125,6 +1568,41 @@ AA600001AA600001 /* PBXTargetDependency */ = {
 			};
 			name = Release;
 		};
+		AA500001AA500001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.ashok.mycoffeeapp.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoffeeJournal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CoffeeJournal";
+			};
+			name = Debug;
+		};
+		AA500002AA500002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.ashok.mycoffeeapp.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoffeeJournal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CoffeeJournal";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		BC70B548D09970EADC7D7039 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1161,6 +1639,7 @@ AA600001AA600001 /* PBXTargetDependency */ = {
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.ashok.mycoffeeapp.uitests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1267,39 +1746,6 @@ AA600001AA600001 /* PBXTargetDependency */ = {
 			};
 			name = Debug;
 		};
-AA500001AA500001 /* Debug */ = {
-	isa = XCBuildConfiguration;
-	buildSettings = {
-		BUNDLE_LOADER = "$(TEST_HOST)";
-		CLANG_ENABLE_OBJC_WEAK = NO;
-		CODE_SIGN_STYLE = Automatic;
-		IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-		PRODUCT_BUNDLE_IDENTIFIER = io.ashok.mycoffeeapp.tests;
-		PRODUCT_NAME = "$(TARGET_NAME)";
-		SDKROOT = iphoneos;
-		SWIFT_VERSION = 5.0;
-		TARGETED_DEVICE_FAMILY = "1,2";
-		TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoffeeJournal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CoffeeJournal";
-	};
-	name = Debug;
-};
-AA500002AA500002 /* Release */ = {
-	isa = XCBuildConfiguration;
-	buildSettings = {
-		BUNDLE_LOADER = "$(TEST_HOST)";
-		CLANG_ENABLE_OBJC_WEAK = NO;
-		CODE_SIGN_STYLE = Automatic;
-		IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-		PRODUCT_BUNDLE_IDENTIFIER = io.ashok.mycoffeeapp.tests;
-		PRODUCT_NAME = "$(TARGET_NAME)";
-		SDKROOT = iphoneos;
-		SWIFT_VERSION = 5.0;
-		TARGETED_DEVICE_FAMILY = "1,2";
-		TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoffeeJournal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CoffeeJournal";
-		VALIDATE_PRODUCT = YES;
-	};
-	name = Release;
-};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1308,6 +1754,15 @@ AA500002AA500002 /* Release */ = {
 			buildConfigurations = (
 				D210F69F96539F6DA9A131A7 /* Release */,
 				BC70B548D09970EADC7D7039 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA500003AA500003 /* Build configuration list for PBXNativeTarget "CoffeeJournalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA500002AA500002 /* Release */,
+				AA500001AA500001 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1330,15 +1785,6 @@ AA500002AA500002 /* Release */ = {
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-AA500003AA500003 /* Build configuration list for PBXNativeTarget "CoffeeJournalTests" */ = {
-	isa = XCConfigurationList;
-	buildConfigurations = (
-		AA500002AA500002 /* Release */,
-		AA500001AA500001 /* Debug */,
-	);
-	defaultConfigurationIsVisible = 0;
-	defaultConfigurationName = Release;
-};
 /* End XCConfigurationList section */
 	};
 	rootObject = 8843C961065C44B0 /* Project object */;
