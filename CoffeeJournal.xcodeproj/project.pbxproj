@@ -116,6 +116,9 @@ AA200006AA200006 /* BrewLogViewModelTests.swift in Sources */ = {isa = PBXBuildF
 AA200007AA200007 /* SetupWizardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100007AA100007 /* SetupWizardViewModelTests.swift */; };
 AA200008AA200008 /* TastingNoteViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100008AA100008 /* TastingNoteViewModelTests.swift */; };
 AA200009AA200009 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100002AA100002 /* AccessibilityIdentifiers.swift */; };
+AA200010AA200010 /* BrewLogComputedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100010AA100010 /* BrewLogComputedTests.swift */; };
+AA200011AA200011 /* CoffeeBeanComputedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100011AA100011 /* CoffeeBeanComputedTests.swift */; };
+AA200012AA200012 /* SwiftDataPersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA100012AA100012 /* SwiftDataPersistenceTests.swift */; };
 AA700001AA700001 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14366588D5B5125A73E229BE /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -288,6 +291,9 @@ AA100005AA100005 /* BrewStepTemplatesTests.swift */ = {isa = PBXFileReference; l
 AA100006AA100006 /* BrewLogViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewLogViewModelTests.swift; sourceTree = "<group>"; };
 AA100007AA100007 /* SetupWizardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupWizardViewModelTests.swift; sourceTree = "<group>"; };
 AA100008AA100008 /* TastingNoteViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingNoteViewModelTests.swift; sourceTree = "<group>"; };
+AA100010AA100010 /* BrewLogComputedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewLogComputedTests.swift; sourceTree = "<group>"; };
+AA100011AA100011 /* CoffeeBeanComputedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeBeanComputedTests.swift; sourceTree = "<group>"; };
+AA100012AA100012 /* SwiftDataPersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataPersistenceTests.swift; sourceTree = "<group>"; };
 AA400002AA400002 /* CoffeeJournalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeJournalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -724,10 +730,31 @@ AA300003AA300003 /* ViewModels */ = {
 	path = ViewModels;
 	sourceTree = "<group>";
 };
+AA300005AA300005 /* Models */ = {
+	isa = PBXGroup;
+	children = (
+		AA100010AA100010 /* BrewLogComputedTests.swift */,
+		AA100011AA100011 /* CoffeeBeanComputedTests.swift */,
+	);
+	name = Models;
+	path = Models;
+	sourceTree = "<group>";
+};
+AA300006AA300006 /* Integration */ = {
+	isa = PBXGroup;
+	children = (
+		AA100012AA100012 /* SwiftDataPersistenceTests.swift */,
+	);
+	name = Integration;
+	path = Integration;
+	sourceTree = "<group>";
+};
 AA300001AA300001 /* CoffeeJournalTests */ = {
 	isa = PBXGroup;
 	children = (
 		AA300004AA300004 /* Helpers */,
+		AA300006AA300006 /* Integration */,
+		AA300005AA300005 /* Models */,
 		AA300002AA300002 /* Utilities */,
 		AA300003AA300003 /* ViewModels */,
 	);
@@ -971,6 +998,9 @@ AA400003AA400003 /* Sources */ = {
 		AA200006AA200006 /* BrewLogViewModelTests.swift in Sources */,
 		AA200007AA200007 /* SetupWizardViewModelTests.swift in Sources */,
 		AA200008AA200008 /* TastingNoteViewModelTests.swift in Sources */,
+		AA200010AA200010 /* BrewLogComputedTests.swift in Sources */,
+		AA200011AA200011 /* CoffeeBeanComputedTests.swift in Sources */,
+		AA200012AA200012 /* SwiftDataPersistenceTests.swift in Sources */,
 	);
 	runOnlyForDeploymentPostprocessing = 0;
 };
