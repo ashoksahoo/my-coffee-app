@@ -76,6 +76,8 @@ let package = Package(
                 "Services/Export/PDFExporter.swift",
                 "Services/Export/CSVExporter.swift",
                 "Services/Export/ExportTypes.swift",
+                "Views/Export/BrewCardView.swift",
+                "Services/Export/BrewImageRenderer.swift",
             ]
         ),
     ]

@@ -5,6 +5,7 @@ struct BrewLogDetailView: View {
     let brew: BrewLog
     @State private var showTastingEntry = false
     @State private var insightsViewModel = InsightsViewModel()
+    @State private var renderedImage: UIImage?
 
     var body: some View {
         ScrollView {
@@ -21,7 +22,26 @@ struct BrewLogDetailView: View {
         }
         .navigationTitle("Brew Detail")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                if let uiImage = renderedImage {
+                    ShareLink(
+                        item: Image(uiImage: uiImage),
+                        preview: SharePreview(
+                            brew.brewMethod?.name ?? "Brew",
+                            image: Image(uiImage: uiImage)
+                        )
+                    ) {
+                        Image(systemName: "square.and.arrow.up")
+                            .foregroundStyle(AppColors.primary)
+                    }
+                } else {
+                    ProgressView()
+                }
+            }
+        }
         .task {
+            renderedImage = BrewImageRenderer.render(brew: brew)
             var textParts: [String] = []
             if let freeform = brew.tastingNote?.freeformNotes, !freeform.isEmpty {
                 textParts.append(freeform)
