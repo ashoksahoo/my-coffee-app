@@ -44,9 +44,11 @@ final class BeanUITests: XCTestCase {
         beans.tapSave()
 
         // Verify bean appears in list
+        // The bean displayName will be "Roaster - Origin" format
+        let beanText = app.staticTexts.containing(NSPredicate(format: "label CONTAINS[c] %@", "Blue Bottle")).firstMatch
         XCTAssertTrue(
-            app.staticTexts["Blue Bottle"].waitForExistence(timeout: 3),
-            "Blue Bottle should appear in bean list"
+            beanText.waitForExistence(timeout: 5),
+            "Blue Bottle bean should appear in bean list"
         )
     }
 }

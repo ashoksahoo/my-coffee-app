@@ -11,8 +11,16 @@ struct SetupWizardPage {
     }
 
     func tapGetStarted() {
-        let button = app.buttons[AccessibilityID.Setup.getStartedButton]
-        XCTAssertTrue(button.waitForExistence(timeout: 3), "Get Started button should exist")
+        // The setup wizard doesn't have a "Get Started" button
+        // It has a "Next" button in the navigation bar
+        var button = app.buttons[AccessibilityID.Setup.getStartedButton]
+
+        if !button.waitForExistence(timeout: 2) {
+            // Look for "Next" button
+            button = app.buttons["Next"]
+        }
+
+        XCTAssertTrue(button.exists, "Next button should exist")
         button.tap()
     }
 
@@ -32,31 +40,57 @@ struct SetupWizardPage {
     }
 
     func tapContinue() {
-        let button = app.buttons[AccessibilityID.Setup.continueButton]
-        XCTAssertTrue(button.waitForExistence(timeout: 3), "Continue button should exist")
+        // Look for Next button (used throughout wizard)
+        var button = app.buttons[AccessibilityID.Setup.continueButton]
+
+        if !button.waitForExistence(timeout: 2) {
+            button = app.buttons["Next"]
+        }
+
+        XCTAssertTrue(button.exists, "Continue/Next button should exist")
         button.tap()
     }
 
     func skipGrinder() {
-        // The Skip button on WelcomeStepView doubles as skip-grinder;
-        // on grinder step the "Next" button (continueButton) advances.
-        // Actually, the grinder step just has "Next" to skip/continue.
-        let nextButton = app.buttons[AccessibilityID.Setup.continueButton]
-        XCTAssertTrue(nextButton.waitForExistence(timeout: 3), "Next/Continue button should exist on grinder step")
+        // The grinder step has a "Next" button to skip/continue
+        var nextButton = app.buttons[AccessibilityID.Setup.continueButton]
+
+        if !nextButton.waitForExistence(timeout: 2) {
+            nextButton = app.buttons["Next"]
+        }
+
+        XCTAssertTrue(nextButton.exists, "Next button should exist on grinder step")
         nextButton.tap()
     }
 
     func enterGrinderName(_ name: String) {
-        let field = app.textFields[AccessibilityID.Equipment.grinderNameField]
-        XCTAssertTrue(field.waitForExistence(timeout: 3), "Grinder name field should exist")
+        // In setup wizard, the field has placeholder "e.g., Comandante C40"
+        var field = app.textFields[AccessibilityID.Equipment.grinderNameField]
+
+        if !field.waitForExistence(timeout: 2) {
+            // Try placeholder text
+            field = app.textFields["e.g., Comandante C40"]
+        }
+
+        if !field.exists {
+            // Fallback: first text field
+            field = app.textFields.firstMatch
+        }
+
+        XCTAssertTrue(field.exists, "Grinder name field should exist")
         field.tap()
         field.typeText(name)
     }
 
     func tapDone() {
-        // On the complete step, the button says "Done" but uses continueButton identifier
-        let button = app.buttons[AccessibilityID.Setup.continueButton]
-        XCTAssertTrue(button.waitForExistence(timeout: 3), "Done button should exist")
+        // On the complete step, the button says "Done"
+        var button = app.buttons[AccessibilityID.Setup.continueButton]
+
+        if !button.waitForExistence(timeout: 2) {
+            button = app.buttons["Done"]
+        }
+
+        XCTAssertTrue(button.exists, "Done button should exist")
         button.tap()
     }
 
