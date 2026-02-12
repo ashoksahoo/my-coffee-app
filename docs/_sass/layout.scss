@@ -374,6 +374,41 @@ nav > ul li a:active {
 	height: 75px;
 }
 
+.gitHubLink {
+	display: inline-block !important;
+	margin-top: 12px !important;
+	margin-left: 24px;
+	padding: 12px 24px !important;
+	background-color: #000000 !important;
+	color: #ffffff !important;
+	text-decoration: none !important;
+	border-radius: 8px !important;
+	font-weight: 600 !important;
+	font-size: 15px !important;
+	transition: opacity 0.2s !important;
+	vertical-align: top;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.gitHubLink {
+		margin-left: 0px;
+		margin-top: 24px !important;
+		display: block !important;
+		margin-left: auto;
+		margin-right: auto;
+		width: fit-content;
+	}
+}
+
+@media only screen and (max-width: 528px) {
+	.gitHubLink {
+		margin-top: 24px !important;
+	}
+}
 
 
 // iPhone Device Preview
