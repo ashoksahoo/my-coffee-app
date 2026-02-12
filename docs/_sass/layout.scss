@@ -375,18 +375,21 @@ nav > ul li a:active {
 }
 
 .gitHubLink {
-	display: inline-block !important;
-	margin-top: 12px !important;
+	display: inline-flex !important;
+	align-items: center;
+	justify-content: center;
+	height: 75px;
 	margin-left: 24px;
-	padding: 12px 24px !important;
+	padding: 0 32px !important;
 	background-color: #000000 !important;
 	color: #ffffff !important;
 	text-decoration: none !important;
-	border-radius: 8px !important;
+	border-radius: 12px !important;
 	font-weight: 600 !important;
-	font-size: 15px !important;
+	font-size: 16px !important;
 	transition: opacity 0.2s !important;
 	vertical-align: top;
+	box-sizing: border-box;
 
 	&:hover {
 		opacity: 0.8;
@@ -397,16 +400,14 @@ nav > ul li a:active {
 	.gitHubLink {
 		margin-left: 0px;
 		margin-top: 24px !important;
-		display: block !important;
-		margin-left: auto;
-		margin-right: auto;
-		width: fit-content;
+		display: inline-flex !important;
 	}
 }
 
 @media only screen and (max-width: 528px) {
 	.gitHubLink {
 		margin-top: 24px !important;
+		margin-left: 0px;
 	}
 }
 
