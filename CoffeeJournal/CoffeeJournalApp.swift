@@ -41,11 +41,14 @@ struct CoffeeJournalApp: App {
         }
     }
 
+    @AppStorage(AppStorageKeys.appearanceMode) private var appearanceModeRaw = AppearanceMode.system.rawValue
+
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environment(syncMonitor)
                 .environment(networkMonitor)
+                .preferredColorScheme((AppearanceMode(rawValue: appearanceModeRaw) ?? .system).colorScheme)
         }
         .modelContainer(container)
     }

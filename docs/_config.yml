@@ -67,8 +67,16 @@ features                                  :
     description                           : Full functionality without internet connection. Your data is always accessible
     fontawesome_icon_name                 : wifi
 
-  - title                                 : Monochrome Design
-    description                           : E-ink friendly, minimal black and white aesthetic for distraction-free brewing
+  - title                                 : Dark Mode
+    description                           : System, Light, and Dark themes with a per-app preference in Settings — adapts instantly to your chosen appearance
+    fontawesome_icon_name                 : moon
+
+  - title                                 : iOS 26 Liquid Glass Icons
+    description                           : Ships with light, dark, and tinted icon variants built for iOS 26's Liquid Glass design language — looks perfect on every home screen
+    fontawesome_icon_name                 : gem
+
+  - title                                 : Minimal Design
+    description                           : Clean, high-contrast aesthetic fully optimised for iOS 26 — including adaptive splash screen and Liquid Glass icon integration
     fontawesome_icon_name                 : palette
 
   - title                                 : Search & Filter
