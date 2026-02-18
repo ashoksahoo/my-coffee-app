@@ -15,6 +15,7 @@
 		0287EE01077563CF1C266D8E /* ImageCompressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDF31C91F4B0E70725C27AD /* ImageCompressor.swift */; };
 		04AE840B3E3A315C10DE089F /* FlavorExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB542AFA1E0023D17366746 /* FlavorExtractor.swift */; };
 		065CD976829E31F0A57F1293 /* ImageCompressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7ED2F3A61B00009322A /* ImageCompressor.swift */; };
+		0A7F2B5E931DC64E8B1A3F07 /* SeedDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8E3C6F042ED75F9C2B4018 /* SeedDataService.swift */; };
 		06B40052E874CEA9BF3A75BC /* BrewStepGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDA11497079541029CE4B40 /* BrewStepGuideView.swift */; };
 		09FF925D0E975018BB2C8308 /* BrewLogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E55FFA72D28E279100B61 /* BrewLogListView.swift */; };
 		0AB42E54085ED2C1067AC3D1 /* BrewPatternCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDA9D1F307A7CAEA6661DE /* BrewPatternCard.swift */; };
@@ -140,6 +141,7 @@
 		A4D136F6A44D2FB3B63C03B1 /* SetupWizardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7F02F3A61B00009322A /* SetupWizardViewModel.swift */; };
 		A64C3CA581CB7160A0E95DDB /* MigrationPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7D62F3A61B00009322A /* MigrationPlan.swift */; };
 		A662F895E40F8E4CE9429E3B /* BrewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A100475883BCCBCFA14C2D /* BrewCardView.swift */; };
+		E1A2B3C4D5E6F7A8B9C0D1E2 /* ExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A2B3C4D5E6F7A8B9C0D1E2 /* ExportView.swift */; };
 		A6A571B05ED942A1F6093191 /* SetupWizardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1287859B8543DC99EECCCE /* SetupWizardViewModel.swift */; };
 		A7D2E3B35C7E4CC37A66EA11 /* MonochromeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD8022F3A61B00009322A /* MonochromeStyle.swift */; };
 		A8040FDB281B35DF464CD635 /* BrewLogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F5C227933E01DFA95C609F /* BrewLogUITests.swift */; };
@@ -315,6 +317,7 @@
 		6495D6C497ADB554A6FAF342 /* BrewLogDetailView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewLogDetailView.swift; path = CoffeeJournal/Views/Brewing/BrewLogDetailView.swift; sourceTree = "<group>"; };
 		668E18CE88863159EA434CA9 /* ProcessingMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProcessingMethod.swift; path = CoffeeJournal/Models/ProcessingMethod.swift; sourceTree = SOURCE_ROOT; };
 		66A100475883BCCBCFA14C2D /* BrewCardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewCardView.swift; path = CoffeeJournal/Views/Export/BrewCardView.swift; sourceTree = SOURCE_ROOT; };
+		F1A2B3C4D5E6F7A8B9C0D1E2 /* ExportView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExportView.swift; path = CoffeeJournal/Views/Export/ExportView.swift; sourceTree = SOURCE_ROOT; };
 		66BE6618E52B2D764B3CCFC1 /* FreshnessIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FreshnessIndicatorView.swift; path = CoffeeJournal/Views/Beans/FreshnessIndicatorView.swift; sourceTree = SOURCE_ROOT; };
 		6A2383C59E886044D05CB816 /* AttributeSliderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AttributeSliderView.swift; path = CoffeeJournal/Views/Tasting/AttributeSliderView.swift; sourceTree = "<group>"; };
 		6A43C245338CC47F0510E341 /* MethodSelectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MethodSelectionView.swift; path = CoffeeJournal/Views/Setup/MethodSelectionView.swift; sourceTree = SOURCE_ROOT; };
@@ -462,6 +465,7 @@
 		F93FD7EB2F3A61B00009322A /* FlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
 		F93FD7EC2F3A61B00009322A /* FreshnessCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshnessCalculator.swift; sourceTree = "<group>"; };
 		F93FD7ED2F3A61B00009322A /* ImageCompressor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCompressor.swift; sourceTree = "<group>"; };
+		0B8E3C6F042ED75F9C2B4018 /* SeedDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedDataService.swift; sourceTree = "<group>"; };
 		F93FD7EF2F3A61B00009322A /* BrewLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewLogViewModel.swift; sourceTree = "<group>"; };
 		F93FD7F02F3A61B00009322A /* SetupWizardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupWizardViewModel.swift; sourceTree = "<group>"; };
 		F93FD7F12F3A61B00009322A /* TastingNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TastingNoteViewModel.swift; sourceTree = "<group>"; };
@@ -797,6 +801,7 @@
 			isa = PBXGroup;
 			children = (
 				66A100475883BCCBCFA14C2D /* BrewCardView.swift */,
+				F1A2B3C4D5E6F7A8B9C0D1E2 /* ExportView.swift */,
 			);
 			name = Export;
 			sourceTree = "<group>";
@@ -900,6 +905,7 @@
 				F93FD7EB2F3A61B00009322A /* FlowLayout.swift */,
 				F93FD7EC2F3A61B00009322A /* FreshnessCalculator.swift */,
 				F93FD7ED2F3A61B00009322A /* ImageCompressor.swift */,
+				0B8E3C6F042ED75F9C2B4018 /* SeedDataService.swift */,
 				AA100002AA100002 /* AccessibilityIdentifiers.swift */,
 				D989582E6058618FE8616161 /* AccessibilityIdentifiers.swift */,
 				42CCF5F42DFF8079E092D140 /* AppStorageKeys.swift */,
@@ -1262,6 +1268,7 @@
 				AFCECABA249E1D25E6DAB6DB /* FlowLayout.swift in Sources */,
 				13C4188A53076B403459479E /* FreshnessCalculator.swift in Sources */,
 				065CD976829E31F0A57F1293 /* ImageCompressor.swift in Sources */,
+				0A7F2B5E931DC64E8B1A3F07 /* SeedDataService.swift in Sources */,
 				2DB56F74FDFBA554C63FDB41 /* BrewLogViewModel.swift in Sources */,
 				A4D136F6A44D2FB3B63C03B1 /* SetupWizardViewModel.swift in Sources */,
 				4F01920FBBA27C0A1FBF50D0 /* TastingNoteViewModel.swift in Sources */,
@@ -1401,6 +1408,7 @@
 				DCCF7C98D9545FB296DDBE4F /* MethodDetailView.swift in Sources */,
 				35B9651AB368327741214486 /* MethodListView.swift in Sources */,
 				A662F895E40F8E4CE9429E3B /* BrewCardView.swift in Sources */,
+				E1A2B3C4D5E6F7A8B9C0D1E2 /* ExportView.swift in Sources */,
 				9C3BBFD12338BCB70E50B400 /* BrewFilterSheet.swift in Sources */,
 				8879499F65ECD0895FB071C4 /* BrewHistoryListContent.swift in Sources */,
 				AFD1A988FB43A8E8490EA6C7 /* StatisticsDashboardView.swift in Sources */,
@@ -1500,7 +1508,7 @@
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_STYLE = Automatic;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.ashok.mycoffeeapp.uitests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1558,7 +1566,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1575,7 +1583,7 @@
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_STYLE = Automatic;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.ashok.mycoffeeapp.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1592,7 +1600,7 @@
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_STYLE = Automatic;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.ashok.mycoffeeapp.tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1619,7 +1627,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1640,7 +1648,7 @@
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_STYLE = Automatic;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.ashok.mycoffeeapp.uitests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1666,7 +1674,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1735,7 +1743,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;

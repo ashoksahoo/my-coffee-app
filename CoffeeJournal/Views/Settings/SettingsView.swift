@@ -1,9 +1,15 @@
 import SwiftUI
+import SwiftData
 
 struct SettingsView: View {
     @AppStorage(AppStorageKeys.appearanceMode) private var appearanceModeRaw = AppearanceMode.system.rawValue
     @State private var showingSetupWizard = false
     @State private var wizardViewModel = SetupWizardViewModel()
+    #if DEBUG
+    @Environment(\.modelContext) private var modelContext
+    @State private var seedConfirmation = false
+    @State private var seedDone = false
+    #endif
 
     private var appearanceMode: Binding<AppearanceMode> {
         Binding(
@@ -55,8 +61,39 @@ struct SettingsView: View {
             }
 
             SyncStatusSection()
+
+            #if DEBUG
+            Section {
+                Button {
+                    seedConfirmation = true
+                } label: {
+                    Label("Load Sample Data", systemImage: "square.and.arrow.down")
+                        .foregroundStyle(.orange)
+                }
+            } header: {
+                Text("Developer")
+            } footer: {
+                Text("Seeds 30+ brew logs with tasting notes to test Foundation Models insights. Only loads if no brews exist.")
+            }
+            #endif
         }
         .navigationTitle("Settings")
+        #if DEBUG
+        .alert("Load Sample Data?", isPresented: $seedConfirmation) {
+            Button("Load", role: .destructive) {
+                SeedDataService.seed(into: modelContext)
+                seedDone = true
+            }
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("This will add 5 beans, 3 brew methods, and 30+ brew logs with rich tasting notes. Only runs if your brew list is empty.")
+        }
+        .alert("Sample Data Loaded", isPresented: $seedDone) {
+            Button("OK") {}
+        } message: {
+            Text("30+ brew logs added. Go to Brews or Statistics to see the Foundation Models insights in action.")
+        }
+        #endif
         .sheet(isPresented: $showingSetupWizard) {
             SetupWizardView(onComplete: {
                 showingSetupWizard = false
