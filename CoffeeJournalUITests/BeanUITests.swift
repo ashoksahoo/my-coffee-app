@@ -23,13 +23,13 @@ final class BeanUITests: XCTestCase {
     // MARK: - Add Coffee Bean
 
     func testAddCoffeeBean() throws {
-        let tabBar = TabBar(app: app)
+        let sidebar = Sidebar(app: app)
         let beans = BeansPage(app: app)
 
-        XCTAssertTrue(tabBar.waitForTabBar(), "Tab bar should be visible")
+        XCTAssertTrue(sidebar.waitForSidebar(), "Sidebar should be visible")
 
-        // Navigate to Beans tab
-        tabBar.tapBeans()
+        // Navigate to Beans
+        sidebar.tapBeans()
         XCTAssertTrue(app.navigationBars["Beans"].waitForExistence(timeout: 3), "Beans screen should load")
 
         // Tap add (opens menu) then "Add Manually"

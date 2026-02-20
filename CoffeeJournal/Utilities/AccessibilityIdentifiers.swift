@@ -16,14 +16,19 @@ enum AccessibilityID {
         static let completeTitle = "setup.complete.title"
     }
 
-    // MARK: - Tab Bar
+    // MARK: - Sidebar
 
-    enum Tabs {
-        static let brews = "tab.brews"
-        static let beans = "tab.beans"
-        static let methods = "tab.methods"
-        static let grinders = "tab.grinders"
-        static let settings = "tab.settings"
+    enum Sidebar {
+        static let brews = "sidebar.brews"
+        static let beans = "sidebar.beans"
+        static let methods = "sidebar.methods"
+        static let grinders = "sidebar.grinders"
+        static let statistics = "sidebar.statistics"
+        static let compare = "sidebar.compare"
+        static let export = "sidebar.export"
+        static let settings = "sidebar.settings"
+
+        static func id(for key: String) -> String { "sidebar.\(key)" }
     }
 
     // MARK: - Brews

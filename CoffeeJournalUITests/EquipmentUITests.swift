@@ -23,24 +23,24 @@ final class EquipmentUITests: XCTestCase {
     // MARK: - View Brew Methods
 
     func testViewBrewMethods() throws {
-        let tabBar = TabBar(app: app)
-        XCTAssertTrue(tabBar.waitForTabBar(), "Tab bar should be visible")
+        let sidebar = Sidebar(app: app)
+        XCTAssertTrue(sidebar.waitForSidebar(), "Sidebar should be visible")
 
-        // Navigate to Methods tab
-        tabBar.tapMethods()
+        // Navigate to Methods
+        sidebar.tapMethods()
         XCTAssertTrue(app.navigationBars["Methods"].waitForExistence(timeout: 3), "Methods screen should load")
     }
 
     // MARK: - Add Grinder
 
     func testAddGrinder() throws {
-        let tabBar = TabBar(app: app)
+        let sidebar = Sidebar(app: app)
         let equipment = EquipmentPage(app: app)
 
-        XCTAssertTrue(tabBar.waitForTabBar(), "Tab bar should be visible")
+        XCTAssertTrue(sidebar.waitForSidebar(), "Sidebar should be visible")
 
-        // Navigate to Grinders tab
-        tabBar.tapGrinders()
+        // Navigate to Grinders
+        sidebar.tapGrinders()
         XCTAssertTrue(app.navigationBars["Grinders"].waitForExistence(timeout: 3), "Grinders screen should load")
 
         // Tap add grinder

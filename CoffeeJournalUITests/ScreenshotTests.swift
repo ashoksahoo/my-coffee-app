@@ -40,7 +40,7 @@ final class ScreenshotTests: XCTestCase {
     // MARK: - Screenshot Tests
 
     func testGenerateAllScreenshots() throws {
-        let tabBar = TabBar(app: app)
+        let sidebar = Sidebar(app: app)
         let wizard = SetupWizardPage(app: app)
         let brewsPage = BrewsPage(app: app)
         let beansPage = BeansPage(app: app)
@@ -48,12 +48,12 @@ final class ScreenshotTests: XCTestCase {
 
         // Complete setup if needed
         wizard.completeWithDefaults()
-        XCTAssertTrue(tabBar.waitForTabBar(), "Tab bar should be visible")
+        XCTAssertTrue(sidebar.waitForSidebar(), "Sidebar should be visible")
 
         waitForAnimations()
 
         // Screenshot 1: Brews List (Home)
-        tabBar.tapBrews()
+        sidebar.tapBrews()
         waitForAnimations()
         takeScreenshot(named: "01-brews-list")
 
@@ -62,36 +62,36 @@ final class ScreenshotTests: XCTestCase {
         takeScreenshot(named: "02-brews-empty-state")
 
         // Screenshot 3: Beans List
-        tabBar.tapBeans()
+        sidebar.tapBeans()
         waitForAnimations()
         takeScreenshot(named: "03-beans-list")
 
         // Screenshot 4: Methods List
-        tabBar.tapMethods()
+        sidebar.tapMethods()
         waitForAnimations()
         takeScreenshot(named: "04-methods-list")
 
         // Screenshot 5: Grinders List
-        tabBar.tapGrinders()
+        sidebar.tapGrinders()
         waitForAnimations()
         takeScreenshot(named: "05-grinders-list")
 
         // Screenshot 6: Settings
-        tabBar.tapSettings()
+        sidebar.tapSettings()
         waitForAnimations()
         takeScreenshot(named: "06-settings")
     }
 
     func testGenerateBrewFlowScreenshots() throws {
-        let tabBar = TabBar(app: app)
+        let sidebar = Sidebar(app: app)
         let wizard = SetupWizardPage(app: app)
         let brewsPage = BrewsPage(app: app)
 
         wizard.completeWithDefaults()
-        XCTAssertTrue(tabBar.waitForTabBar(), "Tab bar should be visible")
+        XCTAssertTrue(sidebar.waitForSidebar(), "Sidebar should be visible")
 
         // Navigate to Brews
-        tabBar.tapBrews()
+        sidebar.tapBrews()
         waitForAnimations()
 
         // Screenshot: Add Brew Button
@@ -113,15 +113,15 @@ final class ScreenshotTests: XCTestCase {
     }
 
     func testGenerateBeanFlowScreenshots() throws {
-        let tabBar = TabBar(app: app)
+        let sidebar = Sidebar(app: app)
         let wizard = SetupWizardPage(app: app)
         let beansPage = BeansPage(app: app)
 
         wizard.completeWithDefaults()
-        XCTAssertTrue(tabBar.waitForTabBar(), "Tab bar should be visible")
+        XCTAssertTrue(sidebar.waitForSidebar(), "Sidebar should be visible")
 
         // Navigate to Beans
-        tabBar.tapBeans()
+        sidebar.tapBeans()
         waitForAnimations()
 
         // Tap add bean
@@ -148,15 +148,15 @@ final class ScreenshotTests: XCTestCase {
     }
 
     func testGenerateEquipmentScreenshots() throws {
-        let tabBar = TabBar(app: app)
+        let sidebar = Sidebar(app: app)
         let wizard = SetupWizardPage(app: app)
         let equipmentPage = EquipmentPage(app: app)
 
         wizard.completeWithDefaults()
-        XCTAssertTrue(tabBar.waitForTabBar(), "Tab bar should be visible")
+        XCTAssertTrue(sidebar.waitForSidebar(), "Sidebar should be visible")
 
         // Grinders
-        tabBar.tapGrinders()
+        sidebar.tapGrinders()
         waitForAnimations()
         takeScreenshot(named: "14-grinders-list")
 
@@ -171,7 +171,7 @@ final class ScreenshotTests: XCTestCase {
         takeScreenshot(named: "16-grinders-with-grinder")
 
         // Methods
-        tabBar.tapMethods()
+        sidebar.tapMethods()
         waitForAnimations()
 
         equipmentPage.tapAddMethod()

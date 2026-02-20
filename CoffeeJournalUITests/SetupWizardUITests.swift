@@ -20,7 +20,7 @@ final class SetupWizardUITests: XCTestCase {
 
     func testCompleteSetupFlow() throws {
         let wizard = SetupWizardPage(app: app)
-        let tabBar = TabBar(app: app)
+        let sidebar = Sidebar(app: app)
 
         // Welcome screen should appear
         XCTAssertTrue(wizard.isVisible, "Welcome screen should be visible")
@@ -49,15 +49,15 @@ final class SetupWizardUITests: XCTestCase {
         // Tap Done to finish
         wizard.tapDone()
 
-        // Should reach main app with tab bar
-        XCTAssertTrue(tabBar.waitForTabBar(), "Tab bar should appear after setup completion")
+        // Should reach main app with sidebar
+        XCTAssertTrue(sidebar.waitForSidebar(), "Sidebar should appear after setup completion")
     }
 
     // MARK: - Flow with Grinder
 
     func testSetupWizardWithGrinder() throws {
         let wizard = SetupWizardPage(app: app)
-        let tabBar = TabBar(app: app)
+        let sidebar = Sidebar(app: app)
 
         XCTAssertTrue(wizard.isVisible, "Welcome screen should be visible")
 
@@ -78,7 +78,7 @@ final class SetupWizardUITests: XCTestCase {
         XCTAssertTrue(completeTitle.waitForExistence(timeout: 3), "Complete title should appear")
 
         wizard.tapDone()
-        XCTAssertTrue(tabBar.waitForTabBar(), "Tab bar should appear after setup with grinder")
+        XCTAssertTrue(sidebar.waitForSidebar(), "Sidebar should appear after setup with grinder")
     }
 
     // MARK: - Re-run Wizard from Settings
@@ -90,15 +90,15 @@ final class SetupWizardUITests: XCTestCase {
         app.launchArguments = ["UITESTING", "-hasCompletedSetup", "YES"]
         app.launch()
 
-        let tabBar = TabBar(app: app)
+        let sidebar = Sidebar(app: app)
         let wizard = SetupWizardPage(app: app)
 
         // Handle wizard if it appears despite hasCompletedSetup=YES
         wizard.completeWithDefaults()
-        XCTAssertTrue(tabBar.waitForTabBar(), "Tab bar should be visible")
+        XCTAssertTrue(sidebar.waitForSidebar(), "Sidebar should be visible")
 
         // Go to Settings
-        tabBar.tapSettings()
+        sidebar.tapSettings()
         XCTAssertTrue(app.navigationBars["Settings"].waitForExistence(timeout: 3), "Settings should load")
 
         // Tap re-run wizard

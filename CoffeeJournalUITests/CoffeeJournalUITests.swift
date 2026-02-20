@@ -16,49 +16,49 @@ final class CoffeeJournalUITests: XCTestCase {
         app = nil
     }
 
-    // MARK: - Tab Navigation
+    // MARK: - Sidebar Navigation
 
-    func testTabNavigation() throws {
-        let tabBar = TabBar(app: app)
+    func testSidebarNavigation() throws {
+        let sidebar = Sidebar(app: app)
         let wizard = SetupWizardPage(app: app)
 
         // Safety: complete setup if wizard appears despite hasCompletedSetup=YES
         wizard.completeWithDefaults()
 
-        // Verify tab bar is visible
-        XCTAssertTrue(tabBar.waitForTabBar(), "Tab bar should be visible")
+        // Verify sidebar is visible
+        XCTAssertTrue(sidebar.waitForSidebar(), "Sidebar should be visible")
 
-        // Navigate to Brews tab
-        tabBar.tapBrews()
+        // Navigate to Brews
+        sidebar.tapBrews()
         XCTAssertTrue(app.navigationBars["Brews"].waitForExistence(timeout: 3), "Brews navigation bar should exist")
 
-        // Navigate to Beans tab
-        tabBar.tapBeans()
+        // Navigate to Beans
+        sidebar.tapBeans()
         XCTAssertTrue(app.navigationBars["Beans"].waitForExistence(timeout: 3), "Beans navigation bar should exist")
 
-        // Navigate to Methods tab
-        tabBar.tapMethods()
+        // Navigate to Methods
+        sidebar.tapMethods()
         XCTAssertTrue(app.navigationBars["Methods"].waitForExistence(timeout: 3), "Methods navigation bar should exist")
 
-        // Navigate to Grinders tab
-        tabBar.tapGrinders()
+        // Navigate to Grinders
+        sidebar.tapGrinders()
         XCTAssertTrue(app.navigationBars["Grinders"].waitForExistence(timeout: 3), "Grinders navigation bar should exist")
 
-        // Navigate to Settings tab
-        tabBar.tapSettings()
+        // Navigate to Settings
+        sidebar.tapSettings()
         XCTAssertTrue(app.navigationBars["Settings"].waitForExistence(timeout: 3), "Settings navigation bar should exist")
     }
 
     // MARK: - Settings Screen
 
     func testSettingsScreen() throws {
-        let tabBar = TabBar(app: app)
+        let sidebar = Sidebar(app: app)
         let wizard = SetupWizardPage(app: app)
 
         wizard.completeWithDefaults()
-        XCTAssertTrue(tabBar.waitForTabBar(), "Tab bar should be visible")
+        XCTAssertTrue(sidebar.waitForSidebar(), "Sidebar should be visible")
 
-        tabBar.tapSettings()
+        sidebar.tapSettings()
         XCTAssertTrue(app.navigationBars["Settings"].waitForExistence(timeout: 3), "Settings screen should load")
 
         // Verify Re-run Setup Wizard button exists via accessibility identifier

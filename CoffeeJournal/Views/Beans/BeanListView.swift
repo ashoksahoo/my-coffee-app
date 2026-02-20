@@ -6,86 +6,64 @@ import VisionKit
 
 struct BeanListView: View {
     @State private var searchText = ""
-    @State private var showArchived = false
     @State private var showingAddSheet = false
     @State private var showingScanner = false
 
     var body: some View {
-        VStack(spacing: 0) {
-            Picker("Filter", selection: $showArchived) {
-                Text("Active").tag(false)
-                Text("Archived").tag(true)
-            }
-            .pickerStyle(.segmented)
-            .padding(.horizontal, AppSpacing.md)
-            .padding(.vertical, AppSpacing.sm)
-
-            BeanListContent(searchText: searchText, showArchived: showArchived)
-        }
-        .searchable(text: $searchText, prompt: "Search by roaster or origin")
-        .navigationTitle("Beans")
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
-                Menu {
-                    Button {
-                        showingAddSheet = true
-                    } label: {
-                        Label("Add Manually", systemImage: "plus")
-                    }
-
-                    if DataScannerViewController.isSupported {
+        BeanListContent(searchText: searchText)
+            .searchable(text: $searchText, prompt: "Search by roaster or origin")
+            .navigationTitle("Beans")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Menu {
                         Button {
-                            showingScanner = true
+                            showingAddSheet = true
                         } label: {
-                            Label("Scan Bag Label", systemImage: "camera.viewfinder")
+                            Label("Add Manually", systemImage: "plus")
                         }
+
+                        if DataScannerViewController.isSupported {
+                            Button {
+                                showingScanner = true
+                            } label: {
+                                Label("Scan Bag Label", systemImage: "camera.viewfinder")
+                            }
+                        }
+                    } label: {
+                        Image(systemName: "plus")
+                            .foregroundStyle(AppColors.primary)
                     }
-                } label: {
-                    Image(systemName: "plus")
-                        .foregroundStyle(AppColors.primary)
+                    .accessibilityIdentifier(AccessibilityID.Beans.addButton)
                 }
-                .accessibilityIdentifier(AccessibilityID.Beans.addButton)
             }
-        }
-        .sheet(isPresented: $showingAddSheet) {
-            NavigationStack {
-                AddBeanView()
+            .sheet(isPresented: $showingAddSheet) {
+                NavigationStack {
+                    AddBeanView()
+                }
             }
-        }
-        .sheet(isPresented: $showingScanner) {
-            BagScannerSheet()
-        }
+            .sheet(isPresented: $showingScanner) {
+                BagScannerSheet()
+            }
     }
 }
 
 // MARK: - Child View (Dynamic @Query)
 
 struct BeanListContent: View {
-    let searchText: String
-    let showArchived: Bool
     @Query private var beans: [CoffeeBean]
     @Environment(\.modelContext) private var modelContext
 
-    init(searchText: String, showArchived: Bool) {
-        self.searchText = searchText
-        self.showArchived = showArchived
-
+    init(searchText: String) {
         if searchText.isEmpty {
-            let archived = showArchived
             _beans = Query(
-                filter: #Predicate<CoffeeBean> { bean in
-                    bean.isArchived == archived
-                },
                 sort: [SortDescriptor(\CoffeeBean.createdAt, order: .reverse)]
             )
         } else {
             let search = searchText
-            let archived = showArchived
             _beans = Query(
                 filter: #Predicate<CoffeeBean> { bean in
-                    (bean.roaster.localizedStandardContains(search) ||
-                     bean.origin.localizedStandardContains(search)) &&
-                    bean.isArchived == archived
+                    bean.roaster.localizedStandardContains(search) ||
+                    bean.origin.localizedStandardContains(search)
                 },
                 sort: [SortDescriptor(\CoffeeBean.createdAt, order: .reverse)]
             )
@@ -96,8 +74,8 @@ struct BeanListContent: View {
         if beans.isEmpty {
             EmptyStateView(
                 systemImage: "leaf",
-                title: showArchived ? "No Archived Beans" : "No Beans Yet",
-                message: showArchived ? "Archive beans you're no longer using" : "Add your first coffee to get started"
+                title: "No Beans Yet",
+                message: "Add your first coffee to get started"
             )
         } else {
             List {

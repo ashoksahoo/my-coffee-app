@@ -312,9 +312,13 @@ struct EquipmentPage {
     }
 }
 
-/// Page object for tab bar navigation.
-struct TabBar {
+/// Page object for tab bar + sidebar drawer navigation.
+/// Brews and Beans are in the bottom tab bar.
+/// Other items are in a sliding sidebar drawer opened via the hamburger button.
+struct Sidebar {
     let app: XCUIApplication
+
+    // MARK: - Tab Bar Items
 
     func tapBrews() {
         app.tabBars.buttons["Brews"].tap()
@@ -324,19 +328,45 @@ struct TabBar {
         app.tabBars.buttons["Beans"].tap()
     }
 
-    func tapMethods() {
-        app.tabBars.buttons["Methods"].tap()
+    // MARK: - Sidebar Drawer
+
+    /// Open the sidebar drawer by tapping the hamburger menu button.
+    func openDrawer() {
+        let menuButton = app.buttons["line.3.horizontal"]
+        XCTAssertTrue(menuButton.waitForExistence(timeout: 3), "Sidebar toggle should exist")
+        menuButton.tap()
+        // Wait for sidebar to animate in
+        usleep(400_000)
     }
 
-    func tapGrinders() {
-        app.tabBars.buttons["Grinders"].tap()
+    /// Tap a sidebar drawer item by its accessibility identifier.
+    private func tapDrawerItem(_ identifier: String, label: String) {
+        openDrawer()
+        let button = app.buttons[identifier]
+        XCTAssertTrue(button.waitForExistence(timeout: 3), "Sidebar item '\(label)' should exist")
+        button.tap()
+        // Wait for fullScreenCover to present
+        usleep(500_000)
     }
 
-    func tapSettings() {
-        app.tabBars.buttons["Settings"].tap()
+    func tapMethods() { tapDrawerItem(AccessibilityID.Sidebar.methods, label: "Methods") }
+    func tapGrinders() { tapDrawerItem(AccessibilityID.Sidebar.grinders, label: "Grinders") }
+    func tapSettings() { tapDrawerItem(AccessibilityID.Sidebar.settings, label: "Settings") }
+    func tapStatistics() { tapDrawerItem(AccessibilityID.Sidebar.statistics, label: "Statistics") }
+    func tapCompare() { tapDrawerItem(AccessibilityID.Sidebar.compare, label: "Compare Brews") }
+    func tapExport() { tapDrawerItem(AccessibilityID.Sidebar.export, label: "Export") }
+
+    /// Close a sidebar-presented fullScreenCover by tapping the Close button.
+    func closePresented() {
+        let closeButton = app.buttons["Close"]
+        if closeButton.waitForExistence(timeout: 3) {
+            closeButton.tap()
+        }
     }
 
-    func waitForTabBar() -> Bool {
+    // MARK: - Readiness
+
+    func waitForSidebar() -> Bool {
         app.tabBars.buttons["Brews"].waitForExistence(timeout: 5)
     }
 }

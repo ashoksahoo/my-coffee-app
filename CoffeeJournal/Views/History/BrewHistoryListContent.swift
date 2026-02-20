@@ -6,15 +6,17 @@ import SwiftData
 struct BrewHistoryListContent: View {
     @Query private var brews: [BrewLog]
     @Environment(\.modelContext) private var modelContext
-    @Binding var exportBrews: [BrewLog]
 
     let methodID: PersistentIdentifier?
     let beanID: PersistentIdentifier?
+    let hasActiveFilters: Bool
+    var onAddBrew: (() -> Void)?
 
-    init(searchText: String, methodID: PersistentIdentifier?, beanID: PersistentIdentifier?, startDate: Date?, endDate: Date?, minimumRating: Int, exportBrews: Binding<[BrewLog]> = .constant([])) {
-        self._exportBrews = exportBrews
+    init(searchText: String, methodID: PersistentIdentifier?, beanID: PersistentIdentifier?, startDate: Date?, endDate: Date?, minimumRating: Int, hasActiveFilters: Bool = false, onAddBrew: (() -> Void)? = nil) {
         self.methodID = methodID
         self.beanID = beanID
+        self.hasActiveFilters = hasActiveFilters
+        self.onAddBrew = onAddBrew
 
         let search = searchText
         let minRating = minimumRating
@@ -49,11 +51,21 @@ struct BrewHistoryListContent: View {
     var body: some View {
         Group {
             if filteredBrews.isEmpty {
-                EmptyStateView(
-                    systemImage: "magnifyingglass",
-                    title: "No Matches",
-                    message: "Try adjusting your filters or search text"
-                )
+                if hasActiveFilters {
+                    EmptyStateView(
+                        systemImage: "magnifyingglass",
+                        title: "No Matches",
+                        message: "Try adjusting your filters or search text"
+                    )
+                } else {
+                    EmptyStateView(
+                        systemImage: "cup.and.saucer",
+                        title: "Your First Cup Awaits",
+                        message: "Start tracking your coffee journey — log a brew and discover what makes your perfect cup.",
+                        action: onAddBrew,
+                        actionLabel: "Log a Brew"
+                    )
+                }
             } else {
                 List {
                     ForEach(filteredBrews) { brew in
@@ -75,7 +87,5 @@ struct BrewHistoryListContent: View {
                 .accessibilityIdentifier(AccessibilityID.Brews.list)
             }
         }
-        .onAppear { exportBrews = filteredBrews }
-        .onChange(of: filteredBrews.count) { exportBrews = filteredBrews }
     }
 }

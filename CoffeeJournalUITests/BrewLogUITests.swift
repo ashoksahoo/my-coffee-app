@@ -24,13 +24,13 @@ final class BrewLogUITests: XCTestCase {
     // MARK: - Add Brew Log
 
     func testAddBrewLog() throws {
-        let tabBar = TabBar(app: app)
+        let sidebar = Sidebar(app: app)
         let brews = BrewsPage(app: app)
 
-        XCTAssertTrue(tabBar.waitForTabBar(), "Tab bar should be visible")
+        XCTAssertTrue(sidebar.waitForSidebar(), "Sidebar should be visible")
 
-        // Navigate to Brews tab
-        tabBar.tapBrews()
+        // Navigate to Brews
+        sidebar.tapBrews()
         XCTAssertTrue(app.navigationBars["Brews"].waitForExistence(timeout: 3), "Brews screen should load")
 
         // Tap add brew
@@ -52,13 +52,13 @@ final class BrewLogUITests: XCTestCase {
     // MARK: - View Brew Detail
 
     func testViewBrewDetail() throws {
-        let tabBar = TabBar(app: app)
+        let sidebar = Sidebar(app: app)
         let brews = BrewsPage(app: app)
 
-        XCTAssertTrue(tabBar.waitForTabBar(), "Tab bar should be visible")
+        XCTAssertTrue(sidebar.waitForSidebar(), "Sidebar should be visible")
 
-        // Navigate to Brews tab and add a brew first
-        tabBar.tapBrews()
+        // Navigate to Brews and add a brew first
+        sidebar.tapBrews()
         XCTAssertTrue(app.navigationBars["Brews"].waitForExistence(timeout: 3), "Brews screen should load")
 
         brews.tapAdd()
