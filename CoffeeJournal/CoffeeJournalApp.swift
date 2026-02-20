@@ -1,5 +1,20 @@
 import SwiftUI
 import SwiftData
+import PostHog
+
+// MARK: - PostHog Environment
+
+enum PostHogEnv: String {
+    case apiKey = "POSTHOG_API_KEY"
+    case host = "POSTHOG_HOST"
+
+    var value: String {
+        guard let value = ProcessInfo.processInfo.environment[rawValue] else {
+            fatalError("Set \(rawValue) in the Xcode scheme environment variables.")
+        }
+        return value
+    }
+}
 
 @main
 struct CoffeeJournalApp: App {
@@ -8,6 +23,13 @@ struct CoffeeJournalApp: App {
     @State private var networkMonitor = NetworkMonitor()
 
     init() {
+        // PostHog: Initialize analytics (opt-out by default; user must explicitly enable)
+        let posthogConfig = PostHogConfig(apiKey: PostHogEnv.apiKey.value, host: PostHogEnv.host.value)
+        posthogConfig.captureApplicationLifecycleEvents = true
+        PostHogSDK.shared.setup(posthogConfig)
+        let analyticsEnabled = UserDefaults.standard.bool(forKey: AppStorageKeys.analyticsEnabled)
+        if !analyticsEnabled { PostHogSDK.shared.optOut() }
+
         let schema = Schema(versionedSchema: SchemaV1.self)
 
         // Determine if running in UI test mode

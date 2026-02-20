@@ -5,6 +5,7 @@ enum AppStorageKeys {
     static let methodSortOrder = "methodSortOrder"
     static let grinderSortOrder = "grinderSortOrder"
     static let appearanceMode = "appearanceMode"
+    static let analyticsEnabled = "analyticsEnabled"
 }
 
 enum AppearanceMode: String, CaseIterable {

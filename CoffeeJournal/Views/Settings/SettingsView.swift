@@ -1,8 +1,10 @@
 import SwiftUI
 import SwiftData
+import PostHog
 
 struct SettingsView: View {
     @AppStorage(AppStorageKeys.appearanceMode) private var appearanceModeRaw = AppearanceMode.system.rawValue
+    @AppStorage(AppStorageKeys.analyticsEnabled) private var analyticsEnabled = false
     @State private var showingSetupWizard = false
     @State private var wizardViewModel = SetupWizardViewModel()
     #if DEBUG
@@ -14,7 +16,13 @@ struct SettingsView: View {
     private var appearanceMode: Binding<AppearanceMode> {
         Binding(
             get: { AppearanceMode(rawValue: appearanceModeRaw) ?? .system },
-            set: { appearanceModeRaw = $0.rawValue }
+            set: { newMode in
+                appearanceModeRaw = newMode.rawValue
+                // PostHog: Track appearance mode changed
+                PostHogSDK.shared.capture("appearance_changed", properties: [
+                    "theme": newMode.rawValue,
+                ])
+            }
         )
     }
 
@@ -42,6 +50,23 @@ struct SettingsView: View {
                 Text("Equipment Setup")
             } footer: {
                 Text("Add more brew methods and grinders from the curated list")
+            }
+
+            Section {
+                Toggle(isOn: Binding(
+                    get: { analyticsEnabled },
+                    set: { enabled in
+                        analyticsEnabled = enabled
+                        if enabled { PostHogSDK.shared.optIn() }
+                        else       { PostHogSDK.shared.optOut() }
+                    }
+                )) {
+                    Label("Share Usage Data", systemImage: "chart.bar")
+                }
+            } header: {
+                Text("Privacy")
+            } footer: {
+                Text("Help improve Coffee Journal by sharing anonymous usage data. Off by default. No personal data or brew content is ever sent.")
             }
 
             Section("About") {
