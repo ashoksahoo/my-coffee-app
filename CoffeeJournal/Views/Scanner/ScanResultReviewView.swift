@@ -1,5 +1,6 @@
 import SwiftUI
 import SwiftData
+import PostHog
 
 struct ScanResultReviewView: View {
     @Environment(\.modelContext) private var modelContext
@@ -156,6 +157,15 @@ struct ScanResultReviewView: View {
         bean.roastDate = hasRoastDate ? roastDate : nil
         bean.notes = notes.trimmingCharacters(in: .whitespacesAndNewlines)
         modelContext.insert(bean)
+        // PostHog: Track coffee bean added via bag scanner
+        PostHogSDK.shared.capture("coffee_bean_scanned", properties: [
+            "roast_level": selectedRoastLevel.rawValue,
+            "processing_method": selectedProcessingMethod.rawValue,
+            "has_roast_date": hasRoastDate,
+            "has_roaster": !bean.roaster.isEmpty,
+            "has_origin": !bean.origin.isEmpty,
+            "source": "scanner",
+        ])
         dismiss()
     }
 }

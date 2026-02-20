@@ -1,6 +1,7 @@
 import SwiftUI
 import SwiftData
 import Charts
+import PostHog
 
 struct StatisticsDashboardView: View {
     @Query(sort: \BrewLog.createdAt, order: .reverse) private var brews: [BrewLog]
@@ -32,6 +33,10 @@ struct StatisticsDashboardView: View {
             if !brews.isEmpty {
                 insightsViewModel.analyzePatterns(brews: brews)
             }
+            // PostHog: Track statistics dashboard viewed
+            PostHogSDK.shared.capture("statistics_viewed", properties: [
+                "total_brews": brews.count,
+            ])
         }
     }
 

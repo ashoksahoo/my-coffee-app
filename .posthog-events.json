@@ -1,0 +1,62 @@
+[
+  {
+    "event": "setup_wizard_completed",
+    "description": "User completes the initial setup wizard (methods selected + optional grinder added). This is the top of the onboarding conversion funnel.",
+    "file": "CoffeeJournal/Views/Setup/SetupWizardView.swift"
+  },
+  {
+    "event": "setup_wizard_skipped",
+    "description": "User taps Skip on the welcome step, bypassing the full setup wizard.",
+    "file": "CoffeeJournal/Views/Setup/SetupWizardView.swift"
+  },
+  {
+    "event": "brew_logged",
+    "description": "User saves a new brew log entry, including method, bean, dose, water, and brew time.",
+    "file": "CoffeeJournal/ViewModels/BrewLogViewModel.swift"
+  },
+  {
+    "event": "tasting_note_saved",
+    "description": "User saves tasting notes (attributes + flavors) for a brew log.",
+    "file": "CoffeeJournal/Views/Tasting/TastingNoteEntryView.swift"
+  },
+  {
+    "event": "coffee_bean_added",
+    "description": "User manually adds a new coffee bean to their journal.",
+    "file": "CoffeeJournal/Views/Beans/AddBeanView.swift"
+  },
+  {
+    "event": "coffee_bean_scanned",
+    "description": "User scans a coffee bag label and saves the resulting bean entry via the scanner flow.",
+    "file": "CoffeeJournal/Views/Scanner/ScanResultReviewView.swift"
+  },
+  {
+    "event": "brew_method_added",
+    "description": "User adds a new brew method (from template or custom).",
+    "file": "CoffeeJournal/Views/Equipment/AddMethodView.swift"
+  },
+  {
+    "event": "brew_suggestion_applied",
+    "description": "User taps Apply on an AI-generated brew suggestion banner when logging a brew.",
+    "file": "CoffeeJournal/Views/Brewing/AddBrewLogView.swift"
+  },
+  {
+    "event": "export_initiated",
+    "description": "User initiates a PDF or CSV export of their brew journal.",
+    "file": "CoffeeJournal/Views/Export/ExportView.swift"
+  },
+  {
+    "event": "statistics_viewed",
+    "description": "User navigates to the statistics dashboard — top of the engagement insight funnel.",
+    "file": "CoffeeJournal/Views/History/StatisticsDashboardView.swift"
+  },
+  {
+    "event": "appearance_changed",
+    "description": "User changes the app theme (light / dark / system) in Settings.",
+    "file": "CoffeeJournal/Views/Settings/SettingsView.swift"
+  },
+  {
+    "event": "brew_timer_started",
+    "description": "User starts the brew timer during a brew log session.",
+    "file": "CoffeeJournal/ViewModels/BrewLogViewModel.swift"
+  }
+]

@@ -1,5 +1,6 @@
 import SwiftUI
 import SwiftData
+import PostHog
 
 struct AddBrewLogView: View {
     @State private var viewModel = BrewLogViewModel()
@@ -281,5 +282,11 @@ struct AddBrewLogView: View {
         viewModel.brewTime = suggestion.brewTime
         viewModel.brewTimeMinutes = Int(suggestion.brewTime) / 60
         viewModel.brewTimeSeconds = Int(suggestion.brewTime) % 60
+        // PostHog: Track brew suggestion applied
+        PostHogSDK.shared.capture("brew_suggestion_applied", properties: [
+            "method": viewModel.selectedMethod?.name ?? "unknown",
+            "suggested_dose": suggestion.dose,
+            "suggested_temperature": suggestion.waterTemperature,
+        ])
     }
 }

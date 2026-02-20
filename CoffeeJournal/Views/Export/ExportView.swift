@@ -1,5 +1,6 @@
 import SwiftUI
 import SwiftData
+import PostHog
 
 struct ExportView: View {
     @Query(sort: \BrewLog.createdAt, order: .reverse) private var brews: [BrewLog]
@@ -46,6 +47,11 @@ struct ExportView: View {
 
     private func exportPDF() {
         isExporting = true
+        // PostHog: Track export initiated
+        PostHogSDK.shared.capture("export_initiated", properties: [
+            "format": "pdf",
+            "brew_count": brews.count,
+        ])
         Task { @MainActor in
             exportURL = PDFExporter.generateJournal(brews: brews)
             isExporting = false
@@ -58,6 +64,11 @@ struct ExportView: View {
 
     private func exportCSV() {
         isExporting = true
+        // PostHog: Track export initiated
+        PostHogSDK.shared.capture("export_initiated", properties: [
+            "format": "csv",
+            "brew_count": brews.count,
+        ])
         Task { @MainActor in
             exportURL = CSVExporter.generateCSV(brews: brews)
             isExporting = false

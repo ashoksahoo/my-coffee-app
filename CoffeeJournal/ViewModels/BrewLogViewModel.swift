@@ -1,5 +1,6 @@
 import Foundation
 import SwiftData
+import PostHog
 
 // MARK: - Timer State
 
@@ -119,6 +120,11 @@ class BrewLogViewModel {
         timerStartDate = Date()
         timerState = .running
         stepElapsedSeconds = 0
+        // PostHog: Track brew timer started
+        PostHogSDK.shared.capture("brew_timer_started", properties: [
+            "method": selectedMethod?.name ?? "unknown",
+            "guidance_enabled": guidanceEnabled,
+        ])
     }
 
     func pauseTimer() {
@@ -217,6 +223,19 @@ class BrewLogViewModel {
         }
 
         context.insert(log)
+
+        // PostHog: Track brew logged
+        PostHogSDK.shared.capture("brew_logged", properties: [
+            "method": selectedMethod?.name ?? "unknown",
+            "method_category": selectedMethod?.category.rawValue ?? "unknown",
+            "bean": selectedBean?.displayName ?? "none",
+            "dose": dose,
+            "rating": rating,
+            "has_notes": !notes.isEmpty,
+            "has_photo": photoData != nil,
+            "used_timer": timerState == .stopped,
+            "brew_time_seconds": timerState == .stopped ? Int(elapsedSeconds) : (brewTimeMinutes * 60 + brewTimeSeconds),
+        ])
 
         // Update equipment usage stats
         if let method = selectedMethod {

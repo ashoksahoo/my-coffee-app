@@ -231,6 +231,7 @@
 		FCC8394937A7D10809C2575D /* TastingNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7E32F3A61B00009322A /* TastingNote.swift */; };
 		FF22FBAFCD679E31DA8317CC /* BrewHistoryListContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD80F2F3A61B00009322A /* BrewHistoryListContent.swift */; };
 		FFE8F145E968F17CAAF5709B /* BeanDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD7F42F3A61B00009322A /* BeanDetailView.swift */; };
+		PH000001PH000001 /* PostHog in Frameworks */ = {isa = PBXBuildFile; productRef = PH000002PH000002 /* PostHog */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -533,6 +534,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E12E497FFA5D953F829AA396 /* Foundation.framework in Frameworks */,
+				PH000001PH000001 /* PostHog in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1151,6 +1153,9 @@
 			dependencies = (
 			);
 			name = CoffeeJournal;
+			packageProductDependencies = (
+				PH000002PH000002 /* PostHog */,
+			);
 			productName = CoffeeJournal;
 			productReference = E5E4D73FDE65A061C9AE33CB /* CoffeeJournal.app */;
 			productType = "com.apple.product-type.application";
@@ -1213,6 +1218,9 @@
 			productRefGroup = 77BCD03B956B4346;
 			projectDirPath = "";
 			projectRoot = "";
+			packageReferences = (
+				PH000003PH000003 /* XCRemoteSwiftPackageReference "posthog-ios" */,
+			);
 			targets = (
 				73E613D43D49E06EF501B539 /* CoffeeJournal */,
 				F5912D86DA94EDD637BD212E /* CoffeeJournalUITests */,
@@ -1798,6 +1806,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		PH000003PH000003 /* XCRemoteSwiftPackageReference "posthog-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/PostHog/posthog-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.41.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		PH000002PH000002 /* PostHog */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = PH000003PH000003 /* XCRemoteSwiftPackageReference "posthog-ios" */;
+			productName = PostHog;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8843C961065C44B0 /* Project object */;
 }

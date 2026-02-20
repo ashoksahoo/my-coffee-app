@@ -1,5 +1,6 @@
 import SwiftUI
 import SwiftData
+import PostHog
 
 struct SetupWizardView: View {
     @State private var viewModel = SetupWizardViewModel()
@@ -59,7 +60,11 @@ struct SetupWizardView: View {
     private var stepContent: some View {
         switch viewModel.currentStep {
         case .welcome:
-            WelcomeStepView(onSkip: onComplete)
+            WelcomeStepView(onSkip: {
+                // PostHog: Track setup wizard skipped
+                PostHogSDK.shared.capture("setup_wizard_skipped")
+                onComplete()
+            })
         case .methods:
             MethodSelectionView(selectedMethods: $viewModel.selectedMethods)
         case .grinder:
@@ -103,6 +108,11 @@ struct SetupWizardView: View {
             Button {
                 if viewModel.currentStep == .complete {
                     viewModel.saveEquipment(context: modelContext)
+                    // PostHog: Track setup wizard completed
+                    PostHogSDK.shared.capture("setup_wizard_completed", properties: [
+                        "method_count": viewModel.selectedMethods.count,
+                        "grinder_added": !viewModel.grinderName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty,
+                    ])
                     onComplete()
                 } else {
                     withAnimation(.easeInOut(duration: 0.25)) {

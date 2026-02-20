@@ -1,5 +1,6 @@
 import SwiftUI
 import SwiftData
+import PostHog
 
 struct TastingNoteEntryView: View {
     let brewLog: BrewLog
@@ -30,6 +31,15 @@ struct TastingNoteEntryView: View {
             ToolbarItem(placement: .topBarTrailing) {
                 Button("Save") {
                     viewModel.save(for: brewLog, in: modelContext)
+                    // PostHog: Track tasting note saved
+                    PostHogSDK.shared.capture("tasting_note_saved", properties: [
+                        "flavor_count": viewModel.selectedFlavorIds.count,
+                        "custom_tag_count": viewModel.allDisplayTags.filter { $0.id.hasPrefix("custom:") }.count,
+                        "has_notes": !viewModel.freeformNotes.isEmpty,
+                        "acidity": viewModel.acidity,
+                        "body": viewModel.bodyRating,
+                        "sweetness": viewModel.sweetness,
+                    ])
                     dismiss()
                 }
                 .fontWeight(.semibold)

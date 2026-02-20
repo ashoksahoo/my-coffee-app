@@ -1,5 +1,6 @@
 import SwiftUI
 import SwiftData
+import PostHog
 
 struct AddBeanView: View {
     @Environment(\.modelContext) private var modelContext
@@ -139,6 +140,14 @@ struct AddBeanView: View {
         bean.roastDate = hasRoastDate ? roastDate : nil
         bean.notes = notes.trimmingCharacters(in: .whitespacesAndNewlines)
         modelContext.insert(bean)
+        // PostHog: Track coffee bean added manually
+        PostHogSDK.shared.capture("coffee_bean_added", properties: [
+            "roast_level": selectedRoastLevel.rawValue,
+            "processing_method": selectedProcessingMethod.rawValue,
+            "has_roast_date": hasRoastDate,
+            "has_variety": !variety.trimmingCharacters(in: .whitespaces).isEmpty,
+            "source": "manual",
+        ])
         dismiss()
     }
 }

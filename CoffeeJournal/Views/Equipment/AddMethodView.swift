@@ -1,5 +1,6 @@
 import SwiftUI
 import SwiftData
+import PostHog
 
 struct AddMethodView: View {
     @Environment(\.modelContext) private var modelContext
@@ -92,6 +93,12 @@ struct AddMethodView: View {
     private func addFromTemplate(_ template: MethodTemplate) {
         let method = BrewMethod(from: template)
         modelContext.insert(method)
+        // PostHog: Track brew method added from template
+        PostHogSDK.shared.capture("brew_method_added", properties: [
+            "method_name": template.name,
+            "method_category": template.category.rawValue,
+            "source": "template",
+        ])
         dismiss()
     }
 
@@ -100,6 +107,12 @@ struct AddMethodView: View {
         guard !trimmedName.isEmpty else { return }
         let method = BrewMethod(name: trimmedName, category: customCategory)
         modelContext.insert(method)
+        // PostHog: Track custom brew method added
+        PostHogSDK.shared.capture("brew_method_added", properties: [
+            "method_name": trimmedName,
+            "method_category": customCategory.rawValue,
+            "source": "custom",
+        ])
         dismiss()
     }
 }
