@@ -2,18 +2,11 @@ import SwiftUI
 import SwiftData
 import PostHog
 
-// MARK: - PostHog Environment
+// MARK: - PostHog Configuration
 
-enum PostHogEnv: String {
-    case apiKey = "POSTHOG_API_KEY"
-    case host = "POSTHOG_HOST"
-
-    var value: String {
-        guard let value = ProcessInfo.processInfo.environment[rawValue] else {
-            fatalError("Set \(rawValue) in the Xcode scheme environment variables.")
-        }
-        return value
-    }
+private enum Analytics {
+    static let apiKey = "phc_Rt8PpEFbLfGBelOVuRPT961aGRc9srL3Hc6qVjbTbgV"
+    static let host   = "https://eu.i.posthog.com"
 }
 
 @main
@@ -24,7 +17,7 @@ struct CoffeeJournalApp: App {
 
     init() {
         // PostHog: Initialize analytics (opt-out by default; user must explicitly enable)
-        let posthogConfig = PostHogConfig(apiKey: PostHogEnv.apiKey.value, host: PostHogEnv.host.value)
+        let posthogConfig = PostHogConfig(apiKey: Analytics.apiKey, host: Analytics.host)
         posthogConfig.captureApplicationLifecycleEvents = true
         PostHogSDK.shared.setup(posthogConfig)
         let analyticsEnabled = UserDefaults.standard.bool(forKey: AppStorageKeys.analyticsEnabled)
