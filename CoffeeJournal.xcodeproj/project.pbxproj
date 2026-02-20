@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FFAA0002FFAA0002 /* FlavorWheel.json in Resources */ = {isa = PBXBuildFile; fileRef = FFAA0001FFAA0001 /* FlavorWheel.json */; };
 		00446567795F92D700D3968B /* MethodDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93FD80B2F3A61B00009322A /* MethodDetailView.swift */; };
 		0046E5ECB33E93476B20BEE0 /* MethodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5B1B670423B0CA89181CC7 /* MethodCategory.swift */; };
 		00939977041C836C6F3D34B7 /* MethodTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3F3B1D28442E1 /* MethodTemplate.swift */; };
@@ -257,6 +258,7 @@
 		05E2F4722E2976E3F1FE6EA2 /* CSVExporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CSVExporter.swift; path = CoffeeJournal/Services/Export/CSVExporter.swift; sourceTree = SOURCE_ROOT; };
 		08E8293CAE4B037A0915CE21 /* TastingNoteEntryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TastingNoteEntryView.swift; path = CoffeeJournal/Views/Tasting/TastingNoteEntryView.swift; sourceTree = "<group>"; };
 		099E721499955159C235059F /* NetworkMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkMonitor.swift; path = CoffeeJournal/Services/NetworkMonitor.swift; sourceTree = "<group>"; };
+		FFAA0001FFAA0001 /* FlavorWheel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = FlavorWheel.json; path = CoffeeJournal/Resources/FlavorWheel.json; sourceTree = SOURCE_ROOT; };
 		0A18F1A8AE5E2A1EE25D76F2 /* FlavorTagChipView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlavorTagChipView.swift; path = CoffeeJournal/Views/Tasting/FlavorTagChipView.swift; sourceTree = SOURCE_ROOT; };
 		0BDB3DFA39143C6A2B517AA5 /* BrewMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrewMethod.swift; path = CoffeeJournal/Models/BrewMethod.swift; sourceTree = SOURCE_ROOT; };
 		0DFB297F485F93E0BC26C0A2 /* AddBeanView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AddBeanView.swift; path = CoffeeJournal/Views/Beans/AddBeanView.swift; sourceTree = SOURCE_ROOT; };
@@ -604,6 +606,7 @@
 			children = (
 				F93FD9022F3A705C0009322A /* CoffeeJournalRelease.entitlements */,
 				F93FD7D52F3A61B00009322A /* Info.plist */,
+				FFAA0001FFAA0001 /* FlavorWheel.json */,
 				F93FD7E42F3A61B00009322A /* Models */,
 				F93FD7E72F3A61B00009322A /* Services */,
 				F93FD7EE2F3A61B00009322A /* Utilities */,
@@ -1223,6 +1226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFAA0002FFAA0002 /* FlavorWheel.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
