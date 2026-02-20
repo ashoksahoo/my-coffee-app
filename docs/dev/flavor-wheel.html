@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coffee Journal — Flavor Wheel</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+    background: #f2f2f7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    width: 100%;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  header h1 { font-size: 17px; font-weight: 600; color: #1c1c1e; }
+  header p  { font-size: 12px; color: #8e8e93; margin-top: 1px; }
+
+  .layout {
+    display: flex;
+    gap: 24px;
+    padding: 24px;
+    width: 100%;
+    max-width: 900px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .wheel-card {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    flex: 0 0 auto;
+  }
+
+  canvas {
+    display: block;
+    cursor: pointer;
+  }
+
+  .breadcrumb {
+    font-size: 12px;
+    color: #8e8e93;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .breadcrumb span { color: #1c1c1e; font-weight: 500; }
+  .breadcrumb .sep { color: #c7c7cc; }
+
+  .hint {
+    font-size: 11px;
+    color: #aeaeb2;
+    text-align: center;
+  }
+
+  /* Right panel */
+  .panel {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    width: 220px;
+    flex: 0 0 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .panel h2 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1c1c1e;
+  }
+
+  #selected-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-height: 80px;
+  }
+
+  .chip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+    animation: popIn 0.18s ease;
+  }
+  .chip .remove {
+    cursor: pointer;
+    opacity: 0.7;
+    font-size: 14px;
+    line-height: 1;
+    margin-left: 6px;
+  }
+  .chip .remove:hover { opacity: 1; }
+
+  @keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+  }
+
+  .empty-state {
+    font-size: 12px;
+    color: #aeaeb2;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  button.clear-btn {
+    width: 100%;
+    padding: 9px;
+    border: none;
+    border-radius: 10px;
+    background: #f2f2f7;
+    color: #ff3b30;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  button.clear-btn:hover { background: #ffe5e5; }
+  button.clear-btn:disabled { color: #aeaeb2; cursor: default; background: #f2f2f7; }
+
+  /* Legend */
+  .legend {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px 10px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: #3c3c43;
+  }
+  .legend-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  hr { border: none; border-top: 1px solid #f2f2f7; }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>☕ Coffee Journal — Flavor Wheel</h1>
+    <p>Live preview · data from FlavorWheel.json</p>
+  </div>
+</header>
+
+<div class="layout">
+  <div class="wheel-card">
+    <div class="breadcrumb" id="breadcrumb">Tap a category to explore</div>
+    <canvas id="wheel" width="420" height="420"></canvas>
+    <div class="hint">Tap inner ring → subcategory → descriptors to select flavors</div>
+  </div>
+
+  <div class="panel">
+    <h2>Selected Flavors</h2>
+    <div id="selected-list"><div class="empty-state">None selected yet</div></div>
+    <button class="clear-btn" id="clear-btn" disabled onclick="clearAll()">Clear All</button>
+    <hr>
+    <div>
+      <div style="font-size:12px;font-weight:600;color:#1c1c1e;margin-bottom:8px;">Categories</div>
+      <div class="legend" id="legend"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── Data (loaded from FlavorWheel.json) ──────────────────────────────────────
+const WHEEL_DATA = [{"id":"floral","name":"Floral","children":[{"id":"floral.floral","name":"Floral","children":[{"id":"floral.floral.jasmine","name":"Jasmine","children":[]},{"id":"floral.floral.rose","name":"Rose","children":[]},{"id":"floral.floral.chamomile","name":"Chamomile","children":[]}]},{"id":"floral.tea-like","name":"Tea-like","children":[{"id":"floral.tea-like.black-tea","name":"Black Tea","children":[]},{"id":"floral.tea-like.green-tea","name":"Green Tea","children":[]}]}]},{"id":"fruity","name":"Fruity","children":[{"id":"fruity.berry","name":"Berry","children":[{"id":"fruity.berry.strawberry","name":"Strawberry","children":[]},{"id":"fruity.berry.raspberry","name":"Raspberry","children":[]},{"id":"fruity.berry.blueberry","name":"Blueberry","children":[]},{"id":"fruity.berry.blackberry","name":"Blackberry","children":[]}]},{"id":"fruity.dried-fruit","name":"Dried Fruit","children":[{"id":"fruity.dried-fruit.raisin","name":"Raisin","children":[]},{"id":"fruity.dried-fruit.prune","name":"Prune","children":[]},{"id":"fruity.dried-fruit.coconut","name":"Coconut","children":[]}]},{"id":"fruity.citrus","name":"Citrus","children":[{"id":"fruity.citrus.grapefruit","name":"Grapefruit","children":[]},{"id":"fruity.citrus.orange","name":"Orange","children":[]},{"id":"fruity.citrus.lemon","name":"Lemon","children":[]},{"id":"fruity.citrus.lime","name":"Lime","children":[]}]},{"id":"fruity.other-fruit","name":"Other Fruit","children":[{"id":"fruity.other-fruit.cherry","name":"Cherry","children":[]},{"id":"fruity.other-fruit.pomegranate","name":"Pomegranate","children":[]},{"id":"fruity.other-fruit.pineapple","name":"Pineapple","children":[]},{"id":"fruity.other-fruit.grape","name":"Grape","children":[]},{"id":"fruity.other-fruit.apple","name":"Apple","children":[]},{"id":"fruity.other-fruit.peach","name":"Peach","children":[]},{"id":"fruity.other-fruit.pear","name":"Pear","children":[]}]}]},{"id":"sour-fermented","name":"Sour/Fermented","children":[{"id":"sour-fermented.sour","name":"Sour","children":[{"id":"sour-fermented.sour.acetic-acid","name":"Acetic Acid","children":[]},{"id":"sour-fermented.sour.butyric-acid","name":"Butyric Acid","children":[]},{"id":"sour-fermented.sour.citric-acid","name":"Citric Acid","children":[]},{"id":"sour-fermented.sour.malic-acid","name":"Malic Acid","children":[]}]},{"id":"sour-fermented.fermented","name":"Fermented","children":[{"id":"sour-fermented.fermented.winey","name":"Winey","children":[]},{"id":"sour-fermented.fermented.whiskey","name":"Whiskey","children":[]},{"id":"sour-fermented.fermented.overripe","name":"Overripe","children":[]}]}]},{"id":"green-vegetative","name":"Green/Vegetative","children":[{"id":"green-vegetative.olive-oil","name":"Olive Oil","children":[]},{"id":"green-vegetative.raw","name":"Raw","children":[{"id":"green-vegetative.raw.under-ripe","name":"Under-ripe","children":[]},{"id":"green-vegetative.raw.peapod","name":"Peapod","children":[]},{"id":"green-vegetative.raw.fresh","name":"Fresh","children":[]}]},{"id":"green-vegetative.vegetative","name":"Vegetative","children":[{"id":"green-vegetative.vegetative.dark-green","name":"Dark Green","children":[]},{"id":"green-vegetative.vegetative.hay-like","name":"Hay-like","children":[]},{"id":"green-vegetative.vegetative.herb-like","name":"Herb-like","children":[]}]}]},{"id":"other","name":"Other","children":[{"id":"other.papery-musty","name":"Papery/Musty","children":[{"id":"other.papery-musty.stale","name":"Stale","children":[]},{"id":"other.papery-musty.cardboard","name":"Cardboard","children":[]},{"id":"other.papery-musty.papery","name":"Papery","children":[]},{"id":"other.papery-musty.woody","name":"Woody","children":[]},{"id":"other.papery-musty.musty-dusty","name":"Musty/Dusty","children":[]},{"id":"other.papery-musty.musty-earthy","name":"Musty/Earthy","children":[]},{"id":"other.papery-musty.animalic","name":"Animalic","children":[]},{"id":"other.papery-musty.meaty-brothy","name":"Meaty/Brothy","children":[]}]},{"id":"other.chemical","name":"Chemical","children":[{"id":"other.chemical.phenolic","name":"Phenolic","children":[]},{"id":"other.chemical.bitter","name":"Bitter","children":[]},{"id":"other.chemical.salty","name":"Salty","children":[]},{"id":"other.chemical.medicinal","name":"Medicinal","children":[]},{"id":"other.chemical.petroleum","name":"Petroleum","children":[]},{"id":"other.chemical.skunky","name":"Skunky","children":[]},{"id":"other.chemical.rubber","name":"Rubber","children":[]}]}]},{"id":"roasted","name":"Roasted","children":[{"id":"roasted.pipe-tobacco","name":"Pipe Tobacco","children":[]},{"id":"roasted.cereal","name":"Cereal","children":[{"id":"roasted.cereal.grain","name":"Grain","children":[]},{"id":"roasted.cereal.malt","name":"Malt","children":[]}]},{"id":"roasted.burnt","name":"Burnt","children":[{"id":"roasted.burnt.smoky","name":"Smoky","children":[]},{"id":"roasted.burnt.ashy","name":"Ashy","children":[]},{"id":"roasted.burnt.acrid","name":"Acrid","children":[]},{"id":"roasted.burnt.brown-roast","name":"Brown Roast","children":[]}]}]},{"id":"spices","name":"Spices","children":[{"id":"spices.pungent","name":"Pungent","children":[{"id":"spices.pungent.pepper","name":"Pepper","children":[]}]},{"id":"spices.brown-spice","name":"Brown Spice","children":[{"id":"spices.brown-spice.anise","name":"Anise","children":[]},{"id":"spices.brown-spice.nutmeg","name":"Nutmeg","children":[]},{"id":"spices.brown-spice.cinnamon","name":"Cinnamon","children":[]},{"id":"spices.brown-spice.clove","name":"Clove","children":[]}]}]},{"id":"nutty-cocoa","name":"Nutty/Cocoa","children":[{"id":"nutty-cocoa.nutty","name":"Nutty","children":[{"id":"nutty-cocoa.nutty.peanuts","name":"Peanuts","children":[]},{"id":"nutty-cocoa.nutty.hazelnut","name":"Hazelnut","children":[]},{"id":"nutty-cocoa.nutty.almond","name":"Almond","children":[]}]},{"id":"nutty-cocoa.cocoa","name":"Cocoa","children":[{"id":"nutty-cocoa.cocoa.dark-chocolate","name":"Dark Chocolate","children":[]},{"id":"nutty-cocoa.cocoa.chocolate","name":"Chocolate","children":[]}]}]},{"id":"sweet","name":"Sweet","children":[{"id":"sweet.brown-sugar","name":"Brown Sugar","children":[{"id":"sweet.brown-sugar.molasses","name":"Molasses","children":[]},{"id":"sweet.brown-sugar.maple-syrup","name":"Maple Syrup","children":[]},{"id":"sweet.brown-sugar.brown-sugar","name":"Brown Sugar","children":[]},{"id":"sweet.brown-sugar.honey","name":"Honey","children":[]},{"id":"sweet.brown-sugar.caramelized","name":"Caramelized","children":[]}]},{"id":"sweet.vanilla","name":"Vanilla","children":[{"id":"sweet.vanilla.vanilla","name":"Vanilla","children":[]},{"id":"sweet.vanilla.vanillin","name":"Vanillin","children":[]}]},{"id":"sweet.overall-sweet","name":"Overall Sweet","children":[{"id":"sweet.overall-sweet.sweet-aromatics","name":"Sweet Aromatics","children":[]}]}]}];
+
+// ── Colors (matching Swift HSB→CSS HSL) ─────────────────────────────────────
+const COLORS = {
+  "floral":           "hsl(295,66%,65%)",
+  "fruity":           "hsl(7,79%,53%)",
+  "sour-fermented":   "hsl(90,56%,49%)",
+  "green-vegetative": "hsl(137,54%,43%)",
+  "other":            "hsl(209,22%,51%)",
+  "roasted":          "hsl(22,60%,26%)",
+  "spices":           "hsl(32,79%,48%)",
+  "nutty-cocoa":      "hsl(40,45%,41%)",
+  "sweet":            "hsl(50,90%,59%)",
+};
+
+function colorFor(id) {
+  return COLORS[id.split('.')[0]] || '#999';
+}
+function alpha(hsl, a) {
+  return hsl.replace('hsl(', 'hsla(').replace(')', `,${a})`);
+}
+
+// ── State ────────────────────────────────────────────────────────────────────
+let expandedCategory    = null;   // FlavorNode
+let expandedSubcategory = null;   // FlavorNode
+let selectedIds         = new Set();
+
+// ── Canvas setup ─────────────────────────────────────────────────────────────
+const canvas = document.getElementById('wheel');
+const ctx    = canvas.getContext('2d');
+const W = canvas.width, H = canvas.height;
+const CX = W / 2, CY = H / 2;
+const S  = Math.min(W, H);
+
+// ── Ring radii — mirrors Swift RingRadii ──────────────────────────────────────
+function radii() {
+  if (expandedSubcategory) {
+    return { iS: S*0.13, iE: S*0.21, mS: S*0.22, mE: S*0.32, oS: S*0.34, oE: S*0.50, hole: S*0.12 };
+  }
+  return   { iS: S*0.20, iE: S*0.35, mS: S*0.36, mE: S*0.46, oS: S*0.47, oE: S*0.50, hole: S*0.18 };
+}
+
+// ── Geometry helpers ─────────────────────────────────────────────────────────
+function toRad(d) { return d * Math.PI / 180; }
+
+function arcPath(r1, r2, a1, a2) {
+  const p = new Path2D();
+  p.arc(CX, CY, r2, toRad(a1), toRad(a2));
+  p.arc(CX, CY, r1, toRad(a2), toRad(a1), true);
+  p.closePath();
+  return p;
+}
+
+function drawArc(r1, r2, a1, a2, fill, stroke, sw) {
+  const p = arcPath(r1, r2, a1, a2);
+  ctx.fillStyle = fill;   ctx.fill(p);
+  ctx.strokeStyle = stroke; ctx.lineWidth = sw; ctx.stroke(p);
+}
+
+function drawLabel(text, r1, r2, midDeg, size, color, bold) {
+  const r   = (r1 + r2) / 2;
+  const rad = toRad(midDeg);
+  ctx.save();
+  ctx.fillStyle = color;
+  ctx.font = `${bold ? '600' : '400'} ${size}px -apple-system, sans-serif`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(text, CX + r * Math.cos(rad), CY + r * Math.sin(rad));
+  ctx.restore();
+}
+
+function arcIndex(angleDeg, count) {
+  let d = angleDeg + 90;
+  while (d <   0) d += 360;
+  while (d >= 360) d -= 360;
+  return Math.min(Math.floor(d / (360 / count)), count - 1);
+}
+
+// ── Draw ─────────────────────────────────────────────────────────────────────
+function draw() {
+  ctx.clearRect(0, 0, W, H);
+  const r   = radii();
+  const gap = 1.5;
+  const cats = WHEEL_DATA;
+
+  if (!expandedCategory) {
+    // Default: all 9 category arcs
+    const span = 360 / cats.length;
+    cats.forEach((cat, i) => {
+      const s = i * span - 90 + gap / 2, e = s + span - gap;
+      const col = colorFor(cat.id);
+      drawArc(r.iS, r.iE, s, e, alpha(col, 0.78), alpha(col, 1.0), 1.2);
+      const fs = Math.max(8, (r.iE - r.iS) * 0.33);
+      drawLabel(cat.name, r.iS, r.iE, (s + e) / 2, fs, '#fff', true);
+    });
+
+  } else {
+    const cat    = expandedCategory;
+    const col    = colorFor(cat.id);
+    const catSpan = 360 / cats.length;
+
+    // Inner ring — active + dimmed others
+    cats.forEach((c, i) => {
+      const s = i * catSpan - 90 + gap / 2, e = s + catSpan - gap;
+      const isActive = c.id === cat.id;
+      const cc = colorFor(c.id);
+      drawArc(r.iS, r.iE, s, e,
+        alpha(cc, isActive ? 0.82 : 0.18),
+        alpha(cc, isActive ? 1.0  : 0.35),
+        isActive ? 1.5 : 0.5);
+      const fs = Math.max(7, (r.iE - r.iS) * (isActive ? 0.35 : 0.28));
+      drawLabel(c.name, r.iS, r.iE, (s + e) / 2, fs,
+        isActive ? '#fff' : 'rgba(0,0,0,0.35)', isActive);
+    });
+
+    // Middle ring — subcategories
+    const subs = cat.children;
+    if (subs.length) {
+      const subSpan = 360 / subs.length;
+      subs.forEach((sub, j) => {
+        const s = j * subSpan - 90 + gap / 2, e = s + subSpan - gap;
+        const isExp = expandedSubcategory && expandedSubcategory.id === sub.id;
+        const op = isExp ? 0.78 : (j % 2 === 0 ? 0.38 : 0.54);
+        drawArc(r.mS, r.mE, s, e, alpha(col, op), alpha(col, 0.85), 1);
+        const fs = Math.max(8, (r.mE - r.mS) * 0.38);
+        drawLabel(sub.name, r.mS, r.mE, (s + e) / 2, fs, '#fff', isExp);
+      });
+    }
+
+    // Outer ring — descriptors
+    if (expandedSubcategory) {
+      const descs = expandedSubcategory.children;
+      if (descs.length) {
+        const dSpan = 360 / descs.length;
+        const fs = Math.max(9, (r.oE - r.oS) * 0.38);
+        descs.forEach((d, k) => {
+          const s = k * dSpan - 90 + gap / 2, e = s + dSpan - gap;
+          const sel = selectedIds.has(d.id);
+          const op = sel ? 1.0 : (k % 2 === 0 ? 0.22 : 0.36);
+          drawArc(r.oS, r.oE, s, e,
+            alpha(col, op), alpha(col, sel ? 1.0 : 0.45), sel ? 2.5 : 0.5);
+          drawLabel(d.name, r.oS, r.oE, (s + e) / 2, fs,
+            sel ? '#fff' : 'rgba(0,0,0,0.72)', sel);
+        });
+      }
+    }
+  }
+
+  // Center hole
+  ctx.beginPath();
+  ctx.arc(CX, CY, r.hole, 0, Math.PI * 2);
+  ctx.fillStyle = '#fff';
+  ctx.fill();
+
+  // Center label
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  if (expandedSubcategory) {
+    ctx.fillStyle = colorFor(expandedSubcategory.id);
+    ctx.font = '600 11px -apple-system, sans-serif';
+    ctx.fillText(expandedSubcategory.name, CX, CY - 7);
+    ctx.fillStyle = '#aaa';
+    ctx.font = '600 15px -apple-system, sans-serif';
+    ctx.fillText('‹', CX, CY + 9);
+  } else if (expandedCategory) {
+    ctx.fillStyle = colorFor(expandedCategory.id);
+    ctx.font = '600 11px -apple-system, sans-serif';
+    ctx.fillText(expandedCategory.name, CX, CY - 7);
+    ctx.fillStyle = '#aaa';
+    ctx.font = '600 15px -apple-system, sans-serif';
+    ctx.fillText('‹', CX, CY + 9);
+  } else {
+    ctx.fillStyle = '#c7c7cc';
+    ctx.font = '11px -apple-system, sans-serif';
+    ctx.fillText('Tap to', CX, CY - 7);
+    ctx.fillText('explore', CX, CY + 7);
+  }
+}
+
+// ── Hit testing ──────────────────────────────────────────────────────────────
+canvas.addEventListener('click', e => {
+  const rect = canvas.getBoundingClientRect();
+  const mx = (e.clientX - rect.left) * (W / rect.width);
+  const my = (e.clientY - rect.top)  * (H / rect.height);
+  const dx = mx - CX, dy = my - CY;
+  const dist = Math.sqrt(dx*dx + dy*dy);
+  const angleDeg = Math.atan2(dy, dx) * 180 / Math.PI;
+  const r = radii();
+  const cats = WHEEL_DATA;
+
+  // Center → back
+  if (dist < r.iS) {
+    if (expandedSubcategory) expandedSubcategory = null;
+    else                      expandedCategory    = null;
+    update(); return;
+  }
+
+  if (!expandedCategory) {
+    if (dist >= r.iS && dist <= r.iE) {
+      const i = arcIndex(angleDeg, cats.length);
+      expandedCategory = cats[i];
+      update();
+    }
+    return;
+  }
+
+  // Inner ring — switch/collapse category
+  if (dist >= r.iS && dist <= r.iE) {
+    const i = arcIndex(angleDeg, cats.length);
+    if (cats[i].id === expandedCategory.id) {
+      expandedCategory = null; expandedSubcategory = null;
+    } else {
+      expandedCategory = cats[i]; expandedSubcategory = null;
+    }
+    update(); return;
+  }
+
+  // Middle ring — subcategory
+  const subs = expandedCategory.children;
+  if (dist >= r.mS && dist <= r.mE && subs.length) {
+    const j = arcIndex(angleDeg, subs.length);
+    const tapped = subs[j];
+    if (tapped.children.length === 0) {
+      toggle(tapped);
+    } else {
+      expandedSubcategory = (expandedSubcategory && expandedSubcategory.id === tapped.id)
+        ? null : tapped;
+    }
+    update(); return;
+  }
+
+  // Outer ring — descriptor toggle
+  if (expandedSubcategory && dist >= r.oS && dist <= r.oE) {
+    const descs = expandedSubcategory.children;
+    if (descs.length) {
+      const k = arcIndex(angleDeg, descs.length);
+      toggle(descs[k]);
+      update();
+    }
+  }
+});
+
+function toggle(node) {
+  if (selectedIds.has(node.id)) selectedIds.delete(node.id);
+  else                           selectedIds.add(node.id);
+}
+
+// ── Update UI ────────────────────────────────────────────────────────────────
+function update() {
+  draw();
+  updateBreadcrumb();
+  updateSelectedPanel();
+}
+
+function updateBreadcrumb() {
+  const el = document.getElementById('breadcrumb');
+  if (!expandedCategory) {
+    el.innerHTML = 'Tap a category to explore';
+    return;
+  }
+  let html = `<span>${expandedCategory.name}</span>`;
+  if (expandedSubcategory) {
+    html += `<span class="sep">›</span><span>${expandedSubcategory.name}</span>`;
+  }
+  el.innerHTML = html;
+}
+
+function updateSelectedPanel() {
+  const list = document.getElementById('selected-list');
+  const btn  = document.getElementById('clear-btn');
+
+  if (selectedIds.size === 0) {
+    list.innerHTML = '<div class="empty-state">None selected yet</div>';
+    btn.disabled = true;
+    return;
+  }
+
+  btn.disabled = false;
+  list.innerHTML = '';
+
+  // Build id → name map by walking tree
+  function findName(id, nodes) {
+    for (const n of nodes) {
+      if (n.id === id) return n.name;
+      const found = findName(id, n.children);
+      if (found) return found;
+    }
+    return id;
+  }
+
+  selectedIds.forEach(id => {
+    const name  = findName(id, WHEEL_DATA);
+    const color = colorFor(id);
+    const chip  = document.createElement('div');
+    chip.className = 'chip';
+    chip.style.background = color;
+    chip.innerHTML = `<span>${name}</span><span class="remove" onclick="removeId('${id}')">×</span>`;
+    list.appendChild(chip);
+  });
+}
+
+function removeId(id) {
+  selectedIds.delete(id);
+  update();
+}
+
+function clearAll() {
+  selectedIds.clear();
+  update();
+}
+
+// ── Legend ───────────────────────────────────────────────────────────────────
+function buildLegend() {
+  const leg = document.getElementById('legend');
+  WHEEL_DATA.forEach(cat => {
+    const item = document.createElement('div');
+    item.className = 'legend-item';
+    const dot = document.createElement('div');
+    dot.className = 'legend-dot';
+    dot.style.background = colorFor(cat.id);
+    item.appendChild(dot);
+    item.appendChild(document.createTextNode(cat.name));
+    leg.appendChild(item);
+  });
+}
+
+// ── Cursor feedback ──────────────────────────────────────────────────────────
+canvas.addEventListener('mousemove', e => {
+  const rect = canvas.getBoundingClientRect();
+  const mx = (e.clientX - rect.left) * (W / rect.width);
+  const my = (e.clientY - rect.top)  * (H / rect.height);
+  const dx = mx - CX, dy = my - CY;
+  const dist = Math.sqrt(dx*dx + dy*dy);
+  const r = radii();
+  const inAnyRing = dist < r.iE ||
+    (expandedCategory && dist >= r.mS && dist <= r.mE) ||
+    (expandedSubcategory && dist >= r.oS && dist <= r.oE);
+  canvas.style.cursor = inAnyRing ? 'pointer' : 'default';
+});
+
+// ── Init ─────────────────────────────────────────────────────────────────────
+buildLegend();
+update();
+</script>
+</body>
+</html>
